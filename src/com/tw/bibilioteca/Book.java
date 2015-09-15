@@ -18,6 +18,6 @@ public class Book {
     public String toString() {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(yearPublished);
-        return name + author + calendar.get(Calendar.YEAR);
+        return name + " " + author + " " + calendar.get(Calendar.YEAR);
     }
 }

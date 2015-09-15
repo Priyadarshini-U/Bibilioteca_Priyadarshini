@@ -28,4 +28,11 @@ public class BookTest {
 
         assertTrue(book.toString().contains("2015"));
     }
+
+    @Test
+    public void shouldHaveFieldsSeparatedBySpacesInItsStringOutput() {
+        Book book = new Book("name", "author", new Date());
+
+        assertTrue(book.toString().contains("name author 2015"));
+    }
 }
