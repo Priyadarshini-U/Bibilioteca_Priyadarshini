@@ -11,8 +11,9 @@ public class Catalog {
 
     @Override
     public String toString() {
-        if(bookList.size() > 0)
-            return bookList.get(0).toString();
-        return "";
+        String outputString = "";
+        for(Book book : bookList)
+            outputString += book.toString()+"\n";
+        return outputString;
     }
 }
