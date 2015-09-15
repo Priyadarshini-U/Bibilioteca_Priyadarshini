@@ -40,4 +40,18 @@ public class CatalogTest {
 
         assertTrue(catalog.toString().contains(book1.toString() + "\n" + book2.toString()));
     }
+
+    @Test
+    public void shouldContainLastBook() {
+        List<Book> bookList = new ArrayList<Book>();
+        Book book1 = new Book("name1", "author1", new Date());
+        Book book2 = new Book("name2", "author2", new Date());
+        Book book3 = new Book("name3", "author3", new Date());
+        bookList.add(book1);
+        bookList.add(book2);
+        bookList.add(book3);
+        Catalog catalog = new Catalog(bookList);
+
+        assertTrue(catalog.toString().contains(book3.toString()));
+    }
 }
