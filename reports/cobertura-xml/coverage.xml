@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="1.0" branch-rate="1.0" lines-covered="9" lines-valid="9" branches-covered="0" branches-valid="0" complexity="1.0" version="2.1.1" timestamp="1442333230510">
+<coverage line-rate="1.0" branch-rate="1.0" lines-covered="9" lines-valid="9" branches-covered="0" branches-valid="0" complexity="1.0" version="2.1.1" timestamp="1442333360066">
 	<sources>
 		<source>src</source>
 	</sources>
@@ -32,26 +32,26 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="10" hits="1" branch="false"/>
-								<line number="11" hits="1" branch="false"/>
-								<line number="12" hits="1" branch="false"/>
-								<line number="13" hits="1" branch="false"/>
-								<line number="14" hits="1" branch="false"/>
+								<line number="10" hits="2" branch="false"/>
+								<line number="11" hits="2" branch="false"/>
+								<line number="12" hits="2" branch="false"/>
+								<line number="13" hits="2" branch="false"/>
+								<line number="14" hits="2" branch="false"/>
 							</lines>
 						</method>
 						<method name="toString" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="18" hits="1" branch="false"/>
+								<line number="18" hits="2" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="10" hits="1" branch="false"/>
-						<line number="11" hits="1" branch="false"/>
-						<line number="12" hits="1" branch="false"/>
-						<line number="13" hits="1" branch="false"/>
-						<line number="14" hits="1" branch="false"/>
-						<line number="18" hits="1" branch="false"/>
+						<line number="10" hits="2" branch="false"/>
+						<line number="11" hits="2" branch="false"/>
+						<line number="12" hits="2" branch="false"/>
+						<line number="13" hits="2" branch="false"/>
+						<line number="14" hits="2" branch="false"/>
+						<line number="18" hits="2" branch="false"/>
 					</lines>
 				</class>
 			</classes>
