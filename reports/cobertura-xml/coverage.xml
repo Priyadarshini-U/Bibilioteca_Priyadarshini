@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="1.0" branch-rate="1.0" lines-covered="11" lines-valid="11" branches-covered="0" branches-valid="0" complexity="1.0" version="2.1.1" timestamp="1442333597766">
+<coverage line-rate="1.0" branch-rate="1.0" lines-covered="15" lines-valid="15" branches-covered="0" branches-valid="0" complexity="1.0" version="2.1.1" timestamp="1442334541137">
 	<sources>
 		<source>src</source>
 	</sources>
@@ -56,6 +56,28 @@
 						<line number="19" hits="4" branch="false"/>
 						<line number="20" hits="4" branch="false"/>
 						<line number="21" hits="4" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.tw.bibilioteca.Catalog" filename="com/tw/bibilioteca/Catalog.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ljava/util/List;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="8" hits="1" branch="false"/>
+								<line number="9" hits="1" branch="false"/>
+								<line number="10" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="toString" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="14" hits="1" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="8" hits="1" branch="false"/>
+						<line number="9" hits="1" branch="false"/>
+						<line number="10" hits="1" branch="false"/>
+						<line number="14" hits="1" branch="false"/>
 					</lines>
 				</class>
 			</classes>
