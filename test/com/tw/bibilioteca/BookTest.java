@@ -21,4 +21,11 @@ public class BookTest {
 
         assertTrue(book.toString().contains("author"));
     }
+
+    @Test
+    public void shouldHaveYearOfPublishedInItsStringOutput() {
+        Book book = new Book("name", "author", new Date());
+
+        assertTrue(book.toString().contains("2015"));
+    }
 }

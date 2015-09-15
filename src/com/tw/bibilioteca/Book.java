@@ -1,5 +1,6 @@
 package com.tw.bibilioteca;
 
+import java.util.Calendar;
 import java.util.Date;
 
 public class Book {
@@ -15,6 +16,8 @@ public class Book {
 
     @Override
     public String toString() {
-        return name + author;
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(yearPublished);
+        return name + author + calendar.get(Calendar.YEAR);
     }
 }
