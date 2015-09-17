@@ -46,7 +46,7 @@
     </target>
 
     <target name="test" depends="init,compile">
-        <junit fork="yes" dir="${basedir}" failureProperty="test.failed" printsummary="true" haltonfailure="false">
+        <junit fork="yes" dir="${basedir}" failureProperty="test.failed" printsummary="true" haltonfailure="true">
             <classpath location="${instrumented.dir}" />
             <classpath location="${classes.dir}" />
 

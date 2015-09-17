@@ -9,8 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
+import static org.junit.Assert.assertTrue;
 
 public class MenuTest {
 
@@ -27,9 +26,11 @@ public class MenuTest {
         options.add("1. List Book");
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStream));
-        Catalog bookCatalog = new Catalog(new ArrayList<Book>(){{add(new Book("name","author",new Date()));}});
+        Catalog bookCatalog = new Catalog(new ArrayList<Book>() {{
+            add(new Book("name", "author", new Date()));
+        }});
         new Menu(options).choose(1, bookCatalog);
 
-        assertEquals(bookCatalog.toString(), outputStream.toString());
+        assertTrue(outputStream.toString().contains(bookCatalog.toString()));
     }
 }
