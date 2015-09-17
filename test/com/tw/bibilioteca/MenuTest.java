@@ -142,4 +142,16 @@ public class MenuTest {
         verify(display).putOutput("checkout NOT successful");
     }
 
+    @Test
+    public void shouldReturnOnOptionFour() {
+        ConsoleDisplay display = mock(ConsoleDisplay.class);
+        when(display.getInteger()).thenReturn(3);
+        when(display.getString()).thenReturn("name1");
+        Catalog bookCatalog = mock(Catalog.class);
+        List<String> options = new ArrayList<String>();
+        options.add("1. List BookDetails");
+        new Menu(options).choose(4, bookCatalog, display);
+
+        verify(bookCatalog).returnEntity("name1");
+    }
 }

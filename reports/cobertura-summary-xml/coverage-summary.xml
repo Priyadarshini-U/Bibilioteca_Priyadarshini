@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.898989898989899" branch-rate="1.0" lines-covered="89" lines-valid="99" branches-covered="10" branches-valid="10" complexity="1.2272727272727273" version="2.1.1" timestamp="1442490375521">
+<coverage line-rate="0.9" branch-rate="1.0" lines-covered="90" lines-valid="100" branches-covered="12" branches-valid="12" complexity="1.2727272727272727" version="2.1.1" timestamp="1442490703645">
 	<packages />
 </coverage>

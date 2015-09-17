@@ -28,6 +28,8 @@ public class Menu {
             else
                 display.putOutput("checkout NOT successful");
         }
+        if(optionChoice == 4)
+            libraryData.returnEntity(display.getString());
         else
             System.out.print("Invalid Option");
     }
