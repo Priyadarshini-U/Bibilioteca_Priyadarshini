@@ -57,7 +57,7 @@ public class BibilioticaApplicationTest {
         System.setOut(new PrintStream(outputStream));
         new BibilioticaApplication().start(inputStream, outputStream);
 
-        assertTrue(outputStream.toString().contains(new Catalog(bookList, new HashMap<String, BookDetails>()).toString()));
+        assertTrue(outputStream.toString().contains(new EntityView(new Catalog(bookList, new HashMap<String, BookDetails>())).toString()));
     }
 
 }

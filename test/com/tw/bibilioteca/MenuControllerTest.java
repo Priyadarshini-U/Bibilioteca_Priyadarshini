@@ -95,7 +95,7 @@ public class MenuControllerTest {
         result.executeAction();
         System.setIn(System.in);
 
-        assertTrue(outContent.toString().contains(catalog.toString()));
+        assertTrue(outContent.toString().contains(new EntityView(catalog).toString()));
     }
 
     @Test

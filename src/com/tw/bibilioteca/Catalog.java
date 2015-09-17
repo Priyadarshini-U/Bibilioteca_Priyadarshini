@@ -55,4 +55,12 @@ public class Catalog {
         return fields;
     }
 
+    public HashMap<String, BookDetails> getAvailableBooks(){
+        return available_books;
+    }
+
+    public HashMap<String, BookDetails> getCheckedOutBooks(){
+        return checked_out_books;
+    }
+
 }
