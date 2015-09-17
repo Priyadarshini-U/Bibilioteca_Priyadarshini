@@ -25,4 +25,14 @@ public class LoginTest {
 
         assertEquals(login.authenticate(libraryNumber, password), libraryNumber);
     }
+
+    @Test
+    public void shouldNotAuthenticateExistingAvailableLoginsWithIncorrectPassword() {
+        String libraryNumber = "011-1111";
+        String password = "-1";
+        Login login = new Login();
+        login.authenticate(libraryNumber, password);
+
+        assertEquals(login.authenticate(libraryNumber, password), null);
+    }
 }

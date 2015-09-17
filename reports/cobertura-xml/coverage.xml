@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.9432314410480349" branch-rate="0.96875" lines-covered="216" lines-valid="229" branches-covered="31" branches-valid="32" complexity="1.3846153846153846" version="2.1.1" timestamp="1442507935287">
+<coverage line-rate="0.9434782608695652" branch-rate="0.9705882352941176" lines-covered="217" lines-valid="230" branches-covered="33" branches-valid="34" complexity="1.4038461538461537" version="2.1.1" timestamp="1442508106909">
 	<sources>
 		<source>src</source>
 	</sources>
 	<packages>
-		<package name="com.tw.bibilioteca" line-rate="0.9432314410480349" branch-rate="0.96875" complexity="1.3846153846153846">
+		<package name="com.tw.bibilioteca" line-rate="0.9434782608695652" branch-rate="0.9705882352941176" complexity="1.4038461538461537">
 			<classes>
 				<class name="com.tw.bibilioteca.BibilioticaApplication" filename="com/tw/bibilioteca/BibilioticaApplication.java" line-rate="1.0" branch-rate="1.0" complexity="1.25">
 					<methods>
@@ -682,52 +682,62 @@
 					<lines>
 					</lines>
 				</class>
-				<class name="com.tw.bibilioteca.Login" filename="com/tw/bibilioteca/Login.java" line-rate="1.0" branch-rate="1.0" complexity="1.6666666666666667">
+				<class name="com.tw.bibilioteca.Login" filename="com/tw/bibilioteca/Login.java" line-rate="1.0" branch-rate="1.0" complexity="2.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="8" hits="2" branch="false"/>
-								<line number="9" hits="2" branch="false"/>
-								<line number="10" hits="2" branch="false"/>
+								<line number="8" hits="3" branch="false"/>
+								<line number="9" hits="3" branch="false"/>
+								<line number="10" hits="3" branch="false"/>
 							</lines>
 						</method>
 						<method name="authenticate" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="19" hits="4" branch="false"/>
-								<line number="20" hits="4" branch="true" condition-coverage="100% (2/2)">
+								<line number="19" hits="6" branch="false"/>
+								<line number="20" hits="6" branch="true" condition-coverage="100% (2/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="100%"/>
 									</conditions>
 								</line>
-								<line number="21" hits="2" branch="false"/>
+								<line number="21" hits="4" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
 								<line number="22" hits="2" branch="false"/>
+								<line number="23" hits="4" branch="false"/>
 							</lines>
 						</method>
 						<method name="loadExistingUserLoginCredentials" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="13" hits="4" branch="false"/>
-								<line number="14" hits="4" branch="false"/>
-								<line number="15" hits="4" branch="false"/>
-								<line number="16" hits="4" branch="false"/>
+								<line number="13" hits="6" branch="false"/>
+								<line number="14" hits="6" branch="false"/>
+								<line number="15" hits="6" branch="false"/>
+								<line number="16" hits="6" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="8" hits="2" branch="false"/>
-						<line number="9" hits="2" branch="false"/>
-						<line number="10" hits="2" branch="false"/>
-						<line number="13" hits="4" branch="false"/>
-						<line number="14" hits="4" branch="false"/>
-						<line number="15" hits="4" branch="false"/>
-						<line number="16" hits="4" branch="false"/>
-						<line number="19" hits="4" branch="false"/>
-						<line number="20" hits="4" branch="true" condition-coverage="100% (2/2)">
+						<line number="8" hits="3" branch="false"/>
+						<line number="9" hits="3" branch="false"/>
+						<line number="10" hits="3" branch="false"/>
+						<line number="13" hits="6" branch="false"/>
+						<line number="14" hits="6" branch="false"/>
+						<line number="15" hits="6" branch="false"/>
+						<line number="16" hits="6" branch="false"/>
+						<line number="19" hits="6" branch="false"/>
+						<line number="20" hits="6" branch="true" condition-coverage="100% (2/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="100%"/>
 							</conditions>
 						</line>
-						<line number="21" hits="2" branch="false"/>
+						<line number="21" hits="4" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
 						<line number="22" hits="2" branch="false"/>
+						<line number="23" hits="4" branch="false"/>
 					</lines>
 				</class>
 				<class name="com.tw.bibilioteca.Menu" filename="com/tw/bibilioteca/Menu.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">

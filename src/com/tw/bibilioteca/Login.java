@@ -18,6 +18,7 @@ public class Login {
     public String authenticate(String libraryNumber, String password) {
         loadExistingUserLoginCredentials();
         if (userCredentials.containsKey(libraryNumber))
+            if (userCredentials.get(libraryNumber).equals(password))
                 return libraryNumber;
         return null;
     }
