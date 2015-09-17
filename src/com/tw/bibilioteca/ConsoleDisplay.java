@@ -21,4 +21,9 @@ public class ConsoleDisplay {
         printStream.println(object);
     }
 
+    public int getInteger() {
+        int input = scanner.nextInt();
+        scanner.nextLine();
+        return input;
+    }
 }
