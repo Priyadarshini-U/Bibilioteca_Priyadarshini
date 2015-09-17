@@ -2,7 +2,7 @@
 
 ##Project Description
 
-    Library Manangement System that supports bookDetails check-in, check-out and other related functionality of books and movies
+    Library Manangement System that supports bookDetails check-in, check-out and other related functionality of available_books and movies
 User login and admin login implemented. 
 
 ##Dependencies

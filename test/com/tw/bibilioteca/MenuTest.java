@@ -44,7 +44,7 @@ public class MenuTest {
         bookList.put(bookName2, bookDetails2);
         bookList.put(bookName3, bookDetails3);
 
-        Catalog bookCatalog = new Catalog(bookList);
+        Catalog bookCatalog = new Catalog(bookList, new HashMap<String, BookDetails>());
         new Menu(options).choose(1, bookCatalog);
 
         assertTrue(outputStream.toString().contains(bookCatalog.toString()));
@@ -67,7 +67,7 @@ public class MenuTest {
         bookList.put(bookName3, bookDetails3);
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStream));
-        Catalog bookCatalog = new Catalog(bookList);
+        Catalog bookCatalog = new Catalog(bookList, new HashMap<String, BookDetails>());
         new Menu(options).choose(3, bookCatalog);
 
         assertTrue(outputStream.toString().contains("Invalid Option"));
@@ -91,7 +91,7 @@ public class MenuTest {
         bookList.put(bookName3, bookDetails3);
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStream));
-        Catalog bookCatalog = new Catalog(bookList);
+        Catalog bookCatalog = new Catalog(bookList, new HashMap<String, BookDetails>());
         new Menu(options).choose(2, bookCatalog);
     }
 }

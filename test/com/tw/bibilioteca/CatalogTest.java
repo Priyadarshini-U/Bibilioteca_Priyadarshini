@@ -15,7 +15,7 @@ public class CatalogTest {
     @Test
     public void shouldContainEmptyStringIfListIsEmpty() {
         HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
-        Catalog catalog = new Catalog(bookList);
+        Catalog catalog = new Catalog(bookList, new HashMap<String, BookDetails>());
 
         assertEquals(catalog.toString(), "");
     }
@@ -27,7 +27,7 @@ public class CatalogTest {
         String bookName1 = "name1";
 
         bookList.put(bookName1, bookDetails1);
-        Catalog catalog = new Catalog(bookList);
+        Catalog catalog = new Catalog(bookList, new HashMap<String, BookDetails>());
 
         assertTrue(catalog.toString().contains("name1 " + bookDetails1.toString()));
     }
@@ -42,7 +42,7 @@ public class CatalogTest {
 
         bookList.put(bookName1, bookDetails1);
         bookList.put(bookName2, bookDetails2);
-        Catalog catalog = new Catalog(bookList);
+        Catalog catalog = new Catalog(bookList, new HashMap<String, BookDetails>());
 
         assertTrue(catalog.toString().contains("name2 author2 2015"));
     }
@@ -60,8 +60,19 @@ public class CatalogTest {
         bookList.put(bookName1, bookDetails1);
         bookList.put(bookName2, bookDetails2);
         bookList.put(bookName3, bookDetails3);
-        Catalog catalog = new Catalog(bookList);
+        Catalog catalog = new Catalog(bookList, new HashMap<String, BookDetails>());
 
         assertTrue(catalog.toString().contains(bookDetails3.toString()));
+    }
+
+    @Test
+    public void shouldCheckIfBookIsInAvailableBookList() {
+        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
+        String bookName = "name";
+        BookDetails bookDetails = new BookDetails("author", new Date());
+        bookList.put(bookName, bookDetails);
+        Catalog catalog = new Catalog(bookList, new HashMap<String, BookDetails>());
+
+        assertTrue(catalog.isBookAvailableForCheckOut(bookName));
     }
 }

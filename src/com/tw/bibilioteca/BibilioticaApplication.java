@@ -16,7 +16,7 @@ public class BibilioticaApplication {
         Menu menu = new Controller(consoleDisplay, new WelcomeMessage(), bookLibrary).executeAction();
         consoleDisplay.putOutput(menu.toString());
         int choice = consoleDisplay.getInteger();
-        menu.choose(choice, new Catalog(loadBooks()));
+        menu.choose(choice, bookLibrary);
     }
 
     private HashMap<String, BookDetails> loadBooks() {
@@ -36,6 +36,6 @@ public class BibilioticaApplication {
 
     private void initiateSession(InputStream inputStream, OutputStream outputStream) {
         consoleDisplay = new ConsoleDisplay(inputStream, outputStream);
-        bookLibrary = new Catalog(loadBooks());
+        bookLibrary = new Catalog(loadBooks(), new HashMap<String, BookDetails>());
     }
 }
