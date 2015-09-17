@@ -33,4 +33,18 @@ public class MenuTest {
 
         assertTrue(outputStream.toString().contains(bookCatalog.toString()));
     }
+
+    @Test
+    public void shouldPrintInvalidOptionForOtherOptions() {
+        List<String> options = new ArrayList<String>();
+        options.add("1. List Book");
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStream));
+        Catalog bookCatalog = new Catalog(new ArrayList<Book>() {{
+            add(new Book("name", "author", new Date()));
+        }});
+        new Menu(options).choose(2, bookCatalog);
+
+        assertTrue(outputStream.toString().contains("Invalid Option"));
+    }
 }
