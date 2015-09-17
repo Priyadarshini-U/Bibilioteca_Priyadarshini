@@ -22,8 +22,15 @@ public class LoginTest {
         String password = "1";
         Login login = new Login();
         login.authenticate(libraryNumber, password);
+        String result = "";
+        for(int i = 0; i < libraryNumber.length(); i++)
+        {
+            int ascii = (int) libraryNumber.charAt(i);
+            ascii += (3 % 26 );
+            result += (char) ascii;
+        }
 
-        assertEquals(login.authenticate(libraryNumber, password), libraryNumber);
+        assertEquals(login.authenticate(libraryNumber, password), result);
     }
 
     @Test
@@ -34,5 +41,22 @@ public class LoginTest {
         login.authenticate(libraryNumber, password);
 
         assertEquals(login.authenticate(libraryNumber, password), new GuestUser().authenticate());
+    }
+
+    @Test
+    public void shouldReturnMessageDigestOfLibraryNumber() {
+        String libraryNumber = "011-1111";
+        String password = "1";
+        Login login = new Login();
+        login.authenticate(libraryNumber, password);
+        String result = "";
+        for(int i = 0; i < libraryNumber.length(); i++)
+        {
+            int ascii = (int) libraryNumber.charAt(i);
+            ascii += (3 % 26 );
+            result += (char) ascii;
+        }
+
+        assertEquals(login.authenticate(libraryNumber, password), result);
     }
 }

@@ -19,7 +19,18 @@ public class Login {
         loadExistingUserLoginCredentials();
         if (userCredentials.containsKey(libraryNumber))
             if (userCredentials.get(libraryNumber).equals(password))
-                return libraryNumber;
+                return encrypt(libraryNumber);
         return new GuestUser().authenticate();
+    }
+
+    private String encrypt(String libraryNumber) {
+        String result = "";
+        for(int i = 0; i < libraryNumber.length(); i++)
+        {
+            int ascii = (int) libraryNumber.charAt(i);
+            ascii += (3 % 26 );
+            result += (char) ascii;
+        }
+        return result;
     }
 }
