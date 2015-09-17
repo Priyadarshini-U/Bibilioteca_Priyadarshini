@@ -17,7 +17,7 @@ public class ControllerTest {
         WelcomeMessage welcomeScreen = new WelcomeMessage();
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
 
-        Controller controller = new Controller(consoleDisplay, welcomeScreen, null);
+        IController controller = new Controller(consoleDisplay, welcomeScreen, null);
         controller.executeAction();
 
         verify(consoleDisplay).putOutput(welcomeScreen);
@@ -31,7 +31,7 @@ public class ControllerTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(inContent, new PrintStream(outContent));
-        Controller controller = new Controller(consoleDisplay, welcomeScreen,  null);
+        IController controller = new Controller(consoleDisplay, welcomeScreen,  null);
 
         assertEquals(controller.executeAction().getClass(), MenuController.class);
     }

@@ -1,6 +1,6 @@
 package com.tw.bibilioteca;
 
-public class MenuController {
+public class MenuController implements IController{
     private ConsoleDisplay display;
     private Menu currentModel;
     private Catalog libraryData;
@@ -11,7 +11,7 @@ public class MenuController {
         this.libraryData = libraryData;
     }
 
-    public MenuController executeAction() {
+    public IController executeAction() {
         display.putOutput(currentModel);
         currentModel.choose(display.getInteger(), libraryData, display);
         return new MenuController(display, currentModel, libraryData);

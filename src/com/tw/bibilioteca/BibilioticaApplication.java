@@ -11,8 +11,8 @@ public class BibilioticaApplication {
 
     public void start(InputStream inputStream, OutputStream outputStream) {
         initiateSession(inputStream, outputStream);
-        MenuController menuController   = new Controller(consoleDisplay, new WelcomeMessage(), bookLibrary).executeAction();
-        menuController.executeAction();
+        IController controller   = new Controller(consoleDisplay, new WelcomeMessage(), bookLibrary).executeAction();
+        controller.executeAction();
     }
 
     private HashMap<String, BookDetails> loadBooks() {
