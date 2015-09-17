@@ -13,7 +13,7 @@ public class LoginTest {
         Login login = new Login();
         login.authenticate(libraryNumber, password);
 
-        assertEquals(login.authenticate(libraryNumber, password), null);
+        assertEquals(login.authenticate(libraryNumber, password), new GuestUser().authenticate());
     }
 
     @Test
@@ -33,6 +33,6 @@ public class LoginTest {
         Login login = new Login();
         login.authenticate(libraryNumber, password);
 
-        assertEquals(login.authenticate(libraryNumber, password), null);
+        assertEquals(login.authenticate(libraryNumber, password), new GuestUser().authenticate());
     }
 }

@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.9434782608695652" branch-rate="0.9705882352941176" lines-covered="217" lines-valid="230" branches-covered="33" branches-valid="34" complexity="1.4038461538461537" version="2.1.1" timestamp="1442508106909">
+<coverage line-rate="0.944206008583691" branch-rate="0.9705882352941176" lines-covered="220" lines-valid="233" branches-covered="33" branches-valid="34" complexity="1.3962264150943395" version="2.1.1" timestamp="1442508275921">
 	<sources>
 		<source>src</source>
 	</sources>
 	<packages>
-		<package name="com.tw.bibilioteca" line-rate="0.9434782608695652" branch-rate="0.9705882352941176" complexity="1.4038461538461537">
+		<package name="com.tw.bibilioteca" line-rate="0.944206008583691" branch-rate="0.9705882352941176" complexity="1.3962264150943395">
 			<classes>
 				<class name="com.tw.bibilioteca.BibilioticaApplication" filename="com/tw/bibilioteca/BibilioticaApplication.java" line-rate="1.0" branch-rate="1.0" complexity="1.25">
 					<methods>
@@ -674,6 +674,26 @@
 					<lines>
 						<line number="3" hits="4" branch="false"/>
 						<line number="7" hits="1" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.tw.bibilioteca.GuestUser" filename="com/tw/bibilioteca/GuestUser.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="3" hits="7" branch="false"/>
+								<line number="5" hits="7" branch="false"/>
+							</lines>
+						</method>
+						<method name="authenticate" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="8" hits="7" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="3" hits="7" branch="false"/>
+						<line number="5" hits="7" branch="false"/>
+						<line number="8" hits="7" branch="false"/>
 					</lines>
 				</class>
 				<class name="com.tw.bibilioteca.IController" filename="com/tw/bibilioteca/IController.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">

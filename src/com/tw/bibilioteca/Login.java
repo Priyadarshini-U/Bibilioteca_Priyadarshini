@@ -20,6 +20,6 @@ public class Login {
         if (userCredentials.containsKey(libraryNumber))
             if (userCredentials.get(libraryNumber).equals(password))
                 return libraryNumber;
-        return null;
+        return new GuestUser().authenticate();
     }
 }
