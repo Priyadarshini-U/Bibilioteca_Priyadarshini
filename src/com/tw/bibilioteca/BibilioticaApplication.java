@@ -14,8 +14,7 @@ public class BibilioticaApplication {
     }
 
     public void start() {
-        consoleDisplay.putOutput(new WelcomeMessage());
-        Menu menu = new Menu(new ArrayList<String>(){{add("1. List Books");}});
+        Menu menu = new Controller(consoleDisplay, new WelcomeMessage(), new Catalog(loadBooks())).executeAction();
         consoleDisplay.putOutput(menu.toString());
         int choice = consoleDisplay.getInteger();
         menu.choose(choice, new Catalog(loadBooks()));
