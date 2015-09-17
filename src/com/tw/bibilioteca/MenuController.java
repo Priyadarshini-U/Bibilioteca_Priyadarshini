@@ -17,6 +17,8 @@ public class MenuController implements IController{
         String choice = operation;
         if (choice.equals("Log in"))
             return new LoginController(display, new Login(), libraryData);
+        if (choice.equals("Log out"))
+            return new MenuController(display, new Menu(UserRole.GUEST.getDisplayOperations()), new BibilioticaData(libraryData.getBookLibrary(), libraryData.getMoviesLibrary(), new GuestUser().authenticate()));
         if (choice.equals("List Books"))
             return new Controller(display, new EntityView(libraryData.getBookLibrary()), libraryData);
         if (choice.equals("List Movies"))

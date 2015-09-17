@@ -1,6 +1,7 @@
 package com.tw.bibilioteca;
 
 import org.junit.Test;
+import org.mockito.InOrder;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -27,6 +28,7 @@ public class MenuControllerTest {
         add("CheckOut Movie");
         add("return Book");
         add("Log in");
+        add("Log out");
     }};
 
     @Test
@@ -187,5 +189,26 @@ public class MenuControllerTest {
         IController result = controller.executeAction();
 
         assertEquals(result.getClass(), LoginController.class);
+    }
+
+    @Test
+    public void shouldReturnGuestSessionAfterLogout() {
+        Menu menu = new Menu(optionsMenu);
+
+        HashMap<String, EntityDetails> moviesList = new HashMap<String, EntityDetails>();
+        String name1 = "name1";
+        EntityDetails details = new MovieDetails(new Date(), "author1", 3.0);
+        moviesList.put(name1, details);
+        Catalog catalog = new Catalog(moviesList, new HashMap<String, EntityDetails>());
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        String input ="8\n2\n";
+        ByteArrayInputStream inputStream = new ByteArrayInputStream(input.getBytes());
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(inputStream, outputStream);
+
+        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(null, catalog, new GuestUser().authenticate()));
+        IController result = controller.executeAction();
+        result.executeAction();
+
+        assertTrue(outputStream.toString().contains(new Menu(UserRole.GUEST.getDisplayOperations()).toString()));
     }
 }
