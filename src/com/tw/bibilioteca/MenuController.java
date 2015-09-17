@@ -22,6 +22,8 @@ public class MenuController implements IController{
             new CatalogOperation(display, libraryData.getBookLibrary()).executeCheckout();
         else if (choice.equals("4"))
             new CatalogOperation(display, libraryData.getBookLibrary()).executeReturn();
+        else if (choice.equals("6"))
+            new CatalogOperation(display, libraryData.getMoviesLibrary()).executeCheckout();
         else if (choice.equals("2"))
             return new ExitController();
         else

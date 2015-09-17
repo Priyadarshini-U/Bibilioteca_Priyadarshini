@@ -151,4 +151,25 @@ public class MenuControllerTest {
 
         assertTrue(outContent.toString().contains(new EntityView(catalog).toString()));
     }
+
+    @Test
+    public void shouldCheckOutMovieIfChoiceIsSix() {
+        Menu menu = new Menu(optionsMenu);
+
+        HashMap<String, EntityDetails> moviesList = new HashMap<String, EntityDetails>();
+        String name1 = "name1";
+        EntityDetails details = new MovieDetails(new Date(), "author1", 3.0);
+        moviesList.put(name1, details);
+        Catalog catalog = new Catalog(moviesList, new HashMap<String, EntityDetails>());
+        String input = "6";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
+        when(consoleDisplay.getString()).thenReturn("6").thenReturn("name1");
+        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(null, catalog));
+        IController result = controller.executeAction();
+        result.executeAction();
+
+        assertFalse(catalog.isEntityAvailableForCheckOut(name1));
+    }
 }
