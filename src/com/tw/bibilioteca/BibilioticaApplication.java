@@ -17,7 +17,8 @@ public class BibilioticaApplication {
         consoleDisplay.putOutput("Welcome to bibiliotica");
         Menu menu = new Menu(new ArrayList<String>(){{add("1. List Books");}});
         consoleDisplay.putOutput(menu.toString());
-
+        int choice = consoleDisplay.getInteger();
+        menu.choose(choice, new Catalog(loadBooks()));
     }
 
     private List<Book> loadBooks() {
