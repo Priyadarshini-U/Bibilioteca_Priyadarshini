@@ -80,5 +80,20 @@ public class LoginControllerTest {
         verify(consoleDisplay, times(2)).getString();
     }
 
+    @Test
+    public void shouldInvokeLoginAuthenticateWithInputLibraryNumberAndInputPassword() {
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
+        BookDetails bookDetails1 = new BookDetails("author", new Date());
+        String bookName1 = "name1";
+        bookList.put(bookName1, bookDetails1);
+        Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
+        ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
+        when(consoleDisplay.getString()).thenReturn("011-1111").thenReturn("1");
+        BibilioticaData data = new BibilioticaData(catalog, null);
+        Login login = mock(Login.class);
+        IController controller = new LoginController(consoleDisplay, login, data);
+        controller.executeAction();
 
+        verify(login).authenticate("011-1111", "1");
+    }
 }
