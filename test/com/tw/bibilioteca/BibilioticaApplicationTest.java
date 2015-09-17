@@ -21,7 +21,7 @@ public class BibilioticaApplicationTest {
         System.setOut(new PrintStream(outputStream));
         new BibilioticaApplication(inputStream, outputStream).start();
 
-        assertTrue(outputStream.toString().contains("Welcome to bibiliotica"));
+        assertTrue(outputStream.toString().contains("welcome to Bibilioteca"));
     }
 
     @Test
