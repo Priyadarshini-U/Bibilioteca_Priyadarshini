@@ -7,8 +7,8 @@ import java.util.Date;
 import java.util.List;
 
 public class BookDetails implements EntityDetails{
-    private String author;
-    private Date yearPublished;
+    protected String author;
+    protected Date yearPublished;
 
     public BookDetails(String author, Date yearPublished) {
         this.author = author;
