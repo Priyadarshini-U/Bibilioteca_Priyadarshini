@@ -24,4 +24,10 @@ public class Catalog {
         }
         return outputString;
     }
+
+    public boolean isBookReturnable(String bookName) {
+        return checked_out_books.containsKey(bookName);
+
+    }
+
 }

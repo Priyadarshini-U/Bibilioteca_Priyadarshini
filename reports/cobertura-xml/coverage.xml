@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.8765432098765432" branch-rate="1.0" lines-covered="71" lines-valid="81" branches-covered="6" branches-valid="6" complexity="1.1666666666666667" version="2.1.1" timestamp="1442470565935">
+<coverage line-rate="0.8780487804878049" branch-rate="1.0" lines-covered="72" lines-valid="82" branches-covered="6" branches-valid="6" complexity="1.1578947368421053" version="2.1.1" timestamp="1442470929087">
 	<sources>
 		<source>src</source>
 	</sources>
 	<packages>
-		<package name="com.tw.bibilioteca" line-rate="0.8765432098765432" branch-rate="1.0" complexity="1.1666666666666667">
+		<package name="com.tw.bibilioteca" line-rate="0.8780487804878049" branch-rate="1.0" complexity="1.1578947368421053">
 			<classes>
 				<class name="com.tw.bibilioteca.BibilioticaApplication" filename="com/tw/bibilioteca/BibilioticaApplication.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 					<methods>
@@ -118,10 +118,10 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/util/Date;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="10" hits="31" branch="false"/>
-								<line number="11" hits="31" branch="false"/>
-								<line number="12" hits="31" branch="false"/>
-								<line number="13" hits="31" branch="false"/>
+								<line number="10" hits="33" branch="false"/>
+								<line number="11" hits="33" branch="false"/>
+								<line number="12" hits="33" branch="false"/>
+								<line number="13" hits="33" branch="false"/>
 							</lines>
 						</method>
 						<method name="toString" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
@@ -133,28 +133,33 @@
 						</method>
 					</methods>
 					<lines>
-						<line number="10" hits="31" branch="false"/>
-						<line number="11" hits="31" branch="false"/>
-						<line number="12" hits="31" branch="false"/>
-						<line number="13" hits="31" branch="false"/>
+						<line number="10" hits="33" branch="false"/>
+						<line number="11" hits="33" branch="false"/>
+						<line number="12" hits="33" branch="false"/>
+						<line number="13" hits="33" branch="false"/>
 						<line number="17" hits="29" branch="false"/>
 						<line number="18" hits="29" branch="false"/>
 						<line number="19" hits="29" branch="false"/>
 					</lines>
 				</class>
-				<class name="com.tw.bibilioteca.Catalog" filename="com/tw/bibilioteca/Catalog.java" line-rate="0.9090909090909091" branch-rate="1.0" complexity="1.3333333333333333">
+				<class name="com.tw.bibilioteca.Catalog" filename="com/tw/bibilioteca/Catalog.java" line-rate="0.9166666666666666" branch-rate="1.0" complexity="1.25">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ljava/util/HashMap;Ljava/util/HashMap;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="9" hits="12" branch="false"/>
-								<line number="10" hits="12" branch="false"/>
-								<line number="11" hits="12" branch="false"/>
-								<line number="12" hits="12" branch="false"/>
+								<line number="9" hits="14" branch="false"/>
+								<line number="10" hits="14" branch="false"/>
+								<line number="11" hits="14" branch="false"/>
+								<line number="12" hits="14" branch="false"/>
 							</lines>
 						</method>
 						<method name="isBookAvailableForCheckOut" signature="(Ljava/lang/String;)Z" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="15" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="isBookReturnable" signature="(Ljava/lang/String;)Z" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="29" hits="2" branch="false"/>
 							</lines>
 						</method>
 						<method name="toString" signature="()Ljava/lang/String;" line-rate="0.8333333333333334" branch-rate="1.0" complexity="0">
@@ -173,10 +178,10 @@
 						</method>
 					</methods>
 					<lines>
-						<line number="9" hits="12" branch="false"/>
-						<line number="10" hits="12" branch="false"/>
-						<line number="11" hits="12" branch="false"/>
-						<line number="12" hits="12" branch="false"/>
+						<line number="9" hits="14" branch="false"/>
+						<line number="10" hits="14" branch="false"/>
+						<line number="11" hits="14" branch="false"/>
+						<line number="12" hits="14" branch="false"/>
 						<line number="15" hits="1" branch="false"/>
 						<line number="20" hits="10" branch="false"/>
 						<line number="21" hits="10" branch="true" condition-coverage="100% (2/2)">
@@ -188,6 +193,7 @@
 						<line number="23" hits="24" branch="false"/>
 						<line number="24" hits="0" branch="false"/>
 						<line number="25" hits="10" branch="false"/>
+						<line number="29" hits="2" branch="false"/>
 					</lines>
 				</class>
 				<class name="com.tw.bibilioteca.ConsoleDisplay" filename="com/tw/bibilioteca/ConsoleDisplay.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
