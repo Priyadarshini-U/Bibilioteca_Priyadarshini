@@ -14,6 +14,7 @@ public class LoginController implements IController {
     @Override
     public IController executeAction() {
         display.putOutput("Enter library Number");
+        String libraryNumber = display.getString();
         return null;
     }
 }
