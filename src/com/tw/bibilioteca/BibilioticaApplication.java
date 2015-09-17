@@ -8,10 +8,12 @@ import java.util.List;
 
 public class BibilioticaApplication {
     private ConsoleDisplay consoleDisplay;
+    private Catalog bookLibrary;
 
     public void start(InputStream inputStream, OutputStream outputStream) {
         consoleDisplay = new ConsoleDisplay(inputStream, outputStream);
-        Menu menu = new Controller(consoleDisplay, new WelcomeMessage(), new Catalog(loadBooks())).executeAction();
+        bookLibrary = new Catalog(loadBooks());
+        Menu menu = new Controller(consoleDisplay, new WelcomeMessage(), bookLibrary).executeAction();
         consoleDisplay.putOutput(menu.toString());
         int choice = consoleDisplay.getInteger();
         menu.choose(choice, new Catalog(loadBooks()));
