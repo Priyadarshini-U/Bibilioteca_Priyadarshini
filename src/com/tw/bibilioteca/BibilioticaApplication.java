@@ -11,8 +11,7 @@ public class BibilioticaApplication {
     private Catalog bookLibrary;
 
     public void start(InputStream inputStream, OutputStream outputStream) {
-        consoleDisplay = new ConsoleDisplay(inputStream, outputStream);
-        bookLibrary = new Catalog(loadBooks());
+        initiateSession(inputStream, outputStream);
         Menu menu = new Controller(consoleDisplay, new WelcomeMessage(), bookLibrary).executeAction();
         consoleDisplay.putOutput(menu.toString());
         int choice = consoleDisplay.getInteger();
@@ -29,5 +28,10 @@ public class BibilioticaApplication {
         bookList.add(book3);
 
         return bookList;
+    }
+
+    private void initiateSession(InputStream inputStream, OutputStream outputStream) {
+        consoleDisplay = new ConsoleDisplay(inputStream, outputStream);
+        bookLibrary = new Catalog(loadBooks());
     }
 }
