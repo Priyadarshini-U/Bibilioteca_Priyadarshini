@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.937799043062201" branch-rate="0.9642857142857143" lines-covered="196" lines-valid="209" branches-covered="27" branches-valid="28" complexity="1.3617021276595744" version="2.1.1" timestamp="1442506735975">
+<coverage line-rate="0.933649289099526" branch-rate="0.9642857142857143" lines-covered="197" lines-valid="211" branches-covered="27" branches-valid="28" complexity="1.3617021276595744" version="2.1.1" timestamp="1442507151294">
 	<sources>
 		<source>src</source>
 	</sources>
 	<packages>
-		<package name="com.tw.bibilioteca" line-rate="0.937799043062201" branch-rate="0.9642857142857143" complexity="1.3617021276595744">
+		<package name="com.tw.bibilioteca" line-rate="0.933649289099526" branch-rate="0.9642857142857143" complexity="1.3617021276595744">
 			<classes>
 				<class name="com.tw.bibilioteca.BibilioticaApplication" filename="com/tw/bibilioteca/BibilioticaApplication.java" line-rate="1.0" branch-rate="1.0" complexity="1.25">
 					<methods>
@@ -442,7 +442,7 @@
 						<line number="32" hits="10" branch="false"/>
 					</lines>
 				</class>
-				<class name="com.tw.bibilioteca.Controller" filename="com/tw/bibilioteca/Controller.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+				<class name="com.tw.bibilioteca.Controller" filename="com/tw/bibilioteca/Controller.java" line-rate="0.8888888888888888" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Lcom/tw/bibilioteca/ConsoleDisplay;Ljava/lang/Object;Lcom/tw/bibilioteca/BibilioticaData;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -453,11 +453,12 @@
 								<line number="14" hits="11" branch="false"/>
 							</lines>
 						</method>
-						<method name="executeAction" signature="()Lcom/tw/bibilioteca/IController;" line-rate="1.0" branch-rate="1.0" complexity="0">
+						<method name="executeAction" signature="()Lcom/tw/bibilioteca/IController;" line-rate="0.75" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="17" hits="10" branch="false"/>
 								<line number="18" hits="10" branch="false"/>
-								<line number="25" hits="10" branch="false"/>
+								<line number="25" hits="0" branch="false"/>
+								<line number="26" hits="10" branch="false"/>
 							</lines>
 						</method>
 					</methods>
@@ -469,7 +470,8 @@
 						<line number="14" hits="11" branch="false"/>
 						<line number="17" hits="10" branch="false"/>
 						<line number="18" hits="10" branch="false"/>
-						<line number="25" hits="10" branch="false"/>
+						<line number="25" hits="0" branch="false"/>
+						<line number="26" hits="10" branch="false"/>
 					</lines>
 				</class>
 				<class name="com.tw.bibilioteca.Controller$1" filename="com/tw/bibilioteca/Controller.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
@@ -483,6 +485,7 @@
 								<line number="22" hits="10" branch="false"/>
 								<line number="23" hits="10" branch="false"/>
 								<line number="24" hits="10" branch="false"/>
+								<line number="25" hits="10" branch="false"/>
 							</lines>
 						</method>
 					</methods>
@@ -494,6 +497,7 @@
 						<line number="22" hits="10" branch="false"/>
 						<line number="23" hits="10" branch="false"/>
 						<line number="24" hits="10" branch="false"/>
+						<line number="25" hits="10" branch="false"/>
 					</lines>
 				</class>
 				<class name="com.tw.bibilioteca.DemoApplication" filename="com/tw/bibilioteca/DemoApplication.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">

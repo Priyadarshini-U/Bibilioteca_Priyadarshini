@@ -21,6 +21,7 @@ public class Controller implements IController{
             add("3. Checkout Book");
             add("4. Return Book");
             add("5. List Movies");
+            add("6. Checkout Movies");
         }});
         return new MenuController(display, menu, libraryData);
     }
