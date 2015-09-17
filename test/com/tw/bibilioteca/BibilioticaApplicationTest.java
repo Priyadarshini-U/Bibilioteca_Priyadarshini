@@ -1,6 +1,8 @@
 package com.tw.bibilioteca;
 
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -11,11 +13,13 @@ import java.util.HashMap;
 import static org.junit.Assert.assertTrue;
 
 public class BibilioticaApplicationTest {
+    @Rule
+    public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
     @Test
     public void shouldPrintWelcomeMessageOnStart() {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        String input ="1\n";
+        String input ="1\n2\n";
         ByteArrayInputStream inputStream = new ByteArrayInputStream(input.getBytes());
         System.setOut(new PrintStream(outputStream));
         new BibilioticaApplication().start(inputStream, outputStream);
@@ -26,7 +30,7 @@ public class BibilioticaApplicationTest {
     @Test
     public void shouldPrintMenuWithListBooksOption() {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        String input ="1\n";
+        String input ="1\n2\n";
         ByteArrayInputStream inputStream = new ByteArrayInputStream(input.getBytes());
         System.setOut(new PrintStream(outputStream));
         new BibilioticaApplication().start(inputStream, outputStream);
@@ -48,11 +52,12 @@ public class BibilioticaApplicationTest {
         bookList.put(bookName2, bookDetails2);
         bookList.put(bookName3, bookDetails3);
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        String input ="1\n";
+        String input ="1\n2\n";
         ByteArrayInputStream inputStream = new ByteArrayInputStream(input.getBytes());
         System.setOut(new PrintStream(outputStream));
         new BibilioticaApplication().start(inputStream, outputStream);
 
         assertTrue(outputStream.toString().contains(new Catalog(bookList, new HashMap<String, BookDetails>()).toString()));
     }
+
 }

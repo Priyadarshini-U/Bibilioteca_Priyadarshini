@@ -1,16 +1,15 @@
 package com.tw.bibilioteca;
 
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.contrib.java.lang.system.ExpectedSystemExit;
+
+import static org.junit.Assert.assertEquals;
 
 public class ExitControllerTest {
-    @Rule
-    public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
     @Test
-    public void shouldExitOnExecution() {
-        exit.expectSystemExit();
-        new ExitController().executeAction();
+    public void shouldReturnExitControllerOnExecution() {
+        IController controller = new ExitController().executeAction();
+
+        assertEquals(controller.getClass(), ExitController.class);
     }
 }
