@@ -8,6 +8,8 @@ public class BibilioticaApplication {
 
     public void start() {
         System.out.println("Welcome to bibiliotica");
+        Menu menu = new Menu(new ArrayList<String>(){{add("1. List Books");}});
+        System.out.println(menu.toString());
     }
 
     private List<Book> loadBooks() {

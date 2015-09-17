@@ -20,4 +20,13 @@ public class BibilioticaApplicationTest {
 
         assertTrue(outputStream.toString().contains("Welcome to bibiliotica"));
     }
+
+    @Test
+    public void shouldPrintMenuWithListBooksOption() {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStream));
+        new BibilioticaApplication().start();
+
+        assertTrue(outputStream.toString().contains("1. List Books"));
+    }
 }
