@@ -1,13 +1,12 @@
 package com.tw.bibilioteca;
 
-import java.util.Date;
 import java.util.List;
 
 public class CheckedOutBookDetails extends BookDetails {
     private String libraryNumber;
 
-    public CheckedOutBookDetails(String author, Date yearPublished, String libraryNumber) {
-        super(author, yearPublished);
+    public CheckedOutBookDetails(BookDetails bookDetails, String libraryNumber) {
+        super(bookDetails);
         this.libraryNumber = libraryNumber;
     }
 

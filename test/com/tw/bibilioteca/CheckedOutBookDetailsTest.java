@@ -12,34 +12,34 @@ public class CheckedOutBookDetailsTest {
     public void shouldContainBookDetailsAsConcatenatedString() {
         String author = "def";
         Date yearPublished = new Date();
-        assertTrue(new CheckedOutBookDetails(author, yearPublished, "011-1111").toString().contains(new BookDetails(author, yearPublished).toString()));
+        assertTrue(new CheckedOutBookDetails(new BookDetails(author, yearPublished), "011-1111").toString().contains(new BookDetails(author, yearPublished).toString()));
     }
 
     @Test
     public void shouldContainBookDetailsAndUserInfoAsConcatenatedString() {
         String author = "def";
         Date yearPublished = new Date();
-        assertTrue(new CheckedOutBookDetails(author, yearPublished, "011-1111").toString().contains(new BookDetails(author, yearPublished).toString()+" 011-1111"));
+        assertTrue(new CheckedOutBookDetails(new BookDetails(author, yearPublished), "011-1111").toString().contains(new BookDetails(author, yearPublished).toString()+" 011-1111"));
     }
 
     @Test
     public void shouldReturnAuthorAsFields() {
         String author = "def";
         Date yearPublished = new Date();
-        assertTrue(new CheckedOutBookDetails(author, yearPublished, "011-1111").fields().contains("author"));
+        assertTrue(new CheckedOutBookDetails(new BookDetails(author, yearPublished), "011-1111").fields().contains("author"));
     }
 
     @Test
     public void shouldReturnYearPublishedAsFields() {
         String author = "def";
         Date yearPublished = new Date();
-        assertTrue(new CheckedOutBookDetails(author, yearPublished, "011-1111").fields().contains("year published"));
+        assertTrue(new CheckedOutBookDetails(new BookDetails(author, yearPublished), "011-1111").fields().contains("year published"));
     }
 
     @Test
     public void shouldReturnUserAsFields() {
         String author = "def";
         Date yearPublished = new Date();
-        assertTrue(new CheckedOutBookDetails(author, yearPublished, "011-1111").fields().contains("user"));
+        assertTrue(new CheckedOutBookDetails(new BookDetails(author, yearPublished), "011-1111").fields().contains("user"));
     }
 }

@@ -15,6 +15,11 @@ public class BookDetails implements EntityDetails{
         this.yearPublished = yearPublished;
     }
 
+    public BookDetails(BookDetails bookDetails) {
+        this.author = bookDetails.author;
+        this.yearPublished = bookDetails.yearPublished;
+    }
+
     @Override
     public String toString() {
         Calendar calendar = Calendar.getInstance();
