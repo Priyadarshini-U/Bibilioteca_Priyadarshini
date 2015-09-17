@@ -125,7 +125,7 @@ public class MenuTest {
         options.add("1. List BookDetails");
         new Menu(options).choose(3, bookCatalog, display);
 
-        verify(display).putOutput("checkout successful");
+        verify(display).putOutput("Checkout succesful");
     }
 
     @Test
@@ -139,7 +139,7 @@ public class MenuTest {
         options.add("1. List BookDetails");
         new Menu(options).choose(3, bookCatalog, display);
 
-        verify(display).putOutput("checkout NOT successful");
+        verify(display).putOutput("Checkout NOT succesful");
     }
 
     @Test
@@ -166,7 +166,7 @@ public class MenuTest {
         options.add("1. List BookDetails");
         new Menu(options).choose(4, bookCatalog, display);
 
-        verify(display).putOutput("return successful");
+        verify(display).putOutput("return succesful");
     }
 
     @Test
@@ -179,6 +179,6 @@ public class MenuTest {
         options.add("1. List BookDetails");
         new Menu(options).choose(4, bookCatalog, display);
 
-        verify(display).putOutput("return NOT successful");
+        verify(display).putOutput("return NOT succesful");
     }
 }

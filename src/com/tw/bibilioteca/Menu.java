@@ -17,26 +17,12 @@ public class Menu {
     public void choose(int optionChoice, Catalog libraryData, ConsoleDisplay display){
         if(optionChoice == 1)
             System.out.print(libraryData);
-        if(optionChoice == 2)
+        else if(optionChoice == 2)
             System.exit(0);
-        if(optionChoice == 3){
-            String bookName = display.getString();
-            if(libraryData.isBookAvailableForCheckOut(bookName)) {
-                libraryData.checkoutEntity(bookName);
-                display.putOutput("checkout successful");
-            }
-            else
-                display.putOutput("checkout NOT successful");
-        }
-        if(optionChoice == 4) {
-            String bookName = display.getString();
-            if(libraryData.isBookReturnable(bookName)) {
-                libraryData.returnEntity(bookName);
-                display.putOutput("return successful");
-            }
-            else
-                display.putOutput("return NOT successful");
-        }
+        else if(optionChoice == 3)
+            new CatalogOperation(display, libraryData).executeCheckout();
+        else if(optionChoice == 4)
+            new CatalogOperation(display, libraryData).executeReturn();
         else
             System.out.print("Invalid Option");
     }
