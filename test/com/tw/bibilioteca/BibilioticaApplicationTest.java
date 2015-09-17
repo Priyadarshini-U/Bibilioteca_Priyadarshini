@@ -16,7 +16,7 @@ public class BibilioticaApplicationTest {
     public void shouldPrintWelcomeMessageOnStart() {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStream));
-        new BibilioticaApplication().start();
+        new BibilioticaApplication(System.in, System.out).start();
 
         assertTrue(outputStream.toString().contains("Welcome to bibiliotica"));
     }
@@ -25,7 +25,7 @@ public class BibilioticaApplicationTest {
     public void shouldPrintMenuWithListBooksOption() {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStream));
-        new BibilioticaApplication().start();
+        new BibilioticaApplication(System.in, System.out).start();
 
         assertTrue(outputStream.toString().contains("1. List Books"));
     }
