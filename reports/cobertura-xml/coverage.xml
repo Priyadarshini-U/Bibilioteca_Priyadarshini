@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.7777777777777778" branch-rate="0.75" lines-covered="28" lines-valid="36" branches-covered="3" branches-valid="4" complexity="1.2222222222222223" version="2.1.1" timestamp="1442456210911">
+<coverage line-rate="0.8181818181818182" branch-rate="0.75" lines-covered="36" lines-valid="44" branches-covered="3" branches-valid="4" complexity="1.1818181818181819" version="2.1.1" timestamp="1442456644934">
 	<sources>
 		<source>src</source>
 	</sources>
 	<packages>
-		<package name="com.tw.bibilioteca" line-rate="0.7777777777777778" branch-rate="0.75" complexity="1.2222222222222223">
+		<package name="com.tw.bibilioteca" line-rate="0.8181818181818182" branch-rate="0.75" complexity="1.1818181818181819">
 			<classes>
 				<class name="com.tw.bibilioteca.BibilioticaApplication" filename="com/tw/bibilioteca/BibilioticaApplication.java" line-rate="0.38461538461538464" branch-rate="1.0" complexity="1.0">
 					<methods>
@@ -128,6 +128,36 @@
 						</line>
 						<line number="16" hits="8" branch="false"/>
 						<line number="17" hits="6" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.tw.bibilioteca.ConsoleDisplay" filename="com/tw/bibilioteca/ConsoleDisplay.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ljava/io/InputStream;Ljava/io/OutputStream;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="13" hits="1" branch="false"/>
+								<line number="14" hits="1" branch="false"/>
+								<line number="15" hits="1" branch="false"/>
+								<line number="16" hits="1" branch="false"/>
+								<line number="17" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="putOutput" signature="(Ljava/lang/Object;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="20" hits="1" branch="false"/>
+								<line number="21" hits="1" branch="false"/>
+								<line number="22" hits="1" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="13" hits="1" branch="false"/>
+						<line number="14" hits="1" branch="false"/>
+						<line number="15" hits="1" branch="false"/>
+						<line number="16" hits="1" branch="false"/>
+						<line number="17" hits="1" branch="false"/>
+						<line number="20" hits="1" branch="false"/>
+						<line number="21" hits="1" branch="false"/>
+						<line number="22" hits="1" branch="false"/>
 					</lines>
 				</class>
 				<class name="com.tw.bibilioteca.Menu" filename="com/tw/bibilioteca/Menu.java" line-rate="1.0" branch-rate="0.5" complexity="1.3333333333333333">
