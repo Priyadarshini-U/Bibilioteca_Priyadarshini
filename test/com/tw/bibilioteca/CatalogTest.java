@@ -124,4 +124,55 @@ public class CatalogTest {
 
         assertFalse(catalog.isBookReturnable(bookName1));
     }
+
+    @Test
+    public void shouldReturnAuthorAsFields() {
+        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
+        BookDetails bookDetails1 = new BookDetails("author", new Date());
+        String bookName1 = "name1";
+        bookList.put(bookName1, bookDetails1);
+
+        assertTrue(new Catalog(new HashMap<String, BookDetails>(), bookList).fields().contains("author"));
+    }
+
+    @Test
+    public void shouldReturnYearPublishedAsFields() {
+        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
+        BookDetails bookDetails1 = new BookDetails("author", new Date());
+        String bookName1 = "name1";
+        bookList.put(bookName1, bookDetails1);
+
+        assertTrue(new Catalog(new HashMap<String, BookDetails>(), bookList).fields().contains("year published"));
+    }
+
+    @Test
+    public void shouldReturnNameAsFields() {
+        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
+        BookDetails bookDetails1 = new BookDetails("author", new Date());
+        String bookName1 = "name1";
+        bookList.put(bookName1, bookDetails1);
+
+        assertTrue(new Catalog(new HashMap<String, BookDetails>(), bookList).fields().contains("name"));
+    }
+
+    @Test
+    public void shouldReturnEntityFieldsIfAvailableEntitesIsEmpty() {
+        HashMap<String, BookDetails> moviesList = new HashMap<String, BookDetails>();
+        String name1 = "name1";
+        BookDetails details = new BookDetails("author1", new Date());
+        moviesList.put(name1, details);
+
+        assertTrue(new Catalog(new HashMap<String, BookDetails>(), moviesList).fields().contains("name"));
+    }
+
+    @Test
+    public void shouldReturnEntityFieldsIfCheckedOutEntitesIsEmpty() {
+        HashMap<String, BookDetails> moviesList = new HashMap<String, BookDetails>();
+        String name1 = "name1";
+        BookDetails details = new BookDetails("author1", new Date());
+        moviesList.put(name1, details);
+
+        assertTrue(new Catalog(moviesList, new HashMap<String, BookDetails>()).fields().contains("name"));
+    }
+
 }

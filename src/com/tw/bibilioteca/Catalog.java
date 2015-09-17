@@ -1,6 +1,8 @@
 package com.tw.bibilioteca;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class Catalog {
     private HashMap<String, BookDetails> available_books;
@@ -39,6 +41,18 @@ public class Catalog {
         BookDetails bookDetails = checked_out_books.get(bookName);
         available_books.put(bookName, bookDetails);
         checked_out_books.remove(bookName);
+    }
+
+    public List<String> fields() {
+        BookDetails entityDetails = null;
+        if (available_books.keySet().iterator().hasNext())
+            entityDetails = available_books.get(available_books.keySet().iterator().next());
+        else
+            entityDetails = checked_out_books.get(checked_out_books.keySet().iterator().next());
+        List<String> fields = new ArrayList<String>();
+        fields.add("name");
+        fields.addAll(entityDetails.fields());
+        return fields;
     }
 
 }
