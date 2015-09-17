@@ -34,6 +34,8 @@ public class Menu {
                 libraryData.returnEntity(bookName);
                 display.putOutput("return successful");
             }
+            else
+                display.putOutput("return NOT successful");
         }
         else
             System.out.print("Invalid Option");

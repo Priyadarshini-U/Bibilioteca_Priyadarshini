@@ -168,4 +168,17 @@ public class MenuTest {
 
         verify(display).putOutput("return successful");
     }
+
+    @Test
+    public void shouldPrintFailureReturnMessageOnReturn() {
+        ConsoleDisplay display = mock(ConsoleDisplay.class);
+        when(display.getString()).thenReturn("name1");
+        Catalog bookCatalog = mock(Catalog.class);
+        when(bookCatalog.isBookReturnable(anyString())).thenReturn(false);
+        List<String> options = new ArrayList<String>();
+        options.add("1. List BookDetails");
+        new Menu(options).choose(4, bookCatalog, display);
+
+        verify(display).putOutput("return NOT successful");
+    }
 }
