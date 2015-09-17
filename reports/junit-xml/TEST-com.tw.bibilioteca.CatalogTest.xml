@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="INPriya.local" name="com.tw.bibilioteca.CatalogTest" skipped="0" tests="26" time="0.204" timestamp="2015-09-17T15:25:57">
+<testsuite errors="0" failures="0" hostname="INPriya.local" name="com.tw.bibilioteca.CatalogTest" skipped="0" tests="26" time="0.208" timestamp="2015-09-17T15:53:06">
   <properties>
     <property name="java.vendor" value="Oracle Corporation" />
     <property name="coverage.summaryxml.dir" value="reports/cobertura-summary-xml" />
@@ -54,7 +54,7 @@
     <property name="java.vm.vendor" value="Oracle Corporation" />
     <property name="gopherProxySet" value="false" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.tw.bibilioteca.CatalogTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/admin/TWU_Biblioteca-master/reports/junit-xml/TEST-com.tw.bibilioteca.CatalogTest.xml crashfile=/Users/admin/TWU_Biblioteca-master/junitvmwatcher5574110449190526021.properties propsfile=/Users/admin/TWU_Biblioteca-master/junit1830655096446469274.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.tw.bibilioteca.CatalogTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/admin/TWU_Biblioteca-master/reports/junit-xml/TEST-com.tw.bibilioteca.CatalogTest.xml crashfile=/Users/admin/TWU_Biblioteca-master/junitvmwatcher4772170123943916546.properties propsfile=/Users/admin/TWU_Biblioteca-master/junit7450668681775519654.properties" />
     <property name="java.class.path" value="/Users/admin/TWU_Biblioteca-master/instrumented:/Users/admin/TWU_Biblioteca-master/out:/Users/admin/TWU_Biblioteca-master/lib/asm-5.0.1.jar:/Users/admin/TWU_Biblioteca-master/lib/asm-analysis-5.0.1.jar:/Users/admin/TWU_Biblioteca-master/lib/asm-commons-5.0.1.jar:/Users/admin/TWU_Biblioteca-master/lib/asm-tree-5.0.1.jar:/Users/admin/TWU_Biblioteca-master/lib/asm-util-5.0.1.jar:/Users/admin/TWU_Biblioteca-master/lib/cobertura-2.1.1-javadoc.jar:/Users/admin/TWU_Biblioteca-master/lib/cobertura-2.1.1-sources.jar:/Users/admin/TWU_Biblioteca-master/lib/cobertura-2.1.1.jar:/Users/admin/TWU_Biblioteca-master/lib/commons-lang3-3.3.2.jar:/Users/admin/TWU_Biblioteca-master/lib/hamcrest-core-1.3.jar:/Users/admin/TWU_Biblioteca-master/lib/jaxen-1.1.4.jar:/Users/admin/TWU_Biblioteca-master/lib/jetty-6.1.14.jar:/Users/admin/TWU_Biblioteca-master/lib/jetty-util-6.1.14.jar:/Users/admin/TWU_Biblioteca-master/lib/junit-4.11.jar:/Users/admin/TWU_Biblioteca-master/lib/logback-classic-1.0.13.jar:/Users/admin/TWU_Biblioteca-master/lib/logback-core-1.0.13.jar:/Users/admin/TWU_Biblioteca-master/lib/mockito-all-1.9.5.jar:/Users/admin/TWU_Biblioteca-master/lib/oro-2.0.8.jar:/Users/admin/TWU_Biblioteca-master/lib/servlet-api-2.5-6.1.14.jar:/Users/admin/TWU_Biblioteca-master/lib/slf4j-api-1.7.5.jar:/Users/admin/TWU_Biblioteca-master/lib/system-rules-1.2.0.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
     <property name="ant.version" value="Apache Ant(TM) version 1.9.6 compiled on June 29 2015" />
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
@@ -79,7 +79,7 @@
     <property name="src.dir" value="src" />
     <property name="ant.project.invoked-targets" value="coverage" />
   </properties>
-  <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldReturnNameAsFields" time="0.145" />
+  <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldReturnNameAsFields" time="0.155" />
   <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldReturnAuthorAsFields" time="0.0" />
   <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldReturnYearPublishedAsFields" time="0.0" />
   <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldContainFirstMovie" time="0.001" />
@@ -88,39 +88,39 @@
   <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldCheckOutAndNotAllowCheckOutOfAlreadyCheckedOutBooks" time="0.0" />
   <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldCheckOutAndNotAllowCheckOutOfAlreadyCheckedOutMovies" time="0.0" />
   <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldCheckIfBookIsNotInAvailableBookList" time="0.0" />
-  <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldReturnEntityFieldsIfCheckedOutEntitesIsEmpty" time="0.001" />
+  <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldReturnEntityFieldsIfCheckedOutEntitesIsEmpty" time="0.0" />
   <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldContainSecondBookInNextLineOfFirstBook" time="0.0" />
   <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldReturnYearReleasedAsFields" time="0.0" />
   <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldReturnEntityFieldsIfAvailableEntitesIsEmptyForMovies" time="0.0" />
   <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldContainFirstBook" time="0.0" />
   <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldContainEmptyStringIfListIsEmpty" time="0.0" />
   <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldReturnEntityFieldsIfAvailableEntitesIsEmpty" time="0.0" />
-  <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldReturnAndNotAllowReturnOfAlreadyReturnedBooks" time="0.001" />
+  <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldReturnAndNotAllowReturnOfAlreadyReturnedBooks" time="0.0" />
   <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldCheckIfMovieIsInAvailableMovieList" time="0.0" />
   <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldCheckIfMovieIsNotInAvailableMovieList" time="0.0" />
-  <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldReturnNameAsFieldsForMovie" time="0.001" />
+  <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldReturnNameAsFieldsForMovie" time="0.0" />
   <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldReturnRatingAsFields" time="0.0" />
   <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldContainSecondMovieInNextLineOfFirstMovie" time="0.0" />
   <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldReturnEntityFieldsIfCheckedOutEntitesIsEmptyForMovies" time="0.0" />
   <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldContainLastBook" time="0.0" />
   <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldCheckIfBookIsInAvailableBookList" time="0.0" />
-  <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldContainLastMovie" time="0.001" />
-  <system-out><![CDATA[20:55:57,446 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
-20:55:57,446 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-20:55:57,446 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/admin/TWU_Biblioteca-master/lib/cobertura-2.1.1-sources.jar!/logback.xml]
-20:55:57,446 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
-20:55:57,446 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/admin/TWU_Biblioteca-master/lib/cobertura-2.1.1.jar!/logback.xml]
-20:55:57,446 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/admin/TWU_Biblioteca-master/lib/cobertura-2.1.1-sources.jar!/logback.xml]
-20:55:57,462 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@5ae9a829 - URL [jar:file:/Users/admin/TWU_Biblioteca-master/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
-20:55:57,500 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
-20:55:57,501 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-20:55:57,507 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
-20:55:57,522 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-20:55:57,549 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
-20:55:57,549 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
-20:55:57,549 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
-20:55:57,550 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
-20:55:57,551 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@6d8a00e3 - Registering current configuration as safe fallback point
+  <testcase classname="com.tw.bibilioteca.CatalogTest" name="shouldContainLastMovie" time="0.0" />
+  <system-out><![CDATA[21:23:06,577 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+21:23:06,577 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+21:23:06,577 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/admin/TWU_Biblioteca-master/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+21:23:06,578 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
+21:23:06,578 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/admin/TWU_Biblioteca-master/lib/cobertura-2.1.1.jar!/logback.xml]
+21:23:06,578 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/admin/TWU_Biblioteca-master/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+21:23:06,593 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@5ae9a829 - URL [jar:file:/Users/admin/TWU_Biblioteca-master/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
+21:23:06,630 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+21:23:06,631 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+21:23:06,640 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+21:23:06,657 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+21:23:06,685 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
+21:23:06,685 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
+21:23:06,685 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+21:23:06,685 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+21:23:06,686 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@6d8a00e3 - Registering current configuration as safe fallback point
 
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
