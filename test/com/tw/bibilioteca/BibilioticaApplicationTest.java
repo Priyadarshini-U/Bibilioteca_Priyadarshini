@@ -19,7 +19,7 @@ public class BibilioticaApplicationTest {
         String input ="1\n";
         ByteArrayInputStream inputStream = new ByteArrayInputStream(input.getBytes());
         System.setOut(new PrintStream(outputStream));
-        new BibilioticaApplication(inputStream, outputStream).start();
+        new BibilioticaApplication().start(inputStream, outputStream);
 
         assertTrue(outputStream.toString().contains("welcome to Bibilioteca"));
     }
@@ -30,7 +30,7 @@ public class BibilioticaApplicationTest {
         String input ="1\n";
         ByteArrayInputStream inputStream = new ByteArrayInputStream(input.getBytes());
         System.setOut(new PrintStream(outputStream));
-        new BibilioticaApplication(inputStream, outputStream).start();
+        new BibilioticaApplication().start(inputStream, outputStream);
 
         assertTrue(outputStream.toString().contains("1. List Books"));
     }
@@ -48,7 +48,7 @@ public class BibilioticaApplicationTest {
         String input ="1\n";
         ByteArrayInputStream inputStream = new ByteArrayInputStream(input.getBytes());
         System.setOut(new PrintStream(outputStream));
-        new BibilioticaApplication(inputStream, outputStream).start();
+        new BibilioticaApplication().start(inputStream, outputStream);
 
         assertTrue(outputStream.toString().contains(new Catalog(bookList).toString()));
     }
