@@ -33,6 +33,6 @@ public class ControllerTest {
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(inContent, new PrintStream(outContent));
         Controller controller = new Controller(consoleDisplay, welcomeScreen,  null);
 
-        assertEquals(controller.executeAction().getClass(), Menu.class);
+        assertEquals(controller.executeAction().getClass(), MenuController.class);
     }
 }

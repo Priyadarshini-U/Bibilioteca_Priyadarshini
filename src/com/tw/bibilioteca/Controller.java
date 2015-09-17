@@ -13,13 +13,14 @@ public class Controller {
         this.libraryData = libraryData;
     }
 
-    public Menu executeAction() {
+    public MenuController executeAction() {
         display.putOutput(current);
-        return new Menu(new ArrayList<String>() {{
+        Menu menu = new Menu(new ArrayList<String>() {{
             add("1. List Books");
             add("2. quit");
             add("3. Checkout Book");
             add("4. Return Book");
         }});
+        return new MenuController(display, menu, libraryData);
     }
 }

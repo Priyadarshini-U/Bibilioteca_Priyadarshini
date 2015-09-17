@@ -1,91 +1,71 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.8421052631578947" branch-rate="1.0" lines-covered="112" lines-valid="133" branches-covered="14" branches-valid="14" complexity="1.2592592592592593" version="2.1.1" timestamp="1442494976701">
+<coverage line-rate="0.9193548387096774" branch-rate="1.0" lines-covered="114" lines-valid="124" branches-covered="14" branches-valid="14" complexity="1.2592592592592593" version="2.1.1" timestamp="1442495602808">
 	<sources>
 		<source>src</source>
 	</sources>
 	<packages>
-		<package name="com.tw.bibilioteca" line-rate="0.8421052631578947" branch-rate="1.0" complexity="1.2592592592592593">
+		<package name="com.tw.bibilioteca" line-rate="0.9193548387096774" branch-rate="1.0" complexity="1.2592592592592593">
 			<classes>
-				<class name="com.tw.bibilioteca.BibilioticaApplication" filename="com/tw/bibilioteca/BibilioticaApplication.java" line-rate="0.7241379310344828" branch-rate="1.0" complexity="1.0">
+				<class name="com.tw.bibilioteca.BibilioticaApplication" filename="com/tw/bibilioteca/BibilioticaApplication.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 					<methods>
-						<method name="&lt;init&gt;" signature="()V" line-rate="0.5" branch-rate="1.0" complexity="0">
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="8" hits="3" branch="false"/>
-								<line number="10" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="initiateSession" signature="(Ljava/io/InputStream;Ljava/io/OutputStream;)V" line-rate="0.6" branch-rate="1.0" complexity="0">
+						<method name="initiateSession" signature="(Ljava/io/InputStream;Ljava/io/OutputStream;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
+								<line number="34" hits="3" branch="false"/>
+								<line number="35" hits="3" branch="false"/>
 								<line number="36" hits="3" branch="false"/>
-								<line number="37" hits="3" branch="false"/>
-								<line number="38" hits="3" branch="false"/>
-								<line number="39" hits="0" branch="false"/>
-								<line number="40" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="loadBooks" signature="()Ljava/util/HashMap;" line-rate="0.7857142857142857" branch-rate="1.0" complexity="0">
+						<method name="loadBooks" signature="()Ljava/util/HashMap;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
+								<line number="19" hits="3" branch="false"/>
+								<line number="20" hits="3" branch="false"/>
 								<line number="21" hits="3" branch="false"/>
 								<line number="22" hits="3" branch="false"/>
 								<line number="23" hits="3" branch="false"/>
 								<line number="24" hits="3" branch="false"/>
 								<line number="25" hits="3" branch="false"/>
-								<line number="26" hits="3" branch="false"/>
 								<line number="27" hits="3" branch="false"/>
-								<line number="28" hits="0" branch="false"/>
+								<line number="28" hits="3" branch="false"/>
 								<line number="29" hits="3" branch="false"/>
 								<line number="30" hits="3" branch="false"/>
-								<line number="31" hits="3" branch="false"/>
-								<line number="32" hits="3" branch="false"/>
-								<line number="33" hits="0" branch="false"/>
-								<line number="34" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="start" signature="(Ljava/io/InputStream;Ljava/io/OutputStream;)V" line-rate="0.75" branch-rate="1.0" complexity="0">
+						<method name="start" signature="(Ljava/io/InputStream;Ljava/io/OutputStream;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="13" hits="3" branch="false"/>
 								<line number="14" hits="3" branch="false"/>
 								<line number="15" hits="3" branch="false"/>
 								<line number="16" hits="3" branch="false"/>
-								<line number="17" hits="3" branch="false"/>
-								<line number="18" hits="3" branch="false"/>
-								<line number="19" hits="0" branch="false"/>
-								<line number="20" hits="0" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
 						<line number="8" hits="3" branch="false"/>
-						<line number="10" hits="0" branch="false"/>
 						<line number="13" hits="3" branch="false"/>
 						<line number="14" hits="3" branch="false"/>
 						<line number="15" hits="3" branch="false"/>
 						<line number="16" hits="3" branch="false"/>
-						<line number="17" hits="3" branch="false"/>
-						<line number="18" hits="3" branch="false"/>
-						<line number="19" hits="0" branch="false"/>
-						<line number="20" hits="0" branch="false"/>
+						<line number="19" hits="3" branch="false"/>
+						<line number="20" hits="3" branch="false"/>
 						<line number="21" hits="3" branch="false"/>
 						<line number="22" hits="3" branch="false"/>
 						<line number="23" hits="3" branch="false"/>
 						<line number="24" hits="3" branch="false"/>
 						<line number="25" hits="3" branch="false"/>
-						<line number="26" hits="3" branch="false"/>
 						<line number="27" hits="3" branch="false"/>
-						<line number="28" hits="0" branch="false"/>
+						<line number="28" hits="3" branch="false"/>
 						<line number="29" hits="3" branch="false"/>
 						<line number="30" hits="3" branch="false"/>
-						<line number="31" hits="3" branch="false"/>
-						<line number="32" hits="3" branch="false"/>
-						<line number="33" hits="0" branch="false"/>
-						<line number="34" hits="0" branch="false"/>
+						<line number="34" hits="3" branch="false"/>
+						<line number="35" hits="3" branch="false"/>
 						<line number="36" hits="3" branch="false"/>
-						<line number="37" hits="3" branch="false"/>
-						<line number="38" hits="3" branch="false"/>
-						<line number="39" hits="0" branch="false"/>
-						<line number="40" hits="0" branch="false"/>
 					</lines>
 				</class>
 				<class name="com.tw.bibilioteca.BibilioticaApplication$1" filename="com/tw/bibilioteca/BibilioticaApplication.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
@@ -361,10 +341,11 @@
 								<line number="14" hits="5" branch="false"/>
 							</lines>
 						</method>
-						<method name="executeAction" signature="()Lcom/tw/bibilioteca/Menu;" line-rate="1.0" branch-rate="1.0" complexity="0">
+						<method name="executeAction" signature="()Lcom/tw/bibilioteca/MenuController;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="17" hits="5" branch="false"/>
 								<line number="18" hits="5" branch="false"/>
+								<line number="24" hits="5" branch="false"/>
 							</lines>
 						</method>
 					</methods>
@@ -376,18 +357,19 @@
 						<line number="14" hits="5" branch="false"/>
 						<line number="17" hits="5" branch="false"/>
 						<line number="18" hits="5" branch="false"/>
+						<line number="24" hits="5" branch="false"/>
 					</lines>
 				</class>
-				<class name="com.tw.bibilioteca.Controller$1" filename="com/tw/bibilioteca/Controller.java" line-rate="0.5" branch-rate="1.0" complexity="1.0">
+				<class name="com.tw.bibilioteca.Controller$1" filename="com/tw/bibilioteca/Controller.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 					<methods>
-						<method name="&lt;init&gt;" signature="(Lcom/tw/bibilioteca/Controller;)V" line-rate="0.5" branch-rate="1.0" complexity="0">
+						<method name="&lt;init&gt;" signature="(Lcom/tw/bibilioteca/Controller;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="18" hits="5" branch="false"/>
 								<line number="19" hits="5" branch="false"/>
 								<line number="20" hits="5" branch="false"/>
-								<line number="21" hits="0" branch="false"/>
-								<line number="22" hits="0" branch="false"/>
-								<line number="23" hits="0" branch="false"/>
+								<line number="21" hits="5" branch="false"/>
+								<line number="22" hits="5" branch="false"/>
+								<line number="23" hits="5" branch="false"/>
 							</lines>
 						</method>
 					</methods>
@@ -395,9 +377,9 @@
 						<line number="18" hits="5" branch="false"/>
 						<line number="19" hits="5" branch="false"/>
 						<line number="20" hits="5" branch="false"/>
-						<line number="21" hits="0" branch="false"/>
-						<line number="22" hits="0" branch="false"/>
-						<line number="23" hits="0" branch="false"/>
+						<line number="21" hits="5" branch="false"/>
+						<line number="22" hits="5" branch="false"/>
+						<line number="23" hits="5" branch="false"/>
 					</lines>
 				</class>
 				<class name="com.tw.bibilioteca.Menu" filename="com/tw/bibilioteca/Menu.java" line-rate="1.0" branch-rate="1.0" complexity="2.3333333333333335">
@@ -482,30 +464,30 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="(Lcom/tw/bibilioteca/ConsoleDisplay;Lcom/tw/bibilioteca/Menu;Lcom/tw/bibilioteca/Catalog;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="8" hits="8" branch="false"/>
-								<line number="9" hits="8" branch="false"/>
-								<line number="10" hits="8" branch="false"/>
-								<line number="11" hits="8" branch="false"/>
-								<line number="12" hits="8" branch="false"/>
+								<line number="8" hits="16" branch="false"/>
+								<line number="9" hits="16" branch="false"/>
+								<line number="10" hits="16" branch="false"/>
+								<line number="11" hits="16" branch="false"/>
+								<line number="12" hits="16" branch="false"/>
 							</lines>
 						</method>
 						<method name="executeAction" signature="()Lcom/tw/bibilioteca/MenuController;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="15" hits="4" branch="false"/>
-								<line number="16" hits="4" branch="false"/>
-								<line number="17" hits="4" branch="false"/>
+								<line number="15" hits="7" branch="false"/>
+								<line number="16" hits="7" branch="false"/>
+								<line number="17" hits="7" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="8" hits="8" branch="false"/>
-						<line number="9" hits="8" branch="false"/>
-						<line number="10" hits="8" branch="false"/>
-						<line number="11" hits="8" branch="false"/>
-						<line number="12" hits="8" branch="false"/>
-						<line number="15" hits="4" branch="false"/>
-						<line number="16" hits="4" branch="false"/>
-						<line number="17" hits="4" branch="false"/>
+						<line number="8" hits="16" branch="false"/>
+						<line number="9" hits="16" branch="false"/>
+						<line number="10" hits="16" branch="false"/>
+						<line number="11" hits="16" branch="false"/>
+						<line number="12" hits="16" branch="false"/>
+						<line number="15" hits="7" branch="false"/>
+						<line number="16" hits="7" branch="false"/>
+						<line number="17" hits="7" branch="false"/>
 					</lines>
 				</class>
 				<class name="com.tw.bibilioteca.WelcomeMessage" filename="com/tw/bibilioteca/WelcomeMessage.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
