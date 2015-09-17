@@ -14,6 +14,6 @@ public class Users {
     }
 
     public User getUserInformationFromToken(String token){
-        return null;
+        return userInformation.get(token);
     }
 }
