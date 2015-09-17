@@ -20,6 +20,8 @@ public class LoginController implements IController {
         String sessionToken = current.authenticate(libraryNumber, password);
         if (new Users().getUserRole(sessionToken).equals(UserRole.GUEST))
             display.putOutput("Login Failed");
+        else
+            display.putOutput("Login Succesful");
         return null;
     }
 }

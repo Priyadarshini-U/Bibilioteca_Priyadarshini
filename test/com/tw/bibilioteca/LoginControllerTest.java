@@ -115,4 +115,22 @@ public class LoginControllerTest {
         assertTrue(outContent.toString().contains("Login Failed"));
     }
 
+    @Test
+    public void shouldPrintSuccessfulMessageForValidLogin() {
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        String input = "011-1111\n1\n";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
+        BookDetails bookDetails1 = new BookDetails("author", new Date());
+        String bookName1 = "name1";
+        bookList.put(bookName1, bookDetails1);
+        Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(inContent, new PrintStream(outContent));
+        BibilioticaData data = new BibilioticaData(catalog, null);
+        IController controller = new LoginController(consoleDisplay, new Login(), data);
+        controller.executeAction();
+
+        assertTrue(outContent.toString().contains("Login Succesful"));
+    }
+
 }
