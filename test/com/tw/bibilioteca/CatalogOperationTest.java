@@ -78,9 +78,9 @@ public class CatalogOperationTest {
         when(consoleDisplay.getString()).thenReturn("name1");
 
         CatalogOperation catalogOperation = new CatalogOperation(consoleDisplay, catalog);
-        catalogOperation.executeReturn();
+        catalogOperation.executeReturn("011-1111");
 
-        verify(catalog).isEntityReturnable("name1");
+        verify(catalog).isEntityReturnable("name1", "011-1111");
     }
 
     @Test
@@ -88,12 +88,12 @@ public class CatalogOperationTest {
         Catalog catalog = mock(Catalog.class);
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
         when(consoleDisplay.getString()).thenReturn("name1");
-        when(catalog.isEntityReturnable(anyString())).thenReturn(true);
+        when(catalog.isEntityReturnable(anyString(), anyString())).thenReturn(true);
 
         CatalogOperation catalogOperation = new CatalogOperation(consoleDisplay, catalog);
-        catalogOperation.executeReturn();
+        catalogOperation.executeReturn("011-1111");
 
-        verify(catalog).returnEntity("name1");
+        verify(catalog).returnEntity(anyString());
     }
 
     @Test
@@ -101,10 +101,10 @@ public class CatalogOperationTest {
         Catalog catalog = mock(Catalog.class);
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
         when(consoleDisplay.getString()).thenReturn("name1");
-        when(catalog.isEntityReturnable(anyString())).thenReturn(false);
+        when(catalog.isEntityReturnable(anyString(), anyString())).thenReturn(false);
 
         CatalogOperation catalogOperation = new CatalogOperation(consoleDisplay, catalog);
-        catalogOperation.executeReturn();
+        catalogOperation.executeReturn("011-1111");
 
         verify(catalog, times(0)).checkoutEntity("name1", "32202222");
     }
@@ -114,10 +114,10 @@ public class CatalogOperationTest {
         Catalog catalog = mock(Catalog.class);
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
         when(consoleDisplay.getString()).thenReturn("name1");
-        when(catalog.isEntityReturnable(anyString())).thenReturn(true);
+        when(catalog.isEntityReturnable(anyString(), anyString())).thenReturn(true);
 
         CatalogOperation catalogOperation = new CatalogOperation(consoleDisplay, catalog);
-        catalogOperation.executeReturn();
+        catalogOperation.executeReturn("011-1111");
 
         verify(consoleDisplay).putOutput("Return succesful");
     }
@@ -127,10 +127,10 @@ public class CatalogOperationTest {
         Catalog catalog = mock(Catalog.class);
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
         when(consoleDisplay.getString()).thenReturn("name1");
-        when(catalog.isEntityReturnable(anyString())).thenReturn(false);
+        when(catalog.isEntityReturnable(anyString(), anyString())).thenReturn(false);
 
         CatalogOperation catalogOperation = new CatalogOperation(consoleDisplay, catalog);
-        catalogOperation.executeReturn();
+        catalogOperation.executeReturn("011-1111");
 
         verify(consoleDisplay).putOutput("Return NOT succesful");
     }

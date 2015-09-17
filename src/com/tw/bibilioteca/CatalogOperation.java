@@ -19,9 +19,9 @@ public class CatalogOperation {
         return catalogData;
     }
 
-    public Catalog executeReturn() {
+    public Catalog executeReturn(String user) {
         String name = display.getString();
-        if (catalogData.isEntityReturnable(name)) {
+        if (catalogData.isEntityReturnable(name, user)) {
             catalogData.returnEntity(name);
             display.putOutput("Return succesful");
         } else

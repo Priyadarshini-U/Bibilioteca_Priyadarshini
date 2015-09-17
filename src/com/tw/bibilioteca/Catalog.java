@@ -31,12 +31,17 @@ public class Catalog {
         return output;
     }
 
-    public boolean isEntityReturnable(String bookName) {
-        return checked_outEntites.containsKey(bookName);
+    public boolean isEntityReturnable(String bookName, String user) {
+        if(checked_outEntites.containsKey(bookName)) {
+            CheckedOutDetails details = (CheckedOutDetails) checked_outEntites.get(bookName);
+            return details.getLibraryNumber().equals(user);
+        }
+        return false;
     }
 
     public void returnEntity(String bookName) {
-        EntityDetails bookDetails = checked_outEntites.get(bookName);
+        CheckedOutDetails details = (CheckedOutDetails) checked_outEntites.get(bookName);
+        EntityDetails bookDetails = details.getEntityDetails();
         availableEntities.put(bookName, bookDetails);
         checked_outEntites.remove(bookName);
 

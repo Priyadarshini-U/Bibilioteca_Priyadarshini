@@ -16,6 +16,13 @@ public class CheckedOutDetails implements EntityDetails{
         return entityDetails.toString() + " " + libraryNumber;
     }
 
+    public String getLibraryNumber(){
+        return libraryNumber;
+    }
+
+    public EntityDetails getEntityDetails(){
+        return entityDetails;
+    }
     public List<String> fields() {
         List<String> bookFields = entityDetails.fields();
         bookFields.add("user");

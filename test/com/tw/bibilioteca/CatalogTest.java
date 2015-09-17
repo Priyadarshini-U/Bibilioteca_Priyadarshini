@@ -84,18 +84,43 @@ public class CatalogTest {
         bookList.put(bookName1, bookDetails1);
         Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
 
-        assertFalse(catalog.isEntityReturnable(bookName2));
+        assertFalse(catalog.isEntityReturnable(bookName2, "011-1111"));
     }
 
     @Test
     public void shouldCheckIfBookIsReturnable() {
         HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
         EntityDetails bookDetails1 = new BookDetails("author", new Date());
+        CheckedOutDetails checkedOutDetails = new CheckedOutDetails(bookDetails1, "011-1111");
         String bookName1 = "name1";
-        bookList.put(bookName1, bookDetails1);
+        bookList.put(bookName1, checkedOutDetails);
         Catalog catalog = new Catalog(new HashMap<String, EntityDetails>(), bookList);
 
-        assertTrue(catalog.isEntityReturnable(bookName1));
+        assertTrue(catalog.isEntityReturnable(bookName1, "011-1111"));
+    }
+
+    @Test
+    public void shouldCheckIfBookIsReturnableForSameUser() {
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
+        EntityDetails bookDetails1 = new BookDetails("author", new Date());
+        CheckedOutDetails checkedOutDetails = new CheckedOutDetails(bookDetails1, "011-1111");
+        String bookName1 = "name1";
+        bookList.put(bookName1, checkedOutDetails);
+        Catalog catalog = new Catalog(new HashMap<String, EntityDetails>(), bookList);
+
+        assertTrue(catalog.isEntityReturnable(bookName1, "011-1111"));
+    }
+
+    @Test
+    public void shouldCheckIfBookIsNotReturnableForDifferentUser() {
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
+        EntityDetails bookDetails1 = new BookDetails("author", new Date());
+        CheckedOutDetails checkedOutDetails = new CheckedOutDetails(bookDetails1, "022-2222");
+        String bookName1 = "name1";
+        bookList.put(bookName1, checkedOutDetails);
+        Catalog catalog = new Catalog(new HashMap<String, EntityDetails>(), bookList);
+
+        assertFalse(catalog.isEntityReturnable(bookName1, "011-1111"));
     }
 
     @Test
@@ -115,12 +140,13 @@ public class CatalogTest {
     public void shouldReturnAndNotAllowReturnOfAlreadyReturnedBooks() {
         HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
         EntityDetails bookDetails1 = new BookDetails("author", new Date());
+        CheckedOutDetails checkedOutDetails = new CheckedOutDetails(bookDetails1, "022-2222");
         String bookName1 = "name1";
-        bookList.put(bookName1, bookDetails1);
+        bookList.put(bookName1, checkedOutDetails);
         Catalog catalog = new Catalog(new HashMap<String, EntityDetails>(), bookList);
         catalog.returnEntity(bookName1);
 
-        assertFalse(catalog.isEntityReturnable(bookName1));
+        assertFalse(catalog.isEntityReturnable(bookName1, "011-1111"));
     }
 
     @Test
@@ -172,8 +198,6 @@ public class CatalogTest {
 
         assertTrue(new Catalog(moviesList, new HashMap<String, EntityDetails>()).fields().contains("name"));
     }
-
-    ///
 
     @Test
     public void shouldContainFirstMovie() {
@@ -240,7 +264,7 @@ public class CatalogTest {
         bookList.put(name1, movieDetails1);
         Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
 
-        assertFalse(catalog.isEntityReturnable(name2));
+        assertFalse(catalog.isEntityReturnable(name2, "011-1111"));
     }
 
     @Test
