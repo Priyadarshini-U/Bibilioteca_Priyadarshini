@@ -16,7 +16,7 @@ public class Menu {
 
     public void choose(int optionChoice, Catalog libraryData, ConsoleDisplay display){
         if(optionChoice == 1)
-            System.out.print(libraryData);
+            display.putOutput(libraryData);
         else if(optionChoice == 2)
             System.exit(0);
         else if(optionChoice == 3)
@@ -24,6 +24,6 @@ public class Menu {
         else if(optionChoice == 4)
             new CatalogOperation(display, libraryData).executeReturn();
         else
-            System.out.print("Invalid Option");
+            display.putOutput("Invalid Option");
     }
 }
