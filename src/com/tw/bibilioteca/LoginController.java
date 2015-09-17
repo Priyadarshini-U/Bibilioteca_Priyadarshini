@@ -15,6 +15,7 @@ public class LoginController implements IController {
     public IController executeAction() {
         display.putOutput("Enter library Number");
         String libraryNumber = display.getString();
+        display.putOutput("Enter Password");
         return null;
     }
 }
