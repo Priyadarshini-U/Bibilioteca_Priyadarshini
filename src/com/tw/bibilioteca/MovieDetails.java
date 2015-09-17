@@ -5,7 +5,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-public class MovieDetails {
+public class MovieDetails implements EntityDetails{
     private Date yearReleased;
     private String director;
     private Double rating;

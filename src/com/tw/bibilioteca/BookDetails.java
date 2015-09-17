@@ -1,11 +1,12 @@
 package com.tw.bibilioteca;
 
+import javax.swing.text.html.parser.Entity;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-public class BookDetails {
+public class BookDetails implements EntityDetails{
     private String author;
     private Date yearPublished;
 

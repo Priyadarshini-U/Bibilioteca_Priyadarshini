@@ -17,7 +17,7 @@ public class MovieDetailsTest {
 
         assertEquals(new MovieDetails(yearRealeased, director, rating).toString(), "2015 asd 3.0");
     }
-    
+
     @Test
     public void shouldReturnYearReleasedAsFields() {
         Date yearRealeased = new Date();
