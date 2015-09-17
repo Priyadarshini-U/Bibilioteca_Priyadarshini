@@ -26,6 +26,7 @@ public class MenuControllerTest {
         add("CheckOut Book");
         add("CheckOut Movie");
         add("return Book");
+        add("Log in");
     }};
 
     @Test
@@ -167,5 +168,24 @@ public class MenuControllerTest {
         result.executeAction();
 
         assertFalse(catalog.isEntityAvailableForCheckOut(name1));
+    }
+
+    @Test
+    public void shouldReturnLoginControllerForLoginOption() {
+        Menu menu = new Menu(optionsMenu);
+
+        HashMap<String, EntityDetails> moviesList = new HashMap<String, EntityDetails>();
+        String name1 = "name1";
+        EntityDetails details = new MovieDetails(new Date(), "author1", 3.0);
+        moviesList.put(name1, details);
+        Catalog catalog = new Catalog(moviesList, new HashMap<String, EntityDetails>());
+        ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
+        when(consoleDisplay.getString()).thenReturn("name1");
+        when(consoleDisplay.getInteger()).thenReturn(7);
+
+        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(null, catalog, new GuestUser().authenticate()));
+        IController result = controller.executeAction();
+
+        assertEquals(result.getClass(), LoginController.class);
     }
 }

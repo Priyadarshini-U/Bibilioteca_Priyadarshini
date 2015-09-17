@@ -15,6 +15,8 @@ public class MenuController implements IController{
         display.putOutput(currentModel);
         String operation = currentModel.choose(display.getInteger());
         String choice = operation;
+        if (choice.equals("Log in"))
+            return new LoginController(display, new Login(), libraryData);
         if (choice.equals("List Books"))
             return new Controller(display, new EntityView(libraryData.getBookLibrary()), libraryData);
         if (choice.equals("List Movies"))
