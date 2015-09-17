@@ -64,7 +64,7 @@ public class MenuControllerTest {
         String input = "1\n";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(inContent, System.out);
-        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(catalog, null));
+        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(catalog, null, new GuestUser().authenticate()));
         IController result = controller.executeAction();
 
         assertEquals(result.getClass(), Controller.class);
@@ -83,7 +83,7 @@ public class MenuControllerTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(inContent, new PrintStream(outContent));
-        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(catalog, null));
+        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(catalog, null, new GuestUser().authenticate()));
         IController result = controller.executeAction();
         result.executeAction();
         System.setIn(System.in);
@@ -103,7 +103,7 @@ public class MenuControllerTest {
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
         when(consoleDisplay.getInteger()).thenReturn(4);
         when(consoleDisplay.getString()).thenReturn("name1");
-        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(catalog, null));
+        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(catalog, null, new GuestUser().authenticate()));
         IController result = controller.executeAction();
         result.executeAction();
 
@@ -122,7 +122,7 @@ public class MenuControllerTest {
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
         when(consoleDisplay.getString()).thenReturn("name1");
         when(consoleDisplay.getInteger()).thenReturn(6);
-        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(catalog, null));
+        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(catalog, null, new GuestUser().authenticate()));
         IController result = controller.executeAction();
         result.executeAction();
 
@@ -142,7 +142,7 @@ public class MenuControllerTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(inContent, new PrintStream(outContent));
-        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(null, catalog));
+        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(null, catalog, new GuestUser().authenticate()));
         IController result = controller.executeAction();
         result.executeAction();
 
@@ -162,7 +162,7 @@ public class MenuControllerTest {
         when(consoleDisplay.getString()).thenReturn("name1");
         when(consoleDisplay.getInteger()).thenReturn(5);
 
-        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(null, catalog));
+        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(null, catalog, new GuestUser().authenticate()));
         IController result = controller.executeAction();
         result.executeAction();
 

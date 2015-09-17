@@ -51,6 +51,6 @@ public class BibilioticaApplication {
         consoleDisplay = new ConsoleDisplay(inputStream, outputStream);
         Catalog books = new Catalog(loadBooks(), new HashMap<String, EntityDetails>());
         Catalog movies = new Catalog(loadMovies(), new HashMap<String, EntityDetails>());
-        library = new BibilioticaData(books, movies);
+        library = new BibilioticaData(books, movies, new GuestUser().authenticate());
     }
 }

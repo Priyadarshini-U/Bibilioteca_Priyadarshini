@@ -25,7 +25,7 @@ public class LoginControllerTest {
         bookList.put(bookName1, bookDetails1);
         Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(inContent, new PrintStream(outContent));
-        BibilioticaData data = new BibilioticaData(catalog, null);
+        BibilioticaData data = new BibilioticaData(catalog, null, new GuestUser().authenticate());
         IController controller = new LoginController(consoleDisplay, new Login(), data);
         controller.executeAction();
 
@@ -40,7 +40,7 @@ public class LoginControllerTest {
         bookList.put(bookName1, bookDetails1);
         Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
-        BibilioticaData data = new BibilioticaData(catalog, null);
+        BibilioticaData data = new BibilioticaData(catalog, null, new GuestUser().authenticate());
         IController controller = new LoginController(consoleDisplay, new Login(), data);
         controller.executeAction();
 
@@ -58,7 +58,7 @@ public class LoginControllerTest {
         bookList.put(bookName1, bookDetails1);
         Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(inContent, new PrintStream(outContent));
-        BibilioticaData data = new BibilioticaData(catalog, null);
+        BibilioticaData data = new BibilioticaData(catalog, null, new GuestUser().authenticate());
         IController controller = new LoginController(consoleDisplay, new Login(), data);
         controller.executeAction();
 
@@ -73,7 +73,7 @@ public class LoginControllerTest {
         bookList.put(bookName1, bookDetails1);
         Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
-        BibilioticaData data = new BibilioticaData(catalog, null);
+        BibilioticaData data = new BibilioticaData(catalog, null, new GuestUser().authenticate());
         IController controller = new LoginController(consoleDisplay, new Login(), data);
         controller.executeAction();
 
@@ -89,7 +89,7 @@ public class LoginControllerTest {
         Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
         when(consoleDisplay.getString()).thenReturn("011-1111").thenReturn("1");
-        BibilioticaData data = new BibilioticaData(catalog, null);
+        BibilioticaData data = new BibilioticaData(catalog, null, new GuestUser().authenticate());
         Login login = mock(Login.class);
         when(login.authenticate(anyString(), anyString())).thenReturn(new GuestUser().authenticate());
         IController controller = new LoginController(consoleDisplay, login, data);
@@ -109,7 +109,7 @@ public class LoginControllerTest {
         bookList.put(bookName1, bookDetails1);
         Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(inContent, new PrintStream(outContent));
-        BibilioticaData data = new BibilioticaData(catalog, null);
+        BibilioticaData data = new BibilioticaData(catalog, null, new GuestUser().authenticate());
         IController controller = new LoginController(consoleDisplay, new Login(), data);
         controller.executeAction();
 
@@ -127,7 +127,7 @@ public class LoginControllerTest {
         bookList.put(bookName1, bookDetails1);
         Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(inContent, new PrintStream(outContent));
-        BibilioticaData data = new BibilioticaData(catalog, null);
+        BibilioticaData data = new BibilioticaData(catalog, null, new GuestUser().authenticate());
         IController controller = new LoginController(consoleDisplay, new Login(), data);
         controller.executeAction();
 
@@ -145,7 +145,7 @@ public class LoginControllerTest {
         bookList.put(bookName1, bookDetails1);
         Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(inContent, new PrintStream(outContent));
-        BibilioticaData data = new BibilioticaData(catalog, null);
+        BibilioticaData data = new BibilioticaData(catalog, null, new GuestUser().authenticate());
         IController controller = new LoginController(consoleDisplay, new Login(), data);
         IController result = controller.executeAction();
 
@@ -163,7 +163,7 @@ public class LoginControllerTest {
         bookList.put(bookName1, bookDetails1);
         Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(inContent, new PrintStream(outContent));
-        BibilioticaData data = new BibilioticaData(catalog, null);
+        BibilioticaData data = new BibilioticaData(catalog, null, new GuestUser().authenticate());
         IController controller = new LoginController(consoleDisplay, new Login(), data);
         IController result = controller.executeAction();
         result.executeAction();

@@ -23,7 +23,7 @@ public class BibilioticaDataTest {
         MovieDetails movieDetails = new MovieDetails(yearRealeased, director, rating);
         movieList.put(bookName1, movieDetails);
         Catalog movieCatalog = new Catalog(movieList, new HashMap<String, EntityDetails>());
-        BibilioticaData session = new BibilioticaData(catalog, movieCatalog);
+        BibilioticaData session = new BibilioticaData(catalog, movieCatalog, new GuestUser().authenticate());
 
         assertEquals(session.getBookLibrary(), catalog);
     }
@@ -42,8 +42,15 @@ public class BibilioticaDataTest {
         MovieDetails movieDetails = new MovieDetails(yearRealeased, director, rating);
         movieList.put(bookName1, movieDetails);
         Catalog movieCatalog = new Catalog(movieList, new HashMap<String, EntityDetails>());
-        BibilioticaData session = new BibilioticaData(catalog, movieCatalog);
+        BibilioticaData session = new BibilioticaData(catalog, movieCatalog, new GuestUser().authenticate());
 
         assertEquals(session.getMoviesLibrary(), movieCatalog);
+    }
+
+    @Test
+    public void sholdReturnSessionToken() {
+        BibilioticaData session = new BibilioticaData(null, null, "token");
+
+        assertEquals(session.getSessionToken(), "token");
     }
 }
