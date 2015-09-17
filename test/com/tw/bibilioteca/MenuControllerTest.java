@@ -27,7 +27,7 @@ public class MenuControllerTest {
 
     @Test
     public void shouldReturnNewMenuController(){
-        Catalog catalog = mock(Catalog.class);
+        BibilioticaData catalog = mock(BibilioticaData.class);
         ConsoleDisplay display = mock(ConsoleDisplay.class);
         when(display.getString()).thenReturn("1\n");
         Menu menu = mock(Menu.class);
@@ -37,7 +37,7 @@ public class MenuControllerTest {
 
     @Test
     public void shouldPrintMenu(){
-        Catalog catalog = mock(Catalog.class);
+        BibilioticaData catalog = mock(BibilioticaData.class);
         ConsoleDisplay display = mock(ConsoleDisplay.class);
         when(display.getString()).thenReturn("1\n");
         Menu menu = mock(Menu.class);
@@ -48,7 +48,7 @@ public class MenuControllerTest {
 
     @Test
     public void shouldGetIntegerInput(){
-        Catalog catalog = mock(Catalog.class);
+        BibilioticaData catalog = mock(BibilioticaData.class);
         ConsoleDisplay display = mock(ConsoleDisplay.class);
         when(display.getString()).thenReturn("1\n");
         Menu menu = mock(Menu.class);
@@ -69,7 +69,7 @@ public class MenuControllerTest {
         String input = "1";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(inContent, System.out);
-        MenuController controller = new MenuController(consoleDisplay, menu, catalog);
+        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(catalog, null));
         IController result = controller.executeAction();
 
         assertEquals(result.getClass(), Controller.class);
@@ -88,7 +88,7 @@ public class MenuControllerTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(inContent, new PrintStream(outContent));
-        MenuController controller = new MenuController(consoleDisplay, menu, catalog);
+        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(catalog, null));
         IController result = controller.executeAction();
         result.executeAction();
         System.setIn(System.in);
@@ -107,7 +107,7 @@ public class MenuControllerTest {
         Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
         when(consoleDisplay.getString()).thenReturn("3").thenReturn("name1");
-        MenuController controller = new MenuController(consoleDisplay, menu, catalog);
+        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(catalog, null));
         IController result = controller.executeAction();
         result.executeAction();
 
@@ -125,7 +125,7 @@ public class MenuControllerTest {
         Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
         when(consoleDisplay.getString()).thenReturn("3").thenReturn("name1");
-        MenuController controller = new MenuController(consoleDisplay, menu, catalog);
+        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(catalog, null));
         IController result = controller.executeAction();
         result.executeAction();
 

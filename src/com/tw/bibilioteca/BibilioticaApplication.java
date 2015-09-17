@@ -7,11 +7,11 @@ import java.util.HashMap;
 
 public class BibilioticaApplication {
     private ConsoleDisplay consoleDisplay;
-    private Catalog bookLibrary;
+    private BibilioticaData library;
 
     public void start(InputStream inputStream, OutputStream outputStream) {
         initiateSession(inputStream, outputStream);
-        IController controller   = new Controller(consoleDisplay, new WelcomeMessage(), bookLibrary);
+        IController controller   = new Controller(consoleDisplay, new WelcomeMessage(), library);
         do {
             controller = controller.executeAction();
         }while(! controller.getClass().equals(ExitController.class));
@@ -32,8 +32,25 @@ public class BibilioticaApplication {
         return bookList;
     }
 
+    private HashMap<String, EntityDetails> loadMovies() {
+        HashMap<String, EntityDetails> movieList = new HashMap<String, EntityDetails>();
+        EntityDetails movieDetails1 = new MovieDetails(new Date(), "director1", 10.0);
+        String name1 = "name1";
+        EntityDetails movieDetails2 = new MovieDetails(new Date(), "director2", 10.0);
+        String name2 = "name2";
+        EntityDetails movieDetails3 = new MovieDetails(new Date(), "director3", 10.0);
+        String name3 = "name3";
+
+        movieList.put(name1, movieDetails1);
+        movieList.put(name2, movieDetails2);
+        movieList.put(name3, movieDetails3);
+        return movieList;
+    }
+
     private void initiateSession(InputStream inputStream, OutputStream outputStream) {
         consoleDisplay = new ConsoleDisplay(inputStream, outputStream);
-        bookLibrary = new Catalog(loadBooks(), new HashMap<String, EntityDetails>());
+        Catalog books = new Catalog(loadBooks(), new HashMap<String, EntityDetails>());
+        Catalog movies = new Catalog(loadMovies(), new HashMap<String, EntityDetails>());
+        library = new BibilioticaData(books, movies);
     }
 }

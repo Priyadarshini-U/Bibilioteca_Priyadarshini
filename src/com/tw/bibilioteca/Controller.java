@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class Controller implements IController{
     private ConsoleDisplay display;
     private Object current;
-    private Catalog libraryData;
+    private BibilioticaData libraryData;
 
-    public Controller(ConsoleDisplay display, Object current, Catalog libraryData) {
+    public Controller(ConsoleDisplay display, Object current, BibilioticaData libraryData) {
         this.current = current;
         this.display = display;
         this.libraryData = libraryData;

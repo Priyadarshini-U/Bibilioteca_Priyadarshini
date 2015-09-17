@@ -3,9 +3,9 @@ package com.tw.bibilioteca;
 public class MenuController implements IController{
     private ConsoleDisplay display;
     private Menu currentModel;
-    private Catalog libraryData;
+    private BibilioticaData libraryData;
 
-    public MenuController(ConsoleDisplay display, Menu current, Catalog libraryData) {
+    public MenuController(ConsoleDisplay display, Menu current, BibilioticaData libraryData) {
         this.currentModel = current;
         this.display = display;
         this.libraryData = libraryData;
@@ -15,11 +15,11 @@ public class MenuController implements IController{
         display.putOutput(currentModel);
         String choice = display.getString();
         if (choice.equals("1"))
-            return new Controller(display, new EntityView(libraryData), libraryData);
+            return new Controller(display, new EntityView(libraryData.getBookLibrary()), libraryData);
         if (choice.equals("3"))
-            new CatalogOperation(display, libraryData).executeCheckout();
+            new CatalogOperation(display, libraryData.getBookLibrary()).executeCheckout();
         else if (choice.equals("4"))
-            new CatalogOperation(display, libraryData).executeReturn();
+            new CatalogOperation(display, libraryData.getBookLibrary()).executeReturn();
         else if (choice.equals("2"))
             return new ExitController();
         else
