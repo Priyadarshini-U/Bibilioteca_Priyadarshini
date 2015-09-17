@@ -5,9 +5,6 @@ import org.junit.Test;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
@@ -30,13 +27,6 @@ public class ControllerTest {
     public void shouldReturnNewControllerWithMenu() {
         WelcomeMessage welcomeScreen = new WelcomeMessage();
 
-        List<Book> bookList = new ArrayList<Book>();
-        Book book1 = new Book("name1", "author1", new Date());
-        Book book2 = new Book("name2", "author2", new Date());
-        Book book3 = new Book("name3", "author3", new Date());
-        bookList.add(book1);
-        bookList.add(book2);
-        bookList.add(book3);
         String input = "1";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();

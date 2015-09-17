@@ -3,13 +3,11 @@ package com.tw.bibilioteca;
 import java.util.Calendar;
 import java.util.Date;
 
-public class Book {
-    private String name;
+public class BookDetails {
     private String author;
     private Date yearPublished;
 
-    public Book(String name, String author, Date yearPublished) {
-        this.name = name;
+    public BookDetails(String author, Date yearPublished) {
         this.author = author;
         this.yearPublished = yearPublished;
     }
@@ -18,6 +16,6 @@ public class Book {
     public String toString() {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(yearPublished);
-        return name + " " + author + " " + calendar.get(Calendar.YEAR);
+        return author + " " + calendar.get(Calendar.YEAR);
     }
 }

@@ -1,19 +1,21 @@
 package com.tw.bibilioteca;
 
-import java.util.List;
+import java.util.HashMap;
 
 public class Catalog {
-    private List<Book> bookList;
+    private HashMap<String, BookDetails> books;
 
-    public Catalog(List<Book> bookList) {
-        this.bookList = bookList;
+    public Catalog(HashMap<String, BookDetails> books) {
+        this.books = books;
     }
 
     @Override
     public String toString() {
         String outputString = "";
-        for(Book book : bookList)
-            outputString += book.toString()+"\n";
+        for (String name : books.keySet()) {
+            outputString += name + " ";
+            outputString += books.get(name).toString() + "\n";
+        }
         return outputString;
     }
 }

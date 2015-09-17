@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -13,7 +14,7 @@ public class CatalogTest {
 
     @Test
     public void shouldContainEmptyStringIfListIsEmpty() {
-        List<Book> bookList = new ArrayList<Book>();
+        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
         Catalog catalog = new Catalog(bookList);
 
         assertEquals(catalog.toString(), "");
@@ -21,37 +22,46 @@ public class CatalogTest {
 
     @Test
     public void shouldContainFirstBook() {
-        List<Book> bookList = new ArrayList<Book>();
-        Book book = new Book("name", "author", new Date());
-        bookList.add(book);
+        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
+        BookDetails bookDetails1 = new BookDetails("author1", new Date());
+        String bookName1 = "name1";
+
+        bookList.put(bookName1, bookDetails1);
         Catalog catalog = new Catalog(bookList);
 
-        assertTrue(catalog.toString().contains(book.toString()));
+        assertTrue(catalog.toString().contains("name1 " + bookDetails1.toString()));
     }
 
     @Test
     public void shouldContainSecondBookInNextLineOfFirstBook() {
-        List<Book> bookList = new ArrayList<Book>();
-        Book book1 = new Book("name1", "author1", new Date());
-        Book book2 = new Book("name2", "author2", new Date());
-        bookList.add(book1);
-        bookList.add(book2);
+        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
+        BookDetails bookDetails1 = new BookDetails("author1", new Date());
+        String bookName1 = "name1";
+        BookDetails bookDetails2 = new BookDetails("author2", new Date());
+        String bookName2 = "name2";
+
+        bookList.put(bookName1, bookDetails1);
+        bookList.put(bookName2, bookDetails2);
         Catalog catalog = new Catalog(bookList);
 
-        assertTrue(catalog.toString().contains(book1.toString() + "\n" + book2.toString()));
+        assertTrue(catalog.toString().contains("name2 author2 2015"));
     }
 
     @Test
     public void shouldContainLastBook() {
-        List<Book> bookList = new ArrayList<Book>();
-        Book book1 = new Book("name1", "author1", new Date());
-        Book book2 = new Book("name2", "author2", new Date());
-        Book book3 = new Book("name3", "author3", new Date());
-        bookList.add(book1);
-        bookList.add(book2);
-        bookList.add(book3);
+        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
+        BookDetails bookDetails1 = new BookDetails("author1", new Date());
+        String bookName1 = "name1";
+        BookDetails bookDetails2 = new BookDetails("author2", new Date());
+        String bookName2 = "name2";
+        BookDetails bookDetails3 = new BookDetails("author3", new Date());
+        String bookName3 = "name3";
+
+        bookList.put(bookName1, bookDetails1);
+        bookList.put(bookName2, bookDetails2);
+        bookList.put(bookName3, bookDetails3);
         Catalog catalog = new Catalog(bookList);
 
-        assertTrue(catalog.toString().contains(book3.toString()));
+        assertTrue(catalog.toString().contains(bookDetails3.toString()));
     }
 }

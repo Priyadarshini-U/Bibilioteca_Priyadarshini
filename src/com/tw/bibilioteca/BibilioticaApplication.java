@@ -4,6 +4,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 public class BibilioticaApplication {
@@ -18,15 +19,18 @@ public class BibilioticaApplication {
         menu.choose(choice, new Catalog(loadBooks()));
     }
 
-    private List<Book> loadBooks() {
-        List<Book> bookList = new ArrayList<Book>();
-        Book book1 = new Book("name1", "author1", new Date());
-        Book book2 = new Book("name2", "author2", new Date());
-        Book book3 = new Book("name3", "author3", new Date());
-        bookList.add(book1);
-        bookList.add(book2);
-        bookList.add(book3);
+    private HashMap<String, BookDetails> loadBooks() {
+        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
+        BookDetails bookDetails1 = new BookDetails("author1", new Date());
+        String bookName1 = "name1";
+        BookDetails bookDetails2 = new BookDetails("author2", new Date());
+        String bookName2 = "name2";
+        BookDetails bookDetails3 = new BookDetails("author3", new Date());
+        String bookName3 = "name3";
 
+        bookList.put(bookName1, bookDetails1);
+        bookList.put(bookName2, bookDetails2);
+        bookList.put(bookName3, bookDetails3);
         return bookList;
     }
 
