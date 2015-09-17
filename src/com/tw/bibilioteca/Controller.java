@@ -2,7 +2,7 @@ package com.tw.bibilioteca;
 
 import java.util.ArrayList;
 
-public class Controller implements IController{
+public class Controller implements IController {
     private ConsoleDisplay display;
     private Object current;
     private BibilioticaData libraryData;
@@ -15,14 +15,7 @@ public class Controller implements IController{
 
     public IController executeAction() {
         display.putOutput(current);
-        Menu menu = new Menu(new ArrayList<String>() {{
-            add("List Books");
-            add("quit");
-            add("CheckOut Book");
-            add("return Book");
-            add("List Movies");
-            add("Checkout Movies");
-        }});
+        Menu menu = new Menu(new Users().getUserRole(libraryData.getSessionToken()).getDisplayOperations());
         return new MenuController(display, menu, libraryData);
     }
 }

@@ -31,13 +31,13 @@
   <td class="src"><pre class="src">&nbsp;    HashMap&lt;String, User&gt; userInformation;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;7</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;8</td>  <td class="nbHitsCovered">&nbsp;45</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> Users() {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;9</td>  <td class="nbHitsCovered">&nbsp;45</td>  <td class="src"><pre class="src">&nbsp;        userInformation = <span class="keyword">new</span> HashMap&lt;String, User&gt;();</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;10</td>  <td class="nbHitsCovered">&nbsp;45</td>  <td class="src"><pre class="src">&nbsp;        userInformation.put(<span class="string">"34404444"</span>,<span class="keyword">new</span> User(<span class="string">"011-1111"</span>,UserRole.ADMIN,<span class="string">"lotus suites"</span>,<span class="string">"808-323-3333"</span>));</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;11</td>  <td class="nbHitsCovered">&nbsp;45</td>  <td class="src"><pre class="src">&nbsp;        userInformation.put(<span class="string">"35505555"</span>,<span class="keyword">new</span> User(<span class="string">"022-2222"</span>,UserRole.USER,<span class="string">"lotus suites"</span>,<span class="string">"808-323-3333"</span>));</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;12</td>  <td class="nbHitsCovered">&nbsp;45</td>  <td class="src"><pre class="src">&nbsp;        userInformation.put(<span class="string">"36606666"</span>,<span class="keyword">new</span> User(<span class="string">"033-3333"</span>,UserRole.ADMIN,<span class="string">"lotus suites"</span>,<span class="string">"808-323-3333"</span>));</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;13</td>  <td class="nbHitsCovered">&nbsp;45</td>  <td class="src"><pre class="src">&nbsp;        userInformation.put(<span class="keyword">new</span> GuestUser().authenticate(),<span class="keyword">new</span> User(<span class="keyword">new</span> GuestUser().authenticate(),UserRole.GUEST,<span class="string">""</span>,<span class="string">""</span>));</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;14</td>  <td class="nbHitsCovered">&nbsp;45</td>  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;8</td>  <td class="nbHitsCovered">&nbsp;60</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> Users() {</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;9</td>  <td class="nbHitsCovered">&nbsp;60</td>  <td class="src"><pre class="src">&nbsp;        userInformation = <span class="keyword">new</span> HashMap&lt;String, User&gt;();</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;10</td>  <td class="nbHitsCovered">&nbsp;60</td>  <td class="src"><pre class="src">&nbsp;        userInformation.put(<span class="string">"34404444"</span>,<span class="keyword">new</span> User(<span class="string">"011-1111"</span>,UserRole.ADMIN,<span class="string">"lotus suites"</span>,<span class="string">"808-323-3333"</span>));</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;11</td>  <td class="nbHitsCovered">&nbsp;60</td>  <td class="src"><pre class="src">&nbsp;        userInformation.put(<span class="string">"35505555"</span>,<span class="keyword">new</span> User(<span class="string">"022-2222"</span>,UserRole.USER,<span class="string">"lotus suites"</span>,<span class="string">"808-323-3333"</span>));</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;12</td>  <td class="nbHitsCovered">&nbsp;60</td>  <td class="src"><pre class="src">&nbsp;        userInformation.put(<span class="string">"36606666"</span>,<span class="keyword">new</span> User(<span class="string">"033-3333"</span>,UserRole.ADMIN,<span class="string">"lotus suites"</span>,<span class="string">"808-323-3333"</span>));</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;13</td>  <td class="nbHitsCovered">&nbsp;60</td>  <td class="src"><pre class="src">&nbsp;        userInformation.put(<span class="keyword">new</span> GuestUser().authenticate(),<span class="keyword">new</span> User(<span class="keyword">new</span> GuestUser().authenticate(),UserRole.GUEST,<span class="string">""</span>,<span class="string">""</span>));</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;14</td>  <td class="nbHitsCovered">&nbsp;60</td>  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;15</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;16</td>  <td class="nbHits">&nbsp;</td>
@@ -49,13 +49,13 @@
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;20</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> UserRole getUserRole(String token){</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;21</td>  <td class="nbHitsCovered">&nbsp;42</td>  <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> userInformation.get(token).getRole();</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;21</td>  <td class="nbHitsCovered">&nbsp;57</td>  <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> userInformation.get(token).getRole();</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;22</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;23</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;}</pre></td></tr>
 </table>
 
-<div class="footer">Report generated by <a href="http://cobertura.sourceforge.net/" target="_top">Cobertura</a> 2.1.1 on 18/9/15 12:17 AM.</div>
+<div class="footer">Report generated by <a href="http://cobertura.sourceforge.net/" target="_top">Cobertura</a> 2.1.1 on 18/9/15 12:28 AM.</div>
 </body>
 </html>
