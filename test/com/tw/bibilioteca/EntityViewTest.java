@@ -149,7 +149,7 @@ public class EntityViewTest {
         int randomBookNumber = Math.abs(new Random().nextInt() % 10);
 
 
-        assertTrue(entityView.toString().contains("name" + (randomBookNumber + 1)));
+        assertTrue(entityView.toString().contains("name" + (randomBookNumber)));
     }
 
     @Test
