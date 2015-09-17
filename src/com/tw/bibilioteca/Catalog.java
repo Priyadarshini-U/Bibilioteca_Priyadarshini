@@ -62,4 +62,8 @@ public class Catalog {
     public HashMap<String, EntityDetails> getAvailableEntities() {
         return availableEntities;
     }
+
+    public HashMap<String, EntityDetails> getCheckedOutEntities() {
+        return checked_outEntites;
+    }
 }

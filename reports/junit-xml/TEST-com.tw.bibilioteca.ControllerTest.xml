@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="INPriya.local" name="com.tw.bibilioteca.ControllerTest" skipped="0" tests="5" time="0.311" timestamp="2015-09-17T19:56:45">
+<testsuite errors="0" failures="0" hostname="INPriya.local" name="com.tw.bibilioteca.ControllerTest" skipped="0" tests="5" time="0.317" timestamp="2015-09-17T20:14:23">
   <properties>
     <property name="java.vendor" value="Oracle Corporation" />
     <property name="coverage.summaryxml.dir" value="reports/cobertura-summary-xml" />
@@ -54,7 +54,7 @@
     <property name="java.vm.vendor" value="Oracle Corporation" />
     <property name="gopherProxySet" value="false" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.tw.bibilioteca.ControllerTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/admin/TWU_Biblioteca-master/reports/junit-xml/TEST-com.tw.bibilioteca.ControllerTest.xml crashfile=/Users/admin/TWU_Biblioteca-master/junitvmwatcher1487498904071499754.properties propsfile=/Users/admin/TWU_Biblioteca-master/junit3319239276548718015.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.tw.bibilioteca.ControllerTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/admin/TWU_Biblioteca-master/reports/junit-xml/TEST-com.tw.bibilioteca.ControllerTest.xml crashfile=/Users/admin/TWU_Biblioteca-master/junitvmwatcher5254362526832303457.properties propsfile=/Users/admin/TWU_Biblioteca-master/junit6714366469549024359.properties" />
     <property name="java.class.path" value="/Users/admin/TWU_Biblioteca-master/instrumented:/Users/admin/TWU_Biblioteca-master/out:/Users/admin/TWU_Biblioteca-master/lib/asm-5.0.1.jar:/Users/admin/TWU_Biblioteca-master/lib/asm-analysis-5.0.1.jar:/Users/admin/TWU_Biblioteca-master/lib/asm-commons-5.0.1.jar:/Users/admin/TWU_Biblioteca-master/lib/asm-tree-5.0.1.jar:/Users/admin/TWU_Biblioteca-master/lib/asm-util-5.0.1.jar:/Users/admin/TWU_Biblioteca-master/lib/cobertura-2.1.1-javadoc.jar:/Users/admin/TWU_Biblioteca-master/lib/cobertura-2.1.1-sources.jar:/Users/admin/TWU_Biblioteca-master/lib/cobertura-2.1.1.jar:/Users/admin/TWU_Biblioteca-master/lib/commons-lang3-3.3.2.jar:/Users/admin/TWU_Biblioteca-master/lib/hamcrest-core-1.3.jar:/Users/admin/TWU_Biblioteca-master/lib/jaxen-1.1.4.jar:/Users/admin/TWU_Biblioteca-master/lib/jetty-6.1.14.jar:/Users/admin/TWU_Biblioteca-master/lib/jetty-util-6.1.14.jar:/Users/admin/TWU_Biblioteca-master/lib/junit-4.11.jar:/Users/admin/TWU_Biblioteca-master/lib/logback-classic-1.0.13.jar:/Users/admin/TWU_Biblioteca-master/lib/logback-core-1.0.13.jar:/Users/admin/TWU_Biblioteca-master/lib/mockito-all-1.9.5.jar:/Users/admin/TWU_Biblioteca-master/lib/oro-2.0.8.jar:/Users/admin/TWU_Biblioteca-master/lib/servlet-api-2.5-6.1.14.jar:/Users/admin/TWU_Biblioteca-master/lib/slf4j-api-1.7.5.jar:/Users/admin/TWU_Biblioteca-master/lib/system-rules-1.2.0.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
     <property name="ant.version" value="Apache Ant(TM) version 1.9.6 compiled on June 29 2015" />
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
@@ -79,27 +79,27 @@
     <property name="src.dir" value="src" />
     <property name="ant.project.invoked-targets" value="coverage" />
   </properties>
-  <testcase classname="com.tw.bibilioteca.ControllerTest" name="shouldReturnNewControllerWithMenu" time="0.154" />
-  <testcase classname="com.tw.bibilioteca.ControllerTest" name="shouldPrintCurrentObject" time="0.097" />
-  <testcase classname="com.tw.bibilioteca.ControllerTest" name="shouldReturnNewControllerWithMenuWithOptionsOfUsersForNonAdmins" time="0.005" />
+  <testcase classname="com.tw.bibilioteca.ControllerTest" name="shouldReturnNewControllerWithMenu" time="0.157" />
+  <testcase classname="com.tw.bibilioteca.ControllerTest" name="shouldPrintCurrentObject" time="0.105" />
+  <testcase classname="com.tw.bibilioteca.ControllerTest" name="shouldReturnNewControllerWithMenuWithOptionsOfUsersForNonAdmins" time="0.006" />
   <testcase classname="com.tw.bibilioteca.ControllerTest" name="shouldReturnNewControllerWithMenuWithOptionsOfGuestsForGuestUsers" time="0.002" />
   <testcase classname="com.tw.bibilioteca.ControllerTest" name="shouldReturnNewControllerWithMenuWithOptionsOfAdminUsersForAdmins" time="0.002" />
-  <system-out><![CDATA[01:26:45,821 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
-01:26:45,822 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-01:26:45,822 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/admin/TWU_Biblioteca-master/lib/cobertura-2.1.1-sources.jar!/logback.xml]
-01:26:45,822 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
-01:26:45,822 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/admin/TWU_Biblioteca-master/lib/cobertura-2.1.1.jar!/logback.xml]
-01:26:45,822 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/admin/TWU_Biblioteca-master/lib/cobertura-2.1.1-sources.jar!/logback.xml]
-01:26:45,838 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@402f32ff - URL [jar:file:/Users/admin/TWU_Biblioteca-master/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
-01:26:45,869 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
-01:26:45,870 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-01:26:45,877 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
-01:26:45,892 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-01:26:45,919 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
-01:26:45,919 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
-01:26:45,919 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
-01:26:45,919 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
-01:26:45,920 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@573f2bb1 - Registering current configuration as safe fallback point
+  <system-out><![CDATA[01:44:23,427 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+01:44:23,427 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+01:44:23,427 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/admin/TWU_Biblioteca-master/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+01:44:23,428 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
+01:44:23,428 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/admin/TWU_Biblioteca-master/lib/cobertura-2.1.1.jar!/logback.xml]
+01:44:23,428 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/admin/TWU_Biblioteca-master/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+01:44:23,443 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@402f32ff - URL [jar:file:/Users/admin/TWU_Biblioteca-master/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
+01:44:23,476 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+01:44:23,477 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+01:44:23,485 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+01:44:23,503 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+01:44:23,533 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
+01:44:23,533 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
+01:44:23,533 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+01:44:23,534 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+01:44:23,534 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@573f2bb1 - Registering current configuration as safe fallback point
 
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

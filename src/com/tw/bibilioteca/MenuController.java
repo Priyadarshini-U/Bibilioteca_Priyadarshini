@@ -33,6 +33,10 @@ public class MenuController implements IController{
             new CatalogOperation(display, libraryData.getMoviesLibrary()).executeCheckout(new Users().getUserLibraryNumber(libraryData.getSessionToken()));
         else if (choice.equals("quit"))
             return new ExitController();
+        else if (choice.equals("Book Status")) {
+            Catalog catalogDisplay = new Catalog(libraryData.getBookLibrary().getCheckedOutEntities(), null);
+            return new Controller(display, new EntityView(catalogDisplay), libraryData);
+        }
         else
             display.putOutput("invalid option");
         return new MenuController(display, currentModel, libraryData);

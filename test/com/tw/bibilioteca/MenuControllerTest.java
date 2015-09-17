@@ -29,6 +29,7 @@ public class MenuControllerTest {
         add("return Book");
         add("Log in");
         add("Log out");
+        add("Book Status");
     }};
 
     @Test
@@ -231,5 +232,28 @@ public class MenuControllerTest {
         IController result = controller.executeAction();
 
         assertEquals(result.getClass(), LoginController.class);
+    }
+
+    @Test
+    public void shouldPrintBookStatus() {
+        Menu menu = new Menu(optionsMenu);
+
+        HashMap<String, EntityDetails> moviesList = new HashMap<String, EntityDetails>();
+        EntityDetails bookDetails1 = new BookDetails("author", new Date());
+        CheckedOutDetails checkedOutDetails = new CheckedOutDetails(bookDetails1, "011-1111");
+        String bookName1 = "name1";
+        moviesList.put(bookName1, checkedOutDetails);
+        Catalog catalog = new Catalog(new HashMap<String, EntityDetails>(), moviesList);
+
+        String input = "9\n2\n";
+        ByteArrayInputStream inputStream = new ByteArrayInputStream(input.getBytes());
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(inputStream, outputStream);
+
+        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(catalog, null, "34404444"));
+        IController result = controller.executeAction();
+        result.executeAction();
+
+        assertTrue(outputStream.toString().contains(new EntityView(new Catalog(moviesList, new HashMap<String, EntityDetails>())).toString()));
     }
 }
