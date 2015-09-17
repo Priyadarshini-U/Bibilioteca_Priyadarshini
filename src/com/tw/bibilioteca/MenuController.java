@@ -12,6 +12,7 @@ public class MenuController {
     }
 
     public MenuController executeAction() {
+        display.putOutput(currentModel);
         return new MenuController(display, currentModel, libraryData);
     }
 }
