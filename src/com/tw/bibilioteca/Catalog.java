@@ -17,9 +17,9 @@ public class Catalog {
         return availableEntities.containsKey(bookName);
     }
 
-    public void checkoutEntity(String bookName) {
-        EntityDetails bookDetails = availableEntities.get(bookName);
-        checked_outEntites.put(bookName, bookDetails);
+    public void checkoutEntity(String bookName, String user) {
+        EntityDetails entityDetails = availableEntities.get(bookName);
+        checked_outEntites.put(bookName, new CheckedOutDetails(entityDetails, user));
         availableEntities.remove(bookName);
     }
 

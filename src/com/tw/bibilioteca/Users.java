@@ -20,4 +20,8 @@ public class Users {
     public UserRole getUserRole(String token){
         return userInformation.get(token).getRole();
     }
+
+    public String getUserLibraryNumber(String token){
+        return userInformation.get(token).getLibraryNumber();
+    }
 }

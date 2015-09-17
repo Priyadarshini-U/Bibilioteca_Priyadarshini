@@ -14,7 +14,7 @@ public class CatalogOperationTest {
         when(consoleDisplay.getString()).thenReturn("name1");
 
         CatalogOperation catalogOperation = new CatalogOperation(consoleDisplay, catalog);
-        catalogOperation.executeCheckout();
+        catalogOperation.executeCheckout("32202222");
 
         verify(catalog).isEntityAvailableForCheckOut("name1");
     }
@@ -27,9 +27,9 @@ public class CatalogOperationTest {
         when(catalog.isEntityAvailableForCheckOut(anyString())).thenReturn(true);
 
         CatalogOperation catalogOperation = new CatalogOperation(consoleDisplay, catalog);
-        catalogOperation.executeCheckout();
+        catalogOperation.executeCheckout("32202222");
 
-        verify(catalog).checkoutEntity("name1");
+        verify(catalog).checkoutEntity("name1", "32202222");
     }
 
     @Test
@@ -40,9 +40,9 @@ public class CatalogOperationTest {
         when(catalog.isEntityAvailableForCheckOut(anyString())).thenReturn(false);
 
         CatalogOperation catalogOperation = new CatalogOperation(consoleDisplay, catalog);
-        catalogOperation.executeCheckout();
+        catalogOperation.executeCheckout("32202222");
 
-        verify(catalog, times(0)).checkoutEntity("name1");
+        verify(catalog, times(0)).checkoutEntity("name1", "32202222");
     }
 
     @Test
@@ -53,7 +53,7 @@ public class CatalogOperationTest {
         when(catalog.isEntityAvailableForCheckOut(anyString())).thenReturn(true);
 
         CatalogOperation catalogOperation = new CatalogOperation(consoleDisplay, catalog);
-        catalogOperation.executeCheckout();
+        catalogOperation.executeCheckout("32202222");
 
         verify(consoleDisplay).putOutput("Checkout succesful");
     }
@@ -66,7 +66,7 @@ public class CatalogOperationTest {
         when(catalog.isEntityAvailableForCheckOut(anyString())).thenReturn(false);
 
         CatalogOperation catalogOperation = new CatalogOperation(consoleDisplay, catalog);
-        catalogOperation.executeCheckout();
+        catalogOperation.executeCheckout("32202222");
 
         verify(consoleDisplay).putOutput("Checkout NOT succesful");
     }
@@ -106,7 +106,7 @@ public class CatalogOperationTest {
         CatalogOperation catalogOperation = new CatalogOperation(consoleDisplay, catalog);
         catalogOperation.executeReturn();
 
-        verify(catalog, times(0)).checkoutEntity("name1");
+        verify(catalog, times(0)).checkoutEntity("name1", "32202222");
     }
 
     @Test

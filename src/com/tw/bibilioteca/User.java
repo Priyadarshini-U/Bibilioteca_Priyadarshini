@@ -21,4 +21,8 @@ public class User {
     public UserRole getRole() {
         return role;
     }
+
+    public String getLibraryNumber() {
+        return libraryNumber;
+    }
 }

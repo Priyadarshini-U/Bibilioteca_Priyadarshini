@@ -34,4 +34,9 @@ public class UsersTest {
     public void shouldReturnGuestRoleInformationForValidGuestToken() {
         assertEquals(new Users().getUserRole(new GuestUser().authenticate()), UserRole.GUEST);
     }
+
+    @Test
+    public void shouldReturnLibraryNumberForUsers() {
+        assertEquals(new Users().getUserLibraryNumber("35505555"), "022-2222");
+    }
 }

@@ -106,7 +106,7 @@ public class CatalogTest {
         bookList.put(bookName1, bookDetails1);
         Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
 
-        catalog.checkoutEntity(bookName1);
+        catalog.checkoutEntity(bookName1, "32202222");
 
         assertFalse(catalog.isEntityAvailableForCheckOut(bookName1));
     }
@@ -251,7 +251,7 @@ public class CatalogTest {
         bookList.put(name1, movieDetails1);
         Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
 
-        catalog.checkoutEntity(name1);
+        catalog.checkoutEntity(name1, "32202222");
 
         assertFalse(catalog.isEntityAvailableForCheckOut(name1));
     }

@@ -9,10 +9,10 @@ public class CatalogOperation {
         this.catalogData = catalogData;
     }
 
-    public Catalog executeCheckout() {
+    public Catalog executeCheckout(String user) {
         String name = display.getString();
         if (catalogData.isEntityAvailableForCheckOut(name)) {
-            catalogData.checkoutEntity(name);
+            catalogData.checkoutEntity(name, user);
             display.putOutput("Checkout succesful");
         } else
             display.putOutput("Checkout NOT succesful");
