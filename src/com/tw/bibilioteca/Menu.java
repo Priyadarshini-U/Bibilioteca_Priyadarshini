@@ -28,8 +28,13 @@ public class Menu {
             else
                 display.putOutput("checkout NOT successful");
         }
-        if(optionChoice == 4)
-            libraryData.returnEntity(display.getString());
+        if(optionChoice == 4) {
+            String bookName = display.getString();
+            if(libraryData.isBookReturnable(bookName)) {
+                libraryData.returnEntity(bookName);
+                display.putOutput("return successful");
+            }
+        }
         else
             System.out.print("Invalid Option");
     }

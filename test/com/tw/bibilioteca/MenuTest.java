@@ -148,10 +148,24 @@ public class MenuTest {
         when(display.getInteger()).thenReturn(3);
         when(display.getString()).thenReturn("name1");
         Catalog bookCatalog = mock(Catalog.class);
+        when(bookCatalog.isBookReturnable(anyString())).thenReturn(true);
         List<String> options = new ArrayList<String>();
         options.add("1. List BookDetails");
         new Menu(options).choose(4, bookCatalog, display);
 
         verify(bookCatalog).returnEntity("name1");
+    }
+
+    @Test
+    public void shouldPrintSuccessfulReturnMessageOnReturn() {
+        ConsoleDisplay display = mock(ConsoleDisplay.class);
+        when(display.getString()).thenReturn("name1");
+        Catalog bookCatalog = mock(Catalog.class);
+        when(bookCatalog.isBookReturnable(anyString())).thenReturn(true);
+        List<String> options = new ArrayList<String>();
+        options.add("1. List BookDetails");
+        new Menu(options).choose(4, bookCatalog, display);
+
+        verify(display).putOutput("return successful");
     }
 }
