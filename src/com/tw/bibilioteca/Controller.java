@@ -17,6 +17,9 @@ public class Controller {
         display.putOutput(current);
         return new Menu(new ArrayList<String>() {{
             add("1. List Books");
+            add("2. quit");
+            add("3. Checkout Book");
+            add("4. Return Book");
         }});
     }
 }
