@@ -13,27 +13,20 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import static org.mockito.Matchers.anyInt;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 public class MenuControllerTest {
     private List<String> optionsMenu = new ArrayList<String>() {{
-        add("1. List Books");
-        add("2. quit");
-        add("3. Checkout Book");
-        add("4. Return Book");
+        add("List Books");
+        add("List Movies");
+        add("quit");
+        add("CheckOut Book");
+        add("CheckOut Movie");
+        add("return Book");
     }};
-
-    @Test
-    public void shouldReturnNewMenuController(){
-        BibilioticaData catalog = mock(BibilioticaData.class);
-        ConsoleDisplay display = mock(ConsoleDisplay.class);
-        when(display.getString()).thenReturn("1\n");
-        Menu menu = mock(Menu.class);
-
-        assertEquals(new MenuController(display, menu, catalog).executeAction().getClass(), MenuController.class);
-    }
 
     @Test
     public void shouldPrintMenu(){
@@ -41,20 +34,22 @@ public class MenuControllerTest {
         ConsoleDisplay display = mock(ConsoleDisplay.class);
         when(display.getString()).thenReturn("1\n");
         Menu menu = mock(Menu.class);
+        when(menu.choose(anyInt())).thenReturn("inalid");
         new MenuController(display, menu, catalog).executeAction();
 
         verify(display).putOutput(menu);
     }
 
     @Test
-    public void shouldGetIntegerInput(){
+    public void shouldGetInput(){
         BibilioticaData catalog = mock(BibilioticaData.class);
         ConsoleDisplay display = mock(ConsoleDisplay.class);
         when(display.getString()).thenReturn("1\n");
         Menu menu = mock(Menu.class);
+        when(menu.choose(anyInt())).thenReturn("inalid");
         new MenuController(display, menu, catalog).executeAction();
 
-        verify(display).getString();
+        verify(display).getInteger();
     }
 
     @Test
@@ -66,7 +61,7 @@ public class MenuControllerTest {
         String bookName1 = "name1";
         bookList.put(bookName1, bookDetails1);
         Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
-        String input = "1";
+        String input = "1\n";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(inContent, System.out);
         MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(catalog, null));
@@ -84,7 +79,7 @@ public class MenuControllerTest {
         String bookName1 = "name1";
         bookList.put(bookName1, bookDetails1);
         Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
-        String input = "1";
+        String input = "1\n";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(inContent, new PrintStream(outContent));
@@ -106,7 +101,8 @@ public class MenuControllerTest {
         bookList.put(bookName1, bookDetails1);
         Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
-        when(consoleDisplay.getString()).thenReturn("3").thenReturn("name1");
+        when(consoleDisplay.getInteger()).thenReturn(4);
+        when(consoleDisplay.getString()).thenReturn("name1");
         MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(catalog, null));
         IController result = controller.executeAction();
         result.executeAction();
@@ -124,12 +120,13 @@ public class MenuControllerTest {
         bookList.put(bookName1, bookDetails1);
         Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
-        when(consoleDisplay.getString()).thenReturn("3").thenReturn("name1");
+        when(consoleDisplay.getString()).thenReturn("name1");
+        when(consoleDisplay.getInteger()).thenReturn(6);
         MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(catalog, null));
         IController result = controller.executeAction();
         result.executeAction();
 
-        assertFalse(catalog.isEntityAvailableForCheckOut(bookName1));
+        assertTrue(catalog.isEntityAvailableForCheckOut(bookName1));
     }
 
     @Test
@@ -141,7 +138,7 @@ public class MenuControllerTest {
         EntityDetails details = new MovieDetails(new Date(), "author1", 3.0);
         moviesList.put(name1, details);
         Catalog catalog = new Catalog(moviesList, new HashMap<String, EntityDetails>());
-        String input = "5";
+        String input = "2\n";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(inContent, new PrintStream(outContent));
@@ -161,11 +158,10 @@ public class MenuControllerTest {
         EntityDetails details = new MovieDetails(new Date(), "author1", 3.0);
         moviesList.put(name1, details);
         Catalog catalog = new Catalog(moviesList, new HashMap<String, EntityDetails>());
-        String input = "6";
-        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
-        when(consoleDisplay.getString()).thenReturn("6").thenReturn("name1");
+        when(consoleDisplay.getString()).thenReturn("name1");
+        when(consoleDisplay.getInteger()).thenReturn(5);
+
         MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(null, catalog));
         IController result = controller.executeAction();
         result.executeAction();

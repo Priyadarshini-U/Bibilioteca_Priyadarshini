@@ -155,7 +155,7 @@ public class LoginControllerTest {
     @Test
     public void shouldReturnNewMenuControllerWithChangedMenuOptions() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        String input = "011-1111\n1\n1";
+        String input = "011-1111\n1\n2\n";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
         BookDetails bookDetails1 = new BookDetails("author", new Date());

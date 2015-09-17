@@ -16,12 +16,12 @@ public class Controller implements IController{
     public IController executeAction() {
         display.putOutput(current);
         Menu menu = new Menu(new ArrayList<String>() {{
-            add("1. List Books");
-            add("2. quit");
-            add("3. Checkout Book");
-            add("4. Return Book");
-            add("5. List Movies");
-            add("6. Checkout Movies");
+            add("List Books");
+            add("quit");
+            add("CheckOut Book");
+            add("return Book");
+            add("List Movies");
+            add("Checkout Movies");
         }});
         return new MenuController(display, menu, libraryData);
     }

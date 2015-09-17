@@ -13,18 +13,19 @@ public class MenuController implements IController{
 
     public IController executeAction() {
         display.putOutput(currentModel);
-        String choice = display.getString();
-        if (choice.equals("1"))
+        String operation = currentModel.choose(display.getInteger());
+        String choice = operation;
+        if (choice.equals("List Books"))
             return new Controller(display, new EntityView(libraryData.getBookLibrary()), libraryData);
-        if (choice.equals("5"))
+        if (choice.equals("List Movies"))
             return new Controller(display, new EntityView(libraryData.getMoviesLibrary()), libraryData);
-        if (choice.equals("3"))
+        if (choice.equals("CheckOut Book"))
             new CatalogOperation(display, libraryData.getBookLibrary()).executeCheckout();
-        else if (choice.equals("4"))
+        else if (choice.equals("return Book"))
             new CatalogOperation(display, libraryData.getBookLibrary()).executeReturn();
-        else if (choice.equals("6"))
+        else if (choice.equals("CheckOut Movie"))
             new CatalogOperation(display, libraryData.getMoviesLibrary()).executeCheckout();
-        else if (choice.equals("2"))
+        else if (choice.equals("quit"))
             return new ExitController();
         else
             display.putOutput("invalid option");
