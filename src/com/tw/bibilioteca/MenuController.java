@@ -13,6 +13,7 @@ public class MenuController {
 
     public MenuController executeAction() {
         display.putOutput(currentModel);
+        currentModel.choose(display.getInteger(), libraryData, display);
         return new MenuController(display, currentModel, libraryData);
     }
 }
