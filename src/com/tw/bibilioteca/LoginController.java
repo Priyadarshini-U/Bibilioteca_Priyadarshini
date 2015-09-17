@@ -22,6 +22,6 @@ public class LoginController implements IController {
             display.putOutput("Login Failed");
         else
             display.putOutput("Login Succesful");
-        return null;
+        return new MenuController(display, new Menu(new Users().getUserRole(sessionToken).getDisplayOperations()), libraryData);
     }
 }

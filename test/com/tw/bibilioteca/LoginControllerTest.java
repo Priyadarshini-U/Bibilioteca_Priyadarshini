@@ -17,7 +17,7 @@ public class LoginControllerTest {
     @Test
     public void shouldPrintEnterLibraryNumber() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        String input ="peri\nperi\nperi\n";
+        String input = "peri\nperi\nperi\n";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
         BookDetails bookDetails1 = new BookDetails("author", new Date());
@@ -50,7 +50,7 @@ public class LoginControllerTest {
     @Test
     public void shouldPrintEnterPassword() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        String input ="peri\nperi\nperi\n";
+        String input = "peri\nperi\nperi\n";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
         BookDetails bookDetails1 = new BookDetails("author", new Date());
@@ -102,7 +102,8 @@ public class LoginControllerTest {
     public void shouldPrintUnSuccessfulMessageForGuest() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         String input = "011-1111\n3\n";
-        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
         BookDetails bookDetails1 = new BookDetails("author", new Date());
         String bookName1 = "name1";
         bookList.put(bookName1, bookDetails1);
@@ -133,4 +134,40 @@ public class LoginControllerTest {
         assertTrue(outContent.toString().contains("Login Succesful"));
     }
 
+    @Test
+    public void shouldLoginControllerReturnNewMenuController() {
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        String input = "011-1111\n3\n";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
+        BookDetails bookDetails1 = new BookDetails("author", new Date());
+        String bookName1 = "name1";
+        bookList.put(bookName1, bookDetails1);
+        Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(inContent, new PrintStream(outContent));
+        BibilioticaData data = new BibilioticaData(catalog, null);
+        IController controller = new LoginController(consoleDisplay, new Login(), data);
+        IController result = controller.executeAction();
+
+        assertEquals(result.getClass(), MenuController.class);
+    }
+
+    @Test
+    public void shouldReturnNewMenuControllerWithChangedMenuOptions() {
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        String input = "011-1111\n1\n1";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
+        BookDetails bookDetails1 = new BookDetails("author", new Date());
+        String bookName1 = "name1";
+        bookList.put(bookName1, bookDetails1);
+        Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay(inContent, new PrintStream(outContent));
+        BibilioticaData data = new BibilioticaData(catalog, null);
+        IController controller = new LoginController(consoleDisplay, new Login(), data);
+        IController result = controller.executeAction();
+        result.executeAction();
+
+        assertTrue(outContent.toString().contains(new Menu(UserRole.ADMIN.getDisplayOperations()).toString()));
+    }
 }
