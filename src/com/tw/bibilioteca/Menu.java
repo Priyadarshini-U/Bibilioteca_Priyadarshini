@@ -17,6 +17,8 @@ public class Menu {
     public void choose(int optionChoice, Catalog libraryData){
         if(optionChoice == 1)
             System.out.print(libraryData);
+        if(optionChoice == 2)
+            System.exit(0);
         else
             System.out.print("Invalid Option");
     }
