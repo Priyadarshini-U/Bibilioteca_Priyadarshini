@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.9386792452830188" branch-rate="0.9666666666666667" lines-covered="199" lines-valid="212" branches-covered="29" branches-valid="30" complexity="1.3829787234042554" version="2.1.1" timestamp="1442507342929">
+<coverage line-rate="0.9403669724770642" branch-rate="0.9666666666666667" lines-covered="205" lines-valid="218" branches-covered="29" branches-valid="30" complexity="1.3673469387755102" version="2.1.1" timestamp="1442507571400">
 	<sources>
 		<source>src</source>
 	</sources>
 	<packages>
-		<package name="com.tw.bibilioteca" line-rate="0.9386792452830188" branch-rate="0.9666666666666667" complexity="1.3829787234042554">
+		<package name="com.tw.bibilioteca" line-rate="0.9403669724770642" branch-rate="0.9666666666666667" complexity="1.3673469387755102">
 			<classes>
 				<class name="com.tw.bibilioteca.BibilioticaApplication" filename="com/tw/bibilioteca/BibilioticaApplication.java" line-rate="1.0" branch-rate="1.0" complexity="1.25">
 					<methods>
@@ -850,6 +850,32 @@
 						<line number="29" hits="339" branch="false"/>
 						<line number="30" hits="339" branch="false"/>
 						<line number="31" hits="339" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.tw.bibilioteca.User" filename="com/tw/bibilioteca/User.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="8" hits="4" branch="false"/>
+								<line number="9" hits="4" branch="false"/>
+								<line number="10" hits="4" branch="false"/>
+								<line number="11" hits="4" branch="false"/>
+								<line number="12" hits="4" branch="false"/>
+							</lines>
+						</method>
+						<method name="toString" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="16" hits="4" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="8" hits="4" branch="false"/>
+						<line number="9" hits="4" branch="false"/>
+						<line number="10" hits="4" branch="false"/>
+						<line number="11" hits="4" branch="false"/>
+						<line number="12" hits="4" branch="false"/>
+						<line number="16" hits="4" branch="false"/>
 					</lines>
 				</class>
 				<class name="com.tw.bibilioteca.WelcomeMessage" filename="com/tw/bibilioteca/WelcomeMessage.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
