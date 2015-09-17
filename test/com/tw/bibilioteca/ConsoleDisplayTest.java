@@ -31,4 +31,15 @@ public class ConsoleDisplayTest {
 
         assertEquals(inputInteger, 1);
     }
+
+    @Test
+    public void shouldGetStringFromInputStream() {
+        String input = "anna kareina";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+
+        ConsoleDisplay display = new ConsoleDisplay(inContent, System.out);
+        String inputString = display.getString();
+
+        assertEquals(inputString, "anna kareina");
+    }
 }

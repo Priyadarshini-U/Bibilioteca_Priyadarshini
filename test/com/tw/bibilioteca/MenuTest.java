@@ -4,6 +4,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
@@ -13,6 +14,9 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 public class MenuTest {
 
@@ -45,7 +49,7 @@ public class MenuTest {
         bookList.put(bookName3, bookDetails3);
 
         Catalog bookCatalog = new Catalog(bookList, new HashMap<String, BookDetails>());
-        new Menu(options).choose(1, bookCatalog);
+        new Menu(options).choose(1, bookCatalog, new ConsoleDisplay(System.in, outputStream));
 
         assertTrue(outputStream.toString().contains(bookCatalog.toString()));
     }
@@ -68,7 +72,7 @@ public class MenuTest {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStream));
         Catalog bookCatalog = new Catalog(bookList, new HashMap<String, BookDetails>());
-        new Menu(options).choose(3, bookCatalog);
+        new Menu(options).choose(-3, bookCatalog, new ConsoleDisplay(System.in, outputStream));
 
         assertTrue(outputStream.toString().contains("Invalid Option"));
     }
@@ -92,6 +96,19 @@ public class MenuTest {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStream));
         Catalog bookCatalog = new Catalog(bookList, new HashMap<String, BookDetails>());
-        new Menu(options).choose(2, bookCatalog);
+        new Menu(options).choose(2, bookCatalog, new ConsoleDisplay(System.in, outputStream));
+    }
+
+    @Test
+    public void shouldCheckoutOnOptionThree() {
+        ConsoleDisplay display = mock(ConsoleDisplay.class);
+        when(display.getInteger()).thenReturn(3);
+        when(display.getString()).thenReturn("name1");
+        Catalog bookCatalog = mock(Catalog.class);
+        List<String> options = new ArrayList<String>();
+        options.add("1. List BookDetails");
+        new Menu(options).choose(3, bookCatalog, display);
+
+        verify(bookCatalog).checkoutEntity("name1");
     }
 }

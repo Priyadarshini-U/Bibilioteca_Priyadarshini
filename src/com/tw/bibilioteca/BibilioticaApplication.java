@@ -16,7 +16,7 @@ public class BibilioticaApplication {
         Menu menu = new Controller(consoleDisplay, new WelcomeMessage(), bookLibrary).executeAction();
         consoleDisplay.putOutput(menu.toString());
         int choice = consoleDisplay.getInteger();
-        menu.choose(choice, bookLibrary);
+        menu.choose(choice, bookLibrary, consoleDisplay);
     }
 
     private HashMap<String, BookDetails> loadBooks() {

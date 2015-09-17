@@ -26,4 +26,9 @@ public class ConsoleDisplay {
         scanner.nextLine();
         return input;
     }
+
+    public String getString() {
+        String input = scanner.nextLine();
+        return input;
+    }
 }
