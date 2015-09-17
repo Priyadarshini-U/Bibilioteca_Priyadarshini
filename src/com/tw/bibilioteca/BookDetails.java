@@ -1,7 +1,9 @@
 package com.tw.bibilioteca;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 public class BookDetails {
     private String author;
@@ -17,5 +19,12 @@ public class BookDetails {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(yearPublished);
         return author + " " + calendar.get(Calendar.YEAR);
+    }
+
+    public List<String> fields() {
+        List<String> fields = new ArrayList<String>();
+        fields.add("author");
+        fields.add("year published");
+        return fields;
     }
 }
