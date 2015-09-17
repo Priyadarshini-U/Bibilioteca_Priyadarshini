@@ -6,7 +6,7 @@ public class User {
     private String phone;
     private UserRole role;
 
-    public User(String libraryNumber, String contact, String phone, UserRole role) {
+    public User(String libraryNumber, UserRole role, String contact, String phone) {
         this.libraryNumber = libraryNumber;
         this.contact = contact;
         this.phone = phone;
@@ -15,6 +15,6 @@ public class User {
 
     @Override
     public String toString() {
-        return libraryNumber + " " + contact + " " + phone + " " + role;
+        return libraryNumber + " " + contact + " " + phone;
     }
 }
