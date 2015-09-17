@@ -16,6 +16,8 @@ public class MenuController implements IController{
         String choice = display.getString();
         if (choice.equals("1"))
             return new Controller(display, new EntityView(libraryData.getBookLibrary()), libraryData);
+        if (choice.equals("5"))
+            return new Controller(display, new EntityView(libraryData.getMoviesLibrary()), libraryData);
         if (choice.equals("3"))
             new CatalogOperation(display, libraryData.getBookLibrary()).executeCheckout();
         else if (choice.equals("4"))
