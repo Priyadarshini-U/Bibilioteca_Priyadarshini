@@ -2,6 +2,7 @@ package com.tw.bibilioteca;
 
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class UsersTest {
@@ -18,5 +19,19 @@ public class UsersTest {
     @Test
     public void shouldReturnUserInformationForValidGuestToken() {
         assertTrue(new Users().getUserInformationFromToken(new GuestUser().authenticate()) != null);
+    }
+    @Test
+    public void shouldReturnAdminRoleInformationForValidAdminUserToken() {
+        assertEquals(new Users().getUserRole("34404444"), UserRole.ADMIN);
+    }
+
+    @Test
+    public void shouldReturnUserRoleInformationForValidNonAdminUserToken() {
+        assertEquals(new Users().getUserRole("35505555"), UserRole.USER);
+    }
+
+    @Test
+    public void shouldReturnGuestRoleInformationForValidGuestToken() {
+        assertEquals(new Users().getUserRole(new GuestUser().authenticate()), UserRole.GUEST);
     }
 }

@@ -16,4 +16,8 @@ public class Users {
     public User getUserInformationFromToken(String token){
         return userInformation.get(token);
     }
+
+    public UserRole getUserRole(String token){
+        return userInformation.get(token).getRole();
+    }
 }

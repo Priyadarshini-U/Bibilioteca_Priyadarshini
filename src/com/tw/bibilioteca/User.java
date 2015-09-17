@@ -17,4 +17,8 @@ public class User {
     public String toString() {
         return libraryNumber + " " + contact + " " + phone;
     }
+
+    public UserRole getRole() {
+        return role;
+    }
 }
