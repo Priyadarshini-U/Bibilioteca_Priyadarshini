@@ -8,7 +8,6 @@ public class BibilioticaApplication {
 
     public void start() {
         System.out.println("Welcome to bibiliotica");
-        System.out.println(new Catalog(loadBooks()));
     }
 
     private List<Book> loadBooks() {
