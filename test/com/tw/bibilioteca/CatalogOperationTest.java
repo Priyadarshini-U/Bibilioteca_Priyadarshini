@@ -16,7 +16,7 @@ public class CatalogOperationTest {
         CatalogOperation catalogOperation = new CatalogOperation(consoleDisplay, catalog);
         catalogOperation.executeCheckout();
 
-        verify(catalog).isBookAvailableForCheckOut("name1");
+        verify(catalog).isEntityAvailableForCheckOut("name1");
     }
 
     @Test
@@ -24,7 +24,7 @@ public class CatalogOperationTest {
         Catalog catalog = mock(Catalog.class);
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
         when(consoleDisplay.getString()).thenReturn("name1");
-        when(catalog.isBookAvailableForCheckOut(anyString())).thenReturn(true);
+        when(catalog.isEntityAvailableForCheckOut(anyString())).thenReturn(true);
 
         CatalogOperation catalogOperation = new CatalogOperation(consoleDisplay, catalog);
         catalogOperation.executeCheckout();
@@ -37,7 +37,7 @@ public class CatalogOperationTest {
         Catalog catalog = mock(Catalog.class);
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
         when(consoleDisplay.getString()).thenReturn("name1");
-        when(catalog.isBookAvailableForCheckOut(anyString())).thenReturn(false);
+        when(catalog.isEntityAvailableForCheckOut(anyString())).thenReturn(false);
 
         CatalogOperation catalogOperation = new CatalogOperation(consoleDisplay, catalog);
         catalogOperation.executeCheckout();
@@ -50,7 +50,7 @@ public class CatalogOperationTest {
         Catalog catalog = mock(Catalog.class);
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
         when(consoleDisplay.getString()).thenReturn("name1");
-        when(catalog.isBookAvailableForCheckOut(anyString())).thenReturn(true);
+        when(catalog.isEntityAvailableForCheckOut(anyString())).thenReturn(true);
 
         CatalogOperation catalogOperation = new CatalogOperation(consoleDisplay, catalog);
         catalogOperation.executeCheckout();
@@ -63,7 +63,7 @@ public class CatalogOperationTest {
         Catalog catalog = mock(Catalog.class);
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
         when(consoleDisplay.getString()).thenReturn("name1");
-        when(catalog.isBookAvailableForCheckOut(anyString())).thenReturn(false);
+        when(catalog.isEntityAvailableForCheckOut(anyString())).thenReturn(false);
 
         CatalogOperation catalogOperation = new CatalogOperation(consoleDisplay, catalog);
         catalogOperation.executeCheckout();
@@ -80,7 +80,7 @@ public class CatalogOperationTest {
         CatalogOperation catalogOperation = new CatalogOperation(consoleDisplay, catalog);
         catalogOperation.executeReturn();
 
-        verify(catalog).isBookReturnable("name1");
+        verify(catalog).isEntityReturnable("name1");
     }
 
     @Test
@@ -88,7 +88,7 @@ public class CatalogOperationTest {
         Catalog catalog = mock(Catalog.class);
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
         when(consoleDisplay.getString()).thenReturn("name1");
-        when(catalog.isBookReturnable(anyString())).thenReturn(true);
+        when(catalog.isEntityReturnable(anyString())).thenReturn(true);
 
         CatalogOperation catalogOperation = new CatalogOperation(consoleDisplay, catalog);
         catalogOperation.executeReturn();
@@ -101,7 +101,7 @@ public class CatalogOperationTest {
         Catalog catalog = mock(Catalog.class);
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
         when(consoleDisplay.getString()).thenReturn("name1");
-        when(catalog.isBookReturnable(anyString())).thenReturn(false);
+        when(catalog.isEntityReturnable(anyString())).thenReturn(false);
 
         CatalogOperation catalogOperation = new CatalogOperation(consoleDisplay, catalog);
         catalogOperation.executeReturn();
@@ -114,12 +114,12 @@ public class CatalogOperationTest {
         Catalog catalog = mock(Catalog.class);
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
         when(consoleDisplay.getString()).thenReturn("name1");
-        when(catalog.isBookReturnable(anyString())).thenReturn(true);
+        when(catalog.isEntityReturnable(anyString())).thenReturn(true);
 
         CatalogOperation catalogOperation = new CatalogOperation(consoleDisplay, catalog);
         catalogOperation.executeReturn();
 
-        verify(consoleDisplay).putOutput("return succesful");
+        verify(consoleDisplay).putOutput("Return succesful");
     }
 
     @Test
@@ -127,11 +127,11 @@ public class CatalogOperationTest {
         Catalog catalog = mock(Catalog.class);
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
         when(consoleDisplay.getString()).thenReturn("name1");
-        when(catalog.isBookReturnable(anyString())).thenReturn(false);
+        when(catalog.isEntityReturnable(anyString())).thenReturn(false);
 
         CatalogOperation catalogOperation = new CatalogOperation(consoleDisplay, catalog);
         catalogOperation.executeReturn();
 
-        verify(consoleDisplay).putOutput("return NOT succesful");
+        verify(consoleDisplay).putOutput("Return NOT succesful");
     }
 }

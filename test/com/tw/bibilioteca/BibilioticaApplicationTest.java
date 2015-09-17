@@ -40,7 +40,7 @@ public class BibilioticaApplicationTest {
 
     @Test
     public void shouldPrintTheCatalog() {
-        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
         BookDetails bookDetails1 = new BookDetails("author1", new Date());
         String bookName1 = "name1";
         BookDetails bookDetails2 = new BookDetails("author2", new Date());
@@ -57,7 +57,7 @@ public class BibilioticaApplicationTest {
         System.setOut(new PrintStream(outputStream));
         new BibilioticaApplication().start(inputStream, outputStream);
 
-        assertTrue(outputStream.toString().contains(new EntityView(new Catalog(bookList, new HashMap<String, BookDetails>())).toString()));
+        assertTrue(outputStream.toString().contains(new EntityView(new Catalog(bookList, new HashMap<String, EntityDetails>())).toString()));
     }
 
 }

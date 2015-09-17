@@ -17,11 +17,11 @@ public class EntityViewTest {
 
     @Test
     public void shouldContainColumnHeaderNameForEmptyLibrary() {
-        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
-        BookDetails bookDetails1 = new BookDetails("author", new Date());
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
+        EntityDetails bookDetails1 = new BookDetails("author", new Date());
         String bookName1 = "name1";
         bookList.put(bookName1, bookDetails1);
-        Catalog catalog = new Catalog(bookList, new HashMap<String, BookDetails>());
+        Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         EntityView entityView = new EntityView(catalog);
 
         assertTrue(entityView.toString().contains("name"));
@@ -29,11 +29,11 @@ public class EntityViewTest {
 
     @Test
     public void shouldContainColumnHeaderAuthorForEmptyLibrary() {
-        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
-        BookDetails bookDetails1 = new BookDetails("author", new Date());
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
+        EntityDetails bookDetails1 = new BookDetails("author", new Date());
         String bookName1 = "name1";
         bookList.put(bookName1, bookDetails1);
-        Catalog catalog = new Catalog(bookList, new HashMap<String, BookDetails>());
+        Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         EntityView entityView = new EntityView(catalog);
 
         assertTrue(entityView.toString().contains("author"));
@@ -41,11 +41,11 @@ public class EntityViewTest {
 
     @Test
     public void shouldContainColumnHeaderYearForEmptyLibrary() {
-        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
-        BookDetails bookDetails1 = new BookDetails("author", new Date());
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
+        EntityDetails bookDetails1 = new BookDetails("author", new Date());
         String bookName1 = "name1";
         bookList.put(bookName1, bookDetails1);
-        Catalog catalog = new Catalog(bookList, new HashMap<String, BookDetails>());
+        Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         EntityView entityView = new EntityView(catalog);
 
         assertTrue(entityView.toString().contains("year published"));
@@ -53,11 +53,11 @@ public class EntityViewTest {
 
     @Test
     public void shouldContainBookNameOfFirstBook() {
-        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
-        BookDetails bookDetails1 = new BookDetails("author", new Date());
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
+        EntityDetails bookDetails1 = new BookDetails("author", new Date());
         String bookName1 = "name1";
         bookList.put(bookName1, bookDetails1);
-        Catalog catalog = new Catalog(bookList, new HashMap<String, BookDetails>());
+        Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         EntityView entityView = new EntityView(catalog);
 
         assertTrue(entityView.toString().contains("name1"));
@@ -65,11 +65,11 @@ public class EntityViewTest {
 
     @Test
     public void shouldContainAuthorOfFirstBook() {
-        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
-        BookDetails bookDetails1 = new BookDetails("author", new Date());
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
+        EntityDetails bookDetails1 = new BookDetails("author", new Date());
         String bookName1 = "name1";
         bookList.put(bookName1, bookDetails1);
-        Catalog catalog = new Catalog(bookList, new HashMap<String, BookDetails>());
+        Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         EntityView entityView = new EntityView(catalog);
 
         assertTrue(entityView.toString().contains("author"));
@@ -77,11 +77,11 @@ public class EntityViewTest {
 
     @Test
     public void shouldContainYearPublishedOfFirstBook() {
-        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
-        BookDetails bookDetails1 = new BookDetails("author", new Date());
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
+        EntityDetails bookDetails1 = new BookDetails("author", new Date());
         String bookName1 = "name1";
         bookList.put(bookName1, bookDetails1);
-        Catalog catalog = new Catalog(bookList, new HashMap<String, BookDetails>());
+        Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         EntityView entityView = new EntityView(catalog);
 
         assertTrue(entityView.toString().contains("2015"));
@@ -89,14 +89,14 @@ public class EntityViewTest {
 
     @Test
     public void shouldContainBookNameOfLastBook() {
-        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
-        BookDetails bookDetails1 = new BookDetails("author", new Date());
-        BookDetails bookDetails2 = new BookDetails("author2", new Date());
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
+        EntityDetails bookDetails1 = new BookDetails("author", new Date());
+        EntityDetails bookDetails2 = new BookDetails("author2", new Date());
         String bookName1 = "name1";
         String bookName2 = "name2";
         bookList.put(bookName1, bookDetails1);
         bookList.put(bookName2, bookDetails2);
-        Catalog catalog = new Catalog(bookList, new HashMap<String, BookDetails>());
+        Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         EntityView entityView = new EntityView(catalog);
 
         assertTrue(entityView.toString().contains("name2"));
@@ -104,16 +104,16 @@ public class EntityViewTest {
 
     @Test
     public void shouldContainAuthorOfLastBook() throws ParseException {
-        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
-        BookDetails bookDetails1 = new BookDetails("author", new Date());
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
+        EntityDetails bookDetails1 = new BookDetails("author", new Date());
         DateFormat formatter = new SimpleDateFormat("MM/dd/yy");
         Date date = formatter.parse("01/29/02");
-        BookDetails bookDetails2 = new BookDetails("author2", date);
+        EntityDetails bookDetails2 = new BookDetails("author2", date);
         String bookName1 = "name1";
         String bookName2 = "name2";
         bookList.put(bookName1, bookDetails1);
         bookList.put(bookName2, bookDetails2);
-        Catalog catalog = new Catalog(bookList, new HashMap<String, BookDetails>());
+        Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         EntityView entityView = new EntityView(catalog);
 
         assertTrue(entityView.toString().contains("author2"));
@@ -121,16 +121,16 @@ public class EntityViewTest {
 
     @Test
     public void shouldContainYearPublishedOfLastBook() throws ParseException {
-        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
-        BookDetails bookDetails1 = new BookDetails("author", new Date());
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
+        EntityDetails bookDetails1 = new BookDetails("author", new Date());
         DateFormat formatter = new SimpleDateFormat("MM/dd/yy");
         Date date = formatter.parse("01/29/02");
-        BookDetails bookDetails2 = new BookDetails("author2", date);
+        EntityDetails bookDetails2 = new BookDetails("author2", date);
         String bookName1 = "name1";
         String bookName2 = "name2";
         bookList.put(bookName1, bookDetails1);
         bookList.put(bookName2, bookDetails2);
-        Catalog catalog = new Catalog(bookList, new HashMap<String, BookDetails>());
+        Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         EntityView entityView = new EntityView(catalog);
 
         assertTrue(entityView.toString().contains("2002"));
@@ -138,13 +138,13 @@ public class EntityViewTest {
 
     @Test
     public void shouldContainBookNameOfAnyBookInLibrary() {
-        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
-        BookDetails bookDetails = new BookDetails("author", new Date());
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
+        EntityDetails bookDetails = new BookDetails("author", new Date());
         for (int i = 0; i < 10; i++) {
             String bookName = "name" + i;
             bookList.put(bookName, bookDetails);
         }
-        Catalog catalog = new Catalog(bookList, new HashMap<String, BookDetails>());
+        Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         EntityView entityView = new EntityView(catalog);
         int randomBookNumber = Math.abs(new Random().nextInt() % 10);
 
@@ -154,13 +154,13 @@ public class EntityViewTest {
 
     @Test
     public void shouldHaveSpacingBasedLineLengthForFirstLine() {
-        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
-        BookDetails bookDetails = new BookDetails("author", new Date());
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
+        EntityDetails bookDetails = new BookDetails("author", new Date());
         for (int i = 0; i < 10; i++) {
             String bookName = "name" + i;
             bookList.put(bookName, bookDetails);
         }
-        Catalog catalog = new Catalog(bookList, new HashMap<String, BookDetails>());
+        Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         EntityView entityView = new EntityView(catalog);
         String outputString = entityView.toString();
         String lastLine = outputString.substring(0, outputString.indexOf("\n"));
@@ -171,13 +171,13 @@ public class EntityViewTest {
 
     @Test
     public void shouldHaveSpacingBasedLineLengthForLastLine() {
-        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
-        BookDetails bookDetails = new BookDetails("author", new Date());
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
+        EntityDetails bookDetails = new BookDetails("author", new Date());
         for (int i = 0; i < 10; i++) {
             String bookName = "name" + i;
             bookList.put(bookName, bookDetails);
         }
-        Catalog catalog = new Catalog(bookList, new HashMap<String, BookDetails>());
+        Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         EntityView entityView = new EntityView(catalog);
         String outputString = entityView.toString();
         outputString = outputString.substring(0, outputString.length() -1);
@@ -189,13 +189,13 @@ public class EntityViewTest {
 
     @Test
     public void shouldHaveOnlySeparatorAsLastLine() {
-        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
-        BookDetails bookDetails = new BookDetails("author", new Date());
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
+        EntityDetails bookDetails = new BookDetails("author", new Date());
         for (int i = 0; i < 10; i++) {
             String bookName = "name" + i;
             bookList.put(bookName, bookDetails);
         }
-        Catalog catalog = new Catalog(bookList, new HashMap<String, BookDetails>());
+        Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         EntityView entityView = new EntityView(catalog);
         String outputString = entityView.toString();
         outputString = outputString.substring(0, outputString.length() -1);
@@ -207,13 +207,13 @@ public class EntityViewTest {
 
     @Test
     public void shouldHaveOnlySeparatorAsLineAfterColumnHeaders() {
-        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
-        BookDetails bookDetails = new BookDetails("author", new Date());
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
+        EntityDetails bookDetails = new BookDetails("author", new Date());
         for (int i = 0; i < 10; i++) {
             String bookName = "name" + i;
             bookList.put(bookName, bookDetails);
         }
-        Catalog catalog = new Catalog(bookList, new HashMap<String, BookDetails>());
+        Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         EntityView entityView = new EntityView(catalog);
         String outputString = entityView.toString();
         Scanner scanner = new Scanner(outputString);

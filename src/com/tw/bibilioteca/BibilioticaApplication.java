@@ -17,8 +17,8 @@ public class BibilioticaApplication {
         }while(! controller.getClass().equals(ExitController.class));
     }
 
-    private HashMap<String, BookDetails> loadBooks() {
-        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
+    private HashMap<String, EntityDetails> loadBooks() {
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
         BookDetails bookDetails1 = new BookDetails("author1", new Date());
         String bookName1 = "name1";
         BookDetails bookDetails2 = new BookDetails("author2", new Date());
@@ -34,6 +34,6 @@ public class BibilioticaApplication {
 
     private void initiateSession(InputStream inputStream, OutputStream outputStream) {
         consoleDisplay = new ConsoleDisplay(inputStream, outputStream);
-        bookLibrary = new Catalog(loadBooks(), new HashMap<String, BookDetails>());
+        bookLibrary = new Catalog(loadBooks(), new HashMap<String, EntityDetails>());
     }
 }

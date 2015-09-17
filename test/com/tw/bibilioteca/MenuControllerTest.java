@@ -13,8 +13,6 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import static org.mockito.Matchers.anyInt;
-import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -63,11 +61,11 @@ public class MenuControllerTest {
     public void shouldGetChoiceAndReturnControllerIfChoiceIsOne() {
         Menu menu = new Menu(optionsMenu);
 
-        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
         BookDetails bookDetails1 = new BookDetails("author", new Date());
         String bookName1 = "name1";
         bookList.put(bookName1, bookDetails1);
-        Catalog catalog = new Catalog(bookList, new HashMap<String, BookDetails>());
+        Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         String input = "1";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(inContent, System.out);
@@ -81,11 +79,11 @@ public class MenuControllerTest {
     public void shouldGetChoiceAndReturnControllerWithLibraryDataIfChoiceIsOne() {
         Menu menu = new Menu(optionsMenu);
 
-        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
         BookDetails bookDetails1 = new BookDetails("author", new Date());
         String bookName1 = "name1";
         bookList.put(bookName1, bookDetails1);
-        Catalog catalog = new Catalog(bookList, new HashMap<String, BookDetails>());
+        Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         String input = "1";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -102,35 +100,35 @@ public class MenuControllerTest {
     public void shouldCheckOutBookIfChoiceIsThree() {
         Menu menu = new Menu(optionsMenu);
 
-        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
         BookDetails bookDetails1 = new BookDetails("author", new Date());
         String bookName1 = "name1";
         bookList.put(bookName1, bookDetails1);
-        Catalog catalog = new Catalog(bookList, new HashMap<String, BookDetails>());
+        Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
         when(consoleDisplay.getString()).thenReturn("3").thenReturn("name1");
         MenuController controller = new MenuController(consoleDisplay, menu, catalog);
         IController result = controller.executeAction();
         result.executeAction();
 
-        assertFalse(catalog.isBookAvailableForCheckOut(bookName1));
+        assertFalse(catalog.isEntityAvailableForCheckOut(bookName1));
     }
 
     @Test
     public void shouldReturnBookIfChoiceIsFour() {
         Menu menu = new Menu(optionsMenu);
 
-        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
+        HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
         BookDetails bookDetails1 = new BookDetails("author", new Date());
         String bookName1 = "name1";
         bookList.put(bookName1, bookDetails1);
-        Catalog catalog = new Catalog(bookList, new HashMap<String, BookDetails>());
+        Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
         when(consoleDisplay.getString()).thenReturn("3").thenReturn("name1");
         MenuController controller = new MenuController(consoleDisplay, menu, catalog);
         IController result = controller.executeAction();
         result.executeAction();
 
-        assertFalse(catalog.isBookAvailableForCheckOut(bookName1));
+        assertFalse(catalog.isEntityAvailableForCheckOut(bookName1));
     }
 }

@@ -11,7 +11,7 @@ public class CatalogOperation {
 
     public Catalog executeCheckout() {
         String name = display.getString();
-        if (catalogData.isBookAvailableForCheckOut(name)) {
+        if (catalogData.isEntityAvailableForCheckOut(name)) {
             catalogData.checkoutEntity(name);
             display.putOutput("Checkout succesful");
         } else
@@ -21,11 +21,11 @@ public class CatalogOperation {
 
     public Catalog executeReturn() {
         String name = display.getString();
-        if (catalogData.isBookReturnable(name)) {
+        if (catalogData.isEntityReturnable(name)) {
             catalogData.returnEntity(name);
-            display.putOutput("return succesful");
+            display.putOutput("Return succesful");
         } else
-            display.putOutput("return NOT succesful");
+            display.putOutput("Return NOT succesful");
         return catalogData;
     }
 }

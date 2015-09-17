@@ -25,10 +25,10 @@ public class EntityView {
 
     private String columnBuilders() {
         String displayString = "";
-        for (String bookName : catalog.getAvailableBooks().keySet()) {
+        for (String bookName : catalog.getAvailableEntities().keySet()) {
             List<String> fieldValues = new ArrayList<String>();
             fieldValues.add(bookName);
-            BookDetails bookDetails = catalog.getAvailableBooks().get(bookName);
+            EntityDetails bookDetails = catalog.getAvailableEntities().get(bookName);
             for (String words : bookDetails.toString().split("\\ "))
                 fieldValues.add(words);
             displayString += formatList(fieldValues);
