@@ -25,6 +25,8 @@ public class Menu {
                 libraryData.checkoutEntity(bookName);
                 display.putOutput("checkout successful");
             }
+            else
+                display.putOutput("checkout NOT successful");
         }
         else
             System.out.print("Invalid Option");

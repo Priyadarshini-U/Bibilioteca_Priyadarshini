@@ -127,4 +127,19 @@ public class MenuTest {
 
         verify(display).putOutput("checkout successful");
     }
+
+    @Test
+    public void shouldPrintFailureCheckoutMessageOnUnsuccesssfulCheckout() {
+        ConsoleDisplay display = mock(ConsoleDisplay.class);
+        when(display.getInteger()).thenReturn(3);
+        when(display.getString()).thenReturn("name1");
+        Catalog bookCatalog = mock(Catalog.class);
+        when(bookCatalog.isBookAvailableForCheckOut(anyString())).thenReturn(false);
+        List<String> options = new ArrayList<String>();
+        options.add("1. List BookDetails");
+        new Menu(options).choose(3, bookCatalog, display);
+
+        verify(display).putOutput("checkout NOT successful");
+    }
+
 }
