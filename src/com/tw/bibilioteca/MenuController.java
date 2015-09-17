@@ -15,6 +15,8 @@ public class MenuController implements IController{
         display.putOutput(currentModel);
         String operation = currentModel.choose(display.getInteger());
         String choice = operation;
+        if (!isValidOperationForCurrentUser(choice, libraryData.getSessionToken()))
+            return new LoginController(display, new Login(), libraryData);
         if (choice.equals("Log in"))
             return new LoginController(display, new Login(), libraryData);
         if (choice.equals("Log out"))
@@ -34,5 +36,9 @@ public class MenuController implements IController{
         else
             display.putOutput("invalid option");
         return new MenuController(display, currentModel, libraryData);
+    }
+
+    private boolean isValidOperationForCurrentUser(String choice, String sessionToken) {
+        return new Users().getUserRole(sessionToken).getOperations().contains(choice);
     }
 }

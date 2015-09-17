@@ -34,6 +34,7 @@ public class MenuControllerTest {
     @Test
     public void shouldPrintMenu(){
         BibilioticaData catalog = mock(BibilioticaData.class);
+        when(catalog.getSessionToken()).thenReturn("34404444");
         ConsoleDisplay display = mock(ConsoleDisplay.class);
         when(display.getString()).thenReturn("1\n");
         Menu menu = mock(Menu.class);
@@ -46,6 +47,7 @@ public class MenuControllerTest {
     @Test
     public void shouldGetInput(){
         BibilioticaData catalog = mock(BibilioticaData.class);
+        when(catalog.getSessionToken()).thenReturn("34404444");
         ConsoleDisplay display = mock(ConsoleDisplay.class);
         when(display.getString()).thenReturn("1\n");
         Menu menu = mock(Menu.class);
@@ -106,7 +108,7 @@ public class MenuControllerTest {
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
         when(consoleDisplay.getInteger()).thenReturn(4);
         when(consoleDisplay.getString()).thenReturn("name1");
-        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(catalog, null, new GuestUser().authenticate()));
+        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(catalog, null, "34404444"));
         IController result = controller.executeAction();
         result.executeAction();
 
@@ -125,7 +127,7 @@ public class MenuControllerTest {
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
         when(consoleDisplay.getString()).thenReturn("name1");
         when(consoleDisplay.getInteger()).thenReturn(6);
-        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(catalog, null, new GuestUser().authenticate()));
+        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(catalog, null, "34404444"));
         IController result = controller.executeAction();
         result.executeAction();
 
@@ -145,7 +147,7 @@ public class MenuControllerTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(inContent, new PrintStream(outContent));
-        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(null, catalog, new GuestUser().authenticate()));
+        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(null, catalog, "34404444"));
         IController result = controller.executeAction();
         result.executeAction();
 
@@ -165,7 +167,7 @@ public class MenuControllerTest {
         when(consoleDisplay.getString()).thenReturn("name1");
         when(consoleDisplay.getInteger()).thenReturn(5);
 
-        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(null, catalog, new GuestUser().authenticate()));
+        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(null, catalog, "34404444"));
         IController result = controller.executeAction();
         result.executeAction();
 
@@ -205,10 +207,29 @@ public class MenuControllerTest {
         ByteArrayInputStream inputStream = new ByteArrayInputStream(input.getBytes());
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(inputStream, outputStream);
 
-        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(null, catalog, new GuestUser().authenticate()));
+        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(null, catalog, "34404444"));
         IController result = controller.executeAction();
         result.executeAction();
 
         assertTrue(outputStream.toString().contains(new Menu(UserRole.GUEST.getDisplayOperations()).toString()));
+    }
+
+    @Test
+    public void shouldReturnLoginControllerIfOperationIsNotValidForCurrentUser() {
+        Menu menu = new Menu(optionsMenu);
+
+        HashMap<String, EntityDetails> moviesList = new HashMap<String, EntityDetails>();
+        String name1 = "name1";
+        EntityDetails details = new MovieDetails(new Date(), "author1", 3.0);
+        moviesList.put(name1, details);
+        Catalog catalog = new Catalog(moviesList, new HashMap<String, EntityDetails>());
+        ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
+        when(consoleDisplay.getString()).thenReturn("name1");
+        when(consoleDisplay.getInteger()).thenReturn(4);
+
+        MenuController controller = new MenuController(consoleDisplay, menu, new BibilioticaData(null, catalog, new GuestUser().authenticate()));
+        IController result = controller.executeAction();
+
+        assertEquals(result.getClass(), LoginController.class);
     }
 }
