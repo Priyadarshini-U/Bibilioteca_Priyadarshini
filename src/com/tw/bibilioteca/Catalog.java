@@ -27,7 +27,13 @@ public class Catalog {
 
     public boolean isBookReturnable(String bookName) {
         return checked_out_books.containsKey(bookName);
-
     }
+
+    public void checkoutEntity(String bookName) {
+        BookDetails bookDetails = available_books.get(bookName);
+        checked_out_books.put(bookName, bookDetails);
+        available_books.remove(bookName);
+    }
+
 
 }

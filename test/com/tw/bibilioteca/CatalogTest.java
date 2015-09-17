@@ -99,4 +99,17 @@ public class CatalogTest {
 
         assertTrue(catalog.isBookReturnable(bookName1));
     }
+
+    @Test
+    public void shouldCheckOutAndNotAllowCheckOutOfAlreadyCheckedOutBooks() {
+        HashMap<String, BookDetails> bookList = new HashMap<String, BookDetails>();
+        BookDetails bookDetails1 = new BookDetails("author", new Date());
+        String bookName1 = "name1";
+        bookList.put(bookName1, bookDetails1);
+        Catalog catalog = new Catalog(bookList, new HashMap<String, BookDetails>());
+
+        catalog.checkoutEntity(bookName1);
+
+        assertFalse(catalog.isBookAvailableForCheckOut(bookName1));
+    }
 }
