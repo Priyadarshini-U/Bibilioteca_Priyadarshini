@@ -20,7 +20,11 @@ public class Menu {
         if(optionChoice == 2)
             System.exit(0);
         if(optionChoice == 3){
-            libraryData.checkoutEntity(display.getString());
+            String bookName = display.getString();
+            if(libraryData.isBookAvailableForCheckOut(bookName)) {
+                libraryData.checkoutEntity(bookName);
+                display.putOutput("checkout successful");
+            }
         }
         else
             System.out.print("Invalid Option");

@@ -14,6 +14,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -105,10 +106,25 @@ public class MenuTest {
         when(display.getInteger()).thenReturn(3);
         when(display.getString()).thenReturn("name1");
         Catalog bookCatalog = mock(Catalog.class);
+        when(bookCatalog.isBookAvailableForCheckOut(anyString())).thenReturn(true);
         List<String> options = new ArrayList<String>();
         options.add("1. List BookDetails");
         new Menu(options).choose(3, bookCatalog, display);
 
         verify(bookCatalog).checkoutEntity("name1");
+    }
+
+    @Test
+    public void shouldPrintSuccessfulCheckoutMessageOnCheckout() {
+        ConsoleDisplay display = mock(ConsoleDisplay.class);
+        when(display.getInteger()).thenReturn(3);
+        when(display.getString()).thenReturn("name1");
+        Catalog bookCatalog = mock(Catalog.class);
+        when(bookCatalog.isBookAvailableForCheckOut(anyString())).thenReturn(true);
+        List<String> options = new ArrayList<String>();
+        options.add("1. List BookDetails");
+        new Menu(options).choose(3, bookCatalog, display);
+
+        verify(display).putOutput("checkout successful");
     }
 }
