@@ -35,5 +35,10 @@ public class Catalog {
         available_books.remove(bookName);
     }
 
+    public void returnEntity(String bookName) {
+        BookDetails bookDetails = checked_out_books.get(bookName);
+        available_books.put(bookName, bookDetails);
+        checked_out_books.remove(bookName);
+    }
 
 }
