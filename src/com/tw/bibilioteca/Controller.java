@@ -15,6 +15,8 @@ public class Controller {
 
     public Menu executeAction() {
         display.putOutput(current);
-        return new Menu(new ArrayList<String>(){{add("1. List Books");}});
+        return new Menu(new ArrayList<String>() {{
+            add("1. List Books");
+        }});
     }
 }
