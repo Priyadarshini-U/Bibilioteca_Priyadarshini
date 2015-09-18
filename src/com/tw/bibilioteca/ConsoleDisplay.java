@@ -22,9 +22,14 @@ public class ConsoleDisplay {
     }
 
     public int getInteger() {
-        int input = scanner.nextInt();
-        scanner.nextLine();
-        return input;
+        try {
+            int input = scanner.nextInt();
+            scanner.nextLine();
+            return input;
+        }catch(Exception exception){
+            scanner.nextLine();
+            return  getInteger();
+        }
     }
 
     public String getString() {

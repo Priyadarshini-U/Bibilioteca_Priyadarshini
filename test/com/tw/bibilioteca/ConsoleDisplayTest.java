@@ -42,4 +42,15 @@ public class ConsoleDisplayTest {
 
         assertEquals(inputString, "anna kareina");
     }
+
+    @Test
+    public void shouldPromptForInputAgainIfGetIntegerInputIsNotAValidNumber() {
+        String input = "anna\n1\n";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+
+        ConsoleDisplay display = new ConsoleDisplay(inContent, System.out);
+        int inputString = display.getInteger();
+
+        assertEquals(inputString, 1);
+    }
 }
