@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.9153439153439153" branch-rate="0.9807692307692307" lines-covered="346" lines-valid="378" branches-covered="51" branches-valid="52" complexity="1.4871794871794872" version="2.1.1" timestamp="1442544624563">
+<coverage line-rate="0.9155672823218998" branch-rate="0.9807692307692307" lines-covered="347" lines-valid="379" branches-covered="51" branches-valid="52" complexity="1.4871794871794872" version="2.1.1" timestamp="1442545078758">
 	<sources>
 		<source>src</source>
 	</sources>
 	<packages>
-		<package name="com.tw.bibilioteca" line-rate="0.9153439153439153" branch-rate="0.9807692307692307" complexity="1.4871794871794872">
+		<package name="com.tw.bibilioteca" line-rate="0.9155672823218998" branch-rate="0.9807692307692307" complexity="1.4871794871794872">
 			<classes>
 				<class name="com.tw.bibilioteca.BibilioticaApplication" filename="com/tw/bibilioteca/BibilioticaApplication.java" line-rate="1.0" branch-rate="1.0" complexity="1.25">
 					<methods>
@@ -133,7 +133,7 @@
 						</method>
 						<method name="getBookLibrary" signature="()Lcom/tw/bibilioteca/Catalog;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="15" hits="23" branch="false"/>
+								<line number="15" hits="25" branch="false"/>
 							</lines>
 						</method>
 						<method name="getMoviesLibrary" signature="()Lcom/tw/bibilioteca/Catalog;" line-rate="1.0" branch-rate="1.0" complexity="0">
@@ -153,7 +153,7 @@
 						<line number="10" hits="41" branch="false"/>
 						<line number="11" hits="41" branch="false"/>
 						<line number="12" hits="41" branch="false"/>
-						<line number="15" hits="23" branch="false"/>
+						<line number="15" hits="25" branch="false"/>
 						<line number="19" hits="14" branch="false"/>
 						<line number="22" hits="46" branch="false"/>
 					</lines>
@@ -261,14 +261,14 @@
 						<method name="fields" signature="()Ljava/util/List;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="51" hits="3378" branch="false"/>
-								<line number="52" hits="3378" branch="true" condition-coverage="100% (2/2)">
+								<line number="52" hits="3378" branch="false"/>
+								<line number="53" hits="3378" branch="true" condition-coverage="100% (2/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="100%"/>
 									</conditions>
 								</line>
-								<line number="53" hits="3369" branch="false"/>
-								<line number="55" hits="9" branch="false"/>
-								<line number="56" hits="3378" branch="false"/>
+								<line number="54" hits="3369" branch="false"/>
+								<line number="56" hits="9" branch="false"/>
 								<line number="57" hits="3378" branch="false"/>
 								<line number="58" hits="3378" branch="false"/>
 								<line number="59" hits="3378" branch="false"/>
@@ -276,7 +276,7 @@
 						</method>
 						<method name="getAvailableEntities" signature="()Ljava/util/HashMap;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="63" hits="104" branch="false"/>
+								<line number="63" hits="106" branch="false"/>
 							</lines>
 						</method>
 						<method name="getCheckedOutEntities" signature="()Ljava/util/HashMap;" line-rate="1.0" branch-rate="1.0" complexity="0">
@@ -355,18 +355,18 @@
 						<line number="46" hits="1" branch="false"/>
 						<line number="48" hits="1" branch="false"/>
 						<line number="51" hits="3378" branch="false"/>
-						<line number="52" hits="3378" branch="true" condition-coverage="100% (2/2)">
+						<line number="52" hits="3378" branch="false"/>
+						<line number="53" hits="3378" branch="true" condition-coverage="100% (2/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="100%"/>
 							</conditions>
 						</line>
-						<line number="53" hits="3369" branch="false"/>
-						<line number="55" hits="9" branch="false"/>
-						<line number="56" hits="3378" branch="false"/>
+						<line number="54" hits="3369" branch="false"/>
+						<line number="56" hits="9" branch="false"/>
 						<line number="57" hits="3378" branch="false"/>
 						<line number="58" hits="3378" branch="false"/>
 						<line number="59" hits="3378" branch="false"/>
-						<line number="63" hits="104" branch="false"/>
+						<line number="63" hits="106" branch="false"/>
 						<line number="67" hits="1" branch="false"/>
 					</lines>
 				</class>
@@ -1014,7 +1014,7 @@
 						<line number="26" hits="27" branch="false"/>
 					</lines>
 				</class>
-				<class name="com.tw.bibilioteca.MenuController" filename="com/tw/bibilioteca/MenuController.java" line-rate="0.9722222222222222" branch-rate="0.9545454545454546" complexity="7.333333333333333">
+				<class name="com.tw.bibilioteca.MenuController" filename="com/tw/bibilioteca/MenuController.java" line-rate="0.972972972972973" branch-rate="0.9545454545454546" complexity="7.333333333333333">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Lcom/tw/bibilioteca/ConsoleDisplay;Lcom/tw/bibilioteca/Menu;Lcom/tw/bibilioteca/BibilioticaData;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -1030,7 +1030,7 @@
 								<line number="5" hits="1" branch="false"/>
 							</lines>
 						</method>
-						<method name="executeAction" signature="()Lcom/tw/bibilioteca/IController;" line-rate="0.9655172413793104" branch-rate="0.9545454545454546" complexity="0">
+						<method name="executeAction" signature="()Lcom/tw/bibilioteca/IController;" line-rate="0.9666666666666667" branch-rate="0.9545454545454546" complexity="0">
 							<lines>
 								<line number="17" hits="26" branch="false"/>
 								<line number="18" hits="26" branch="false"/>
@@ -1102,6 +1102,7 @@
 									</conditions>
 								</line>
 								<line number="42" hits="1" branch="false"/>
+								<line number="44" hits="1" branch="false"/>
 								<line number="45" hits="1" branch="false"/>
 								<line number="47" hits="0" branch="false"/>
 								<line number="48" hits="6" branch="false"/>
@@ -1190,6 +1191,7 @@
 							</conditions>
 						</line>
 						<line number="42" hits="1" branch="false"/>
+						<line number="44" hits="1" branch="false"/>
 						<line number="45" hits="1" branch="false"/>
 						<line number="47" hits="0" branch="false"/>
 						<line number="48" hits="6" branch="false"/>

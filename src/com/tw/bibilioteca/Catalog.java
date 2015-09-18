@@ -49,11 +49,11 @@ public class Catalog {
 
     public List<String> fields() {
         EntityDetails entityDetails = null;
+        List<String> fields = new ArrayList<String>();
         if (availableEntities.keySet().iterator().hasNext())
             entityDetails = availableEntities.get(availableEntities.keySet().iterator().next());
         else
             entityDetails = checked_outEntites.get(checked_outEntites.keySet().iterator().next());
-        List<String> fields = new ArrayList<String>();
         fields.add("name");
         fields.addAll(entityDetails.fields());
         return fields;

@@ -36,12 +36,12 @@ public class MenuController implements IController {
         else if (choice.equals("quit"))
             return new ExitController();
         else if (choice.equals("Book Status")) {
-            Catalog catalogDisplay = new Catalog(libraryData.getBookLibrary().getCheckedOutEntities(), null);
+            Catalog catalogDisplay = new Catalog(libraryData.getBookLibrary().getCheckedOutEntities(), libraryData.getBookLibrary().getAvailableEntities());
             return new Controller(display, new EntityView(catalogDisplay), libraryData);
         } else if (choice.equals("User Information")) {
             Catalog catalogDisplay = new Catalog(new HashMap<String, EntityDetails>() {{
                 put("", new Users().getUserInformationFromToken(libraryData.getSessionToken()));
-            }}, null);
+            }}, libraryData.getBookLibrary().getAvailableEntities() );
             return new Controller(display, new EntityView(catalogDisplay), libraryData);
         } else
             display.putOutput("invalid option");
