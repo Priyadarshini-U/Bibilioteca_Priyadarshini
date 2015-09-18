@@ -4,6 +4,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class ConsoleDisplay {
     private InputStream inputStream;
@@ -37,5 +38,14 @@ public class ConsoleDisplay {
     public String getString() {
         String input = scanner.nextLine();
         return input;
+    }
+
+    public String getLibraryNumber() {
+        if(scanner.hasNext(Pattern.compile("...-....")))
+            return  scanner.nextLine();
+        else {
+            scanner.nextLine();
+            return getLibraryNumber();
+        }
     }
 }

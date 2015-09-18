@@ -65,4 +65,15 @@ public class ConsoleDisplayTest {
 
         assertTrue(outputStream.toString().contains("Enter Valid Number"));
     }
+
+    @Test
+    public void shouldPromptForInputAgainIfGetLibraryNumberIsNotAValidNumber() {
+        String input = "anna\n011-1111\n";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+
+        ConsoleDisplay display = new ConsoleDisplay(inContent, System.out);
+        String inputString = display.getLibraryNumber();
+
+        assertEquals(inputString, "011-1111");
+    }
 }
