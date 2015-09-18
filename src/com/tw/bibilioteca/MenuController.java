@@ -1,6 +1,8 @@
 package com.tw.bibilioteca;
 
-public class MenuController implements IController{
+import java.util.HashMap;
+
+public class MenuController implements IController {
     private ConsoleDisplay display;
     private Menu currentModel;
     private BibilioticaData libraryData;
@@ -36,8 +38,12 @@ public class MenuController implements IController{
         else if (choice.equals("Book Status")) {
             Catalog catalogDisplay = new Catalog(libraryData.getBookLibrary().getCheckedOutEntities(), null);
             return new Controller(display, new EntityView(catalogDisplay), libraryData);
-        }
-        else
+        } else if (choice.equals("User Information")) {
+            Catalog catalogDisplay = new Catalog(new HashMap<String, EntityDetails>() {{
+                put("", new Users().getUserInformationFromToken(libraryData.getSessionToken()));
+            }}, null);
+            return new Controller(display, new EntityView(catalogDisplay), libraryData);
+        } else
             display.putOutput("invalid option");
         return new MenuController(display, currentModel, libraryData);
     }

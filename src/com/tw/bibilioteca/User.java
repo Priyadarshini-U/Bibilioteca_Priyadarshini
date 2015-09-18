@@ -1,5 +1,6 @@
 package com.tw.bibilioteca;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class User implements EntityDetails{
@@ -30,6 +31,10 @@ public class User implements EntityDetails{
 
     @Override
     public List<String> fields() {
-        return null;
+        List<String> fields = new ArrayList<String>();
+        fields.add("library Number");
+        fields.add("contact");
+        fields.add("phone");
+        return fields;
     }
 }

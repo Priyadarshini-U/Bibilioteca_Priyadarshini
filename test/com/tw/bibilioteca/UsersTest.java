@@ -39,4 +39,6 @@ public class UsersTest {
     public void shouldReturnLibraryNumberForUsers() {
         assertEquals(new Users().getUserLibraryNumber("35505555"), "022-2222");
     }
+
+
 }
