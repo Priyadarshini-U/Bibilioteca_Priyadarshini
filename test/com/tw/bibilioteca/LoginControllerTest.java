@@ -169,6 +169,6 @@ public class LoginControllerTest {
         IController result = controller.executeAction();
         result.executeAction();
 
-        assertTrue(outContent.toString().contains(new Menu(UserRole.ADMIN.getDisplayOperations()).toString()));
+        assertTrue(outContent.toString().contains(new Menu(new Admin().getDisplayOperations()).toString()));
     }
 }

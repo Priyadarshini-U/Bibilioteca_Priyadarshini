@@ -25,6 +25,6 @@ public class AdminTest {
 
     @Test
     public void shouldHaveRespectiveDisplayOperationsIsSameAsPermissibleOPerationsForAdmin() {
-        assertTrue(new Admin().getDisplayOperations().containsAll(UserRole.ADMIN.getOperations()));
+        assertTrue(new Admin().getDisplayOperations().containsAll(new Admin().getOperations()));
     }
 }

@@ -56,7 +56,7 @@ public class ControllerTest {
         IController result = controller.executeAction();
         result.executeAction();
 
-        assertTrue(outContent.toString().contains(new Menu(UserRole.ADMIN.getDisplayOperations()).toString()));
+        assertTrue(outContent.toString().contains(new Menu(new Admin().getDisplayOperations()).toString()));
     }
 
     @Test
@@ -76,7 +76,7 @@ public class ControllerTest {
         IController result = controller.executeAction();
         result.executeAction();
 
-        assertTrue(outContent.toString().contains(new Menu(UserRole.USER.getDisplayOperations()).toString()));
+        assertTrue(outContent.toString().contains(new Menu(new NonAdminUser().getDisplayOperations()).toString()));
     }
 
     @Test
@@ -96,6 +96,6 @@ public class ControllerTest {
         IController result = controller.executeAction();
         result.executeAction();
 
-        assertTrue(outContent.toString().contains(new Menu(UserRole.GUEST.getDisplayOperations()).toString()));
+        assertTrue(outContent.toString().contains(new Menu(new Guest().getDisplayOperations()).toString()));
     }
 }

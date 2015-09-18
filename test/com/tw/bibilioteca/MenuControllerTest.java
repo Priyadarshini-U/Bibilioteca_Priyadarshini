@@ -213,7 +213,7 @@ public class MenuControllerTest {
         IController result = controller.executeAction();
         result.executeAction();
 
-        assertTrue(outputStream.toString().contains(new Menu(UserRole.GUEST.getDisplayOperations()).toString()));
+        assertTrue(outputStream.toString().contains(new Menu(new Guest().getDisplayOperations()).toString()));
     }
 
     @Test

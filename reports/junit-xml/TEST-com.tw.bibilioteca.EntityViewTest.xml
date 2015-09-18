@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="INPriya.local" name="com.tw.bibilioteca.EntityViewTest" skipped="0" tests="14" time="0.195" timestamp="2015-09-18T09:58:05">
+<testsuite errors="0" failures="0" hostname="INPriya.local" name="com.tw.bibilioteca.EntityViewTest" skipped="0" tests="14" time="0.192" timestamp="2015-09-18T10:24:22">
   <properties>
     <property name="java.vendor" value="Oracle Corporation" />
     <property name="coverage.summaryxml.dir" value="reports/cobertura-summary-xml" />
@@ -54,7 +54,7 @@
     <property name="java.vm.vendor" value="Oracle Corporation" />
     <property name="gopherProxySet" value="false" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.tw.bibilioteca.EntityViewTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/admin/check2/Bibilioteca_Priyadarshini/reports/junit-xml/TEST-com.tw.bibilioteca.EntityViewTest.xml crashfile=/Users/admin/check2/Bibilioteca_Priyadarshini/junitvmwatcher1943699916473740464.properties propsfile=/Users/admin/check2/Bibilioteca_Priyadarshini/junit6076747044181063872.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.tw.bibilioteca.EntityViewTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/admin/check2/Bibilioteca_Priyadarshini/reports/junit-xml/TEST-com.tw.bibilioteca.EntityViewTest.xml crashfile=/Users/admin/check2/Bibilioteca_Priyadarshini/junitvmwatcher7233027888370997925.properties propsfile=/Users/admin/check2/Bibilioteca_Priyadarshini/junit6816690710958576836.properties" />
     <property name="java.class.path" value="/Users/admin/check2/Bibilioteca_Priyadarshini/instrumented:/Users/admin/check2/Bibilioteca_Priyadarshini/out:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/asm-5.0.1.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/asm-analysis-5.0.1.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/asm-commons-5.0.1.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/asm-tree-5.0.1.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/asm-util-5.0.1.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/cobertura-2.1.1-javadoc.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/cobertura-2.1.1-sources.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/cobertura-2.1.1.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/commons-lang3-3.3.2.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/hamcrest-core-1.3.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/jaxen-1.1.4.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/jetty-6.1.14.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/jetty-util-6.1.14.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/junit-4.11.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/logback-classic-1.0.13.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/logback-core-1.0.13.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/mockito-all-1.9.5.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/oro-2.0.8.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/servlet-api-2.5-6.1.14.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/slf4j-api-1.7.5.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/system-rules-1.2.0.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
     <property name="ant.version" value="Apache Ant(TM) version 1.9.6 compiled on June 29 2015" />
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
@@ -80,35 +80,35 @@
     <property name="ant.project.invoked-targets" value="coverage" />
   </properties>
   <testcase classname="com.tw.bibilioteca.EntityViewTest" name="shouldContainColumnHeaderAuthorForEmptyLibrary" time="0.134" />
-  <testcase classname="com.tw.bibilioteca.EntityViewTest" name="shouldContainBookNameOfLastBook" time="0.001" />
+  <testcase classname="com.tw.bibilioteca.EntityViewTest" name="shouldContainBookNameOfLastBook" time="0.0" />
   <testcase classname="com.tw.bibilioteca.EntityViewTest" name="shouldContainYearPublishedOfLastBook" time="0.001" />
   <testcase classname="com.tw.bibilioteca.EntityViewTest" name="shouldHaveOnlySeparatorAsLineAfterColumnHeaders" time="0.004" />
   <testcase classname="com.tw.bibilioteca.EntityViewTest" name="shouldContainBookNameOfAnyBookInLibrary" time="0.002" />
   <testcase classname="com.tw.bibilioteca.EntityViewTest" name="shouldContainColumnHeaderYearForEmptyLibrary" time="0.001" />
   <testcase classname="com.tw.bibilioteca.EntityViewTest" name="shouldHaveSpacingBasedLineLengthForLastLine" time="0.001" />
-  <testcase classname="com.tw.bibilioteca.EntityViewTest" name="shouldContainAuthorOfLastBook" time="0.001" />
+  <testcase classname="com.tw.bibilioteca.EntityViewTest" name="shouldContainAuthorOfLastBook" time="0.0" />
   <testcase classname="com.tw.bibilioteca.EntityViewTest" name="shouldContainAuthorOfFirstBook" time="0.001" />
-  <testcase classname="com.tw.bibilioteca.EntityViewTest" name="shouldHaveOnlySeparatorAsLastLine" time="0.002" />
-  <testcase classname="com.tw.bibilioteca.EntityViewTest" name="shouldContainBookNameOfFirstBook" time="0.0" />
+  <testcase classname="com.tw.bibilioteca.EntityViewTest" name="shouldHaveOnlySeparatorAsLastLine" time="0.003" />
+  <testcase classname="com.tw.bibilioteca.EntityViewTest" name="shouldContainBookNameOfFirstBook" time="0.001" />
   <testcase classname="com.tw.bibilioteca.EntityViewTest" name="shouldContainColumnHeaderNameForEmptyLibrary" time="0.001" />
-  <testcase classname="com.tw.bibilioteca.EntityViewTest" name="shouldHaveSpacingBasedLineLengthForFirstLine" time="0.002" />
-  <testcase classname="com.tw.bibilioteca.EntityViewTest" name="shouldContainYearPublishedOfFirstBook" time="0.002" />
-  <system-out><![CDATA[15:28:05,503 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
-15:28:05,503 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-15:28:05,503 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/cobertura-2.1.1-sources.jar!/logback.xml]
-15:28:05,504 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
-15:28:05,504 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/cobertura-2.1.1-sources.jar!/logback.xml]
-15:28:05,504 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/cobertura-2.1.1.jar!/logback.xml]
-15:28:05,522 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@402f32ff - URL [jar:file:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
-15:28:05,552 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
-15:28:05,553 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-15:28:05,558 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
-15:28:05,573 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-15:28:05,597 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
-15:28:05,598 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
-15:28:05,598 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
-15:28:05,598 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
-15:28:05,599 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@573f2bb1 - Registering current configuration as safe fallback point
+  <testcase classname="com.tw.bibilioteca.EntityViewTest" name="shouldHaveSpacingBasedLineLengthForFirstLine" time="0.001" />
+  <testcase classname="com.tw.bibilioteca.EntityViewTest" name="shouldContainYearPublishedOfFirstBook" time="0.001" />
+  <system-out><![CDATA[15:54:22,913 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+15:54:22,913 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+15:54:22,913 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+15:54:22,914 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
+15:54:22,914 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+15:54:22,914 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/cobertura-2.1.1.jar!/logback.xml]
+15:54:22,926 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@402f32ff - URL [jar:file:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
+15:54:22,958 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+15:54:22,959 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+15:54:22,965 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+15:54:22,980 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+15:54:23,004 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
+15:54:23,004 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
+15:54:23,004 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+15:54:23,004 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+15:54:23,005 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@573f2bb1 - Registering current configuration as safe fallback point
 
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

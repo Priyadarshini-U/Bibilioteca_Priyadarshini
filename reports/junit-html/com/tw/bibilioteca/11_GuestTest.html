@@ -1,13 +1,13 @@
 <html xmlns:string="xalan://java.lang.String" xmlns:lxslt="http://xml.apache.org/xslt">
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Unit Test Results: com.tw.bibilioteca.LoginControllerTest</title>
+<title>Unit Test Results: com.tw.bibilioteca.GuestTest</title>
 <link rel="stylesheet" type="text/css" title="Style" href="../../../stylesheet.css">
 <script type="text/javascript" language="JavaScript">
         var TestCases = new Array();
         var cur;
         
-    cur = TestCases['com.tw.bibilioteca.LoginControllerTest'] = new Array();
+    cur = TestCases['com.tw.bibilioteca.GuestTest'] = new Array();
     
         cur['ant.core.lib'] = '/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar';
     
@@ -137,7 +137,7 @@
     
         cur['sun.io.unicode.encoding'] = 'UnicodeBig';
     
-        cur['sun.java.command'] = 'org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.tw.bibilioteca.LoginControllerTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/admin/check2/Bibilioteca_Priyadarshini/reports/junit-xml/TEST-com.tw.bibilioteca.LoginControllerTest.xml crashfile=/Users/admin/check2/Bibilioteca_Priyadarshini/junitvmwatcher9049404636326385204.properties propsfile=/Users/admin/check2/Bibilioteca_Priyadarshini/junit6192051663367063808.properties';
+        cur['sun.java.command'] = 'org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.tw.bibilioteca.GuestTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/admin/check2/Bibilioteca_Priyadarshini/reports/junit-xml/TEST-com.tw.bibilioteca.GuestTest.xml crashfile=/Users/admin/check2/Bibilioteca_Priyadarshini/junitvmwatcher4984587196604677378.properties propsfile=/Users/admin/check2/Bibilioteca_Priyadarshini/junit8285190281930551518.properties';
     
         cur['sun.java.launcher'] = 'SUN_STANDARD';
     
@@ -200,13 +200,13 @@
 </tr>
 </table>
 <hr size="1">
-<h3>Class com.tw.bibilioteca.LoginControllerTest</h3>
+<h3>Class com.tw.bibilioteca.GuestTest</h3>
 <table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
 <tr valign="top">
 <th width="80%">Name</th><th>Tests</th><th>Errors</th><th>Failures</th><th>Skipped</th><th nowrap>Time(s)</th><th nowrap>Time Stamp</th><th>Host</th>
 </tr>
 <tr valign="top" class="Pass">
-<td><a title="Display all tests" href="13_LoginControllerTest.html">LoginControllerTest</a></td><td><a title="Display all tests" href="13_LoginControllerTest.html">9</a></td><td>0</td><td>0</td><td>0</td><td>0.299</td><td>2015-09-18T10:24:28</td><td>INPriya.local</td>
+<td><a title="Display all tests" href="11_GuestTest.html">GuestTest</a></td><td><a title="Display all tests" href="11_GuestTest.html">2</a></td><td>0</td><td>0</td><td>0</td><td>0.176</td><td>2015-09-18T10:24:25</td><td>INPriya.local</td>
 </tr>
 </table>
 <h2>Tests</h2>
@@ -215,40 +215,19 @@
 <th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="shouldReturnNewMenuControllerWithChangedMenuOptions"></a>shouldReturnNewMenuControllerWithChangedMenuOptions</td><td>Success</td><td></td><td>0.154</td>
+<td><a name="shouldHaveRespectiveDisplayOperationsForGuest"></a>shouldHaveRespectiveDisplayOperationsForGuest</td><td>Success</td><td></td><td>0.134</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="shouldPrintEnterLibraryNumber"></a>shouldPrintEnterLibraryNumber</td><td>Success</td><td></td><td>0.001</td>
-</tr>
-<tr valign="top" class="TableRowColor">
-<td><a name="shouldInvokeLoginAuthenticateWithInputLibraryNumberAndInputPassword"></a>shouldInvokeLoginAuthenticateWithInputLibraryNumberAndInputPassword</td><td>Success</td><td></td><td>0.101</td>
-</tr>
-<tr valign="top" class="TableRowColor">
-<td><a name="shouldInputLibraryNumber"></a>shouldInputLibraryNumber</td><td>Success</td><td></td><td>0.001</td>
-</tr>
-<tr valign="top" class="TableRowColor">
-<td><a name="shouldInputPassword"></a>shouldInputPassword</td><td>Success</td><td></td><td>0.000</td>
-</tr>
-<tr valign="top" class="TableRowColor">
-<td><a name="shouldPrintEnterPassword"></a>shouldPrintEnterPassword</td><td>Success</td><td></td><td>0.000</td>
-</tr>
-<tr valign="top" class="TableRowColor">
-<td><a name="shouldLoginControllerReturnNewMenuController"></a>shouldLoginControllerReturnNewMenuController</td><td>Success</td><td></td><td>0.001</td>
-</tr>
-<tr valign="top" class="TableRowColor">
-<td><a name="shouldPrintSuccessfulMessageForValidLogin"></a>shouldPrintSuccessfulMessageForValidLogin</td><td>Success</td><td></td><td>0.000</td>
-</tr>
-<tr valign="top" class="TableRowColor">
-<td><a name="shouldPrintUnSuccessfulMessageForGuest"></a>shouldPrintUnSuccessfulMessageForGuest</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="shouldHaveRespectiveOperationsForGuest"></a>shouldHaveRespectiveOperationsForGuest</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 </table>
 <div class="Properties">
-<a href="javascript:displayProperties('com.tw.bibilioteca.LoginControllerTest');">
+<a href="javascript:displayProperties('com.tw.bibilioteca.GuestTest');">
                     Properties &raquo;
                 </a>
 </div>
 <div class="Properties">
-<a href="./13_LoginControllerTest-out.html">
+<a href="./11_GuestTest-out.html">
                         System.out &raquo;
                     </a>
 </div>

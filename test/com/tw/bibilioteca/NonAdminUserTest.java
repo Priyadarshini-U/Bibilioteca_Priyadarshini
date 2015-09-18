@@ -24,6 +24,6 @@ public class NonAdminUserTest {
 
     @Test
     public void shouldHaveRespectiveDisplayOperationsIsSameAsPermissibleOPerationsForUser() {
-        assertTrue(new NonAdminUser().getDisplayOperations().containsAll(UserRole.USER.getOperations()));
+        assertTrue(new NonAdminUser().getDisplayOperations().containsAll(new NonAdminUser().getOperations()));
     }
 }

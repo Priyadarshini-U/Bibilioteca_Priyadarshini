@@ -7,9 +7,9 @@ public class User implements EntityDetails{
     private String libraryNumber;
     private String contact;
     private String phone;
-    private UserRole role;
+    private Role role;
 
-    public User(String libraryNumber, UserRole role, String contact, String phone) {
+    public User(String libraryNumber, Role role, String contact, String phone) {
         this.libraryNumber = libraryNumber;
         this.contact = contact;
         this.phone = phone;
@@ -21,7 +21,7 @@ public class User implements EntityDetails{
         return libraryNumber + " " + contact + " " + phone;
     }
 
-    public UserRole getRole() {
+    public Role getRole() {
         return role;
     }
 

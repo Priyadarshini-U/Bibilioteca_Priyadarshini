@@ -22,17 +22,17 @@ public class UsersTest {
     }
     @Test
     public void shouldReturnAdminRoleInformationForValidAdminUserToken() {
-        assertEquals(new Users().getUserRole("34404444"), UserRole.ADMIN);
+        assertEquals(new Users().getUserRole("34404444").getClass(), Admin.class);
     }
 
     @Test
     public void shouldReturnUserRoleInformationForValidNonAdminUserToken() {
-        assertEquals(new Users().getUserRole("35505555"), UserRole.USER);
+        assertEquals(new Users().getUserRole("35505555").getClass(), NonAdminUser.class);
     }
 
     @Test
     public void shouldReturnGuestRoleInformationForValidGuestToken() {
-        assertEquals(new Users().getUserRole(new GuestUser().authenticate()), UserRole.GUEST);
+        assertEquals(new Users().getUserRole(new GuestUser().authenticate()).getClass(), Guest.class);
     }
 
     @Test

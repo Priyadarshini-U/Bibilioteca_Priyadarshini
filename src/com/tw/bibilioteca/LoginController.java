@@ -19,7 +19,7 @@ public class LoginController implements IController {
         String password = display.getString();
         String sessionToken = current.authenticate(libraryNumber, password);
         BibilioticaData libraryDataNext = new BibilioticaData(libraryData.getBookLibrary(), libraryData.getMoviesLibrary(), sessionToken);
-        if (new Users().getUserRole(sessionToken).equals(UserRole.GUEST))
+        if (new Users().getUserRole(sessionToken).getClass().equals(Guest.class))
             display.putOutput("Login Failed");
         else
             display.putOutput("Login Succesful");
