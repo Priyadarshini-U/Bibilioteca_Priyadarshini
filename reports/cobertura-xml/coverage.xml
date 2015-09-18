@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.917098445595855" branch-rate="0.9814814814814815" lines-covered="354" lines-valid="386" branches-covered="53" branches-valid="54" complexity="1.5063291139240507" version="2.1.1" timestamp="1442548658955">
+<coverage line-rate="0.917098445595855" branch-rate="0.9814814814814815" lines-covered="354" lines-valid="386" branches-covered="53" branches-valid="54" complexity="1.5063291139240507" version="2.1.1" timestamp="1442550535599">
 	<sources>
 		<source>src</source>
 	</sources>
@@ -539,12 +539,12 @@
 						</method>
 						<method name="getLibraryNumber" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="44" hits="4" branch="true" condition-coverage="100% (2/2)">
+								<line number="44" hits="10" branch="true" condition-coverage="100% (2/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="100%"/>
 									</conditions>
 								</line>
-								<line number="45" hits="2" branch="false"/>
+								<line number="45" hits="8" branch="false"/>
 								<line number="47" hits="2" branch="false"/>
 								<line number="48" hits="2" branch="false"/>
 								<line number="49" hits="2" branch="false"/>
@@ -553,8 +553,8 @@
 						</method>
 						<method name="getString" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="39" hits="13" branch="false"/>
-								<line number="40" hits="13" branch="false"/>
+								<line number="39" hits="7" branch="false"/>
+								<line number="40" hits="7" branch="false"/>
 							</lines>
 						</method>
 						<method name="putOutput" signature="(Ljava/lang/Object;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
@@ -582,14 +582,14 @@
 						<line number="32" hits="2" branch="false"/>
 						<line number="33" hits="2" branch="false"/>
 						<line number="34" hits="2" branch="false"/>
-						<line number="39" hits="13" branch="false"/>
-						<line number="40" hits="13" branch="false"/>
-						<line number="44" hits="4" branch="true" condition-coverage="100% (2/2)">
+						<line number="39" hits="7" branch="false"/>
+						<line number="40" hits="7" branch="false"/>
+						<line number="44" hits="10" branch="true" condition-coverage="100% (2/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="100%"/>
 							</conditions>
 						</line>
-						<line number="45" hits="2" branch="false"/>
+						<line number="45" hits="8" branch="false"/>
 						<line number="47" hits="2" branch="false"/>
 						<line number="48" hits="2" branch="false"/>
 						<line number="49" hits="2" branch="false"/>
@@ -873,7 +873,7 @@
 										<condition number="0" type="jump" coverage="100%"/>
 									</conditions>
 								</line>
-								<line number="21" hits="10" branch="true" condition-coverage="100% (2/2)">
+								<line number="21" hits="12" branch="true" condition-coverage="100% (2/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="100%"/>
 									</conditions>
@@ -919,7 +919,7 @@
 								<condition number="0" type="jump" coverage="100%"/>
 							</conditions>
 						</line>
-						<line number="21" hits="10" branch="true" condition-coverage="100% (2/2)">
+						<line number="21" hits="12" branch="true" condition-coverage="100% (2/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="100%"/>
 							</conditions>

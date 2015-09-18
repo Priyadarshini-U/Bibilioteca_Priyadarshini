@@ -17,7 +17,7 @@ public class LoginControllerTest {
     @Test
     public void shouldPrintEnterLibraryNumber() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        String input = "peri\nperi\nperi\n";
+        String input = "011-1111\nperi\n011-1111\n";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
         BookDetails bookDetails1 = new BookDetails("author", new Date());
@@ -44,13 +44,13 @@ public class LoginControllerTest {
         IController controller = new LoginController(consoleDisplay, new Login(), data);
         controller.executeAction();
 
-        verify(consoleDisplay, times(2)).getString();
+        verify(consoleDisplay, times(1)).getLibraryNumber();
     }
 
     @Test
     public void shouldPrintEnterPassword() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        String input = "peri\nperi\nperi\n";
+        String input = "011-1111\nperi\nperi\n";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
         BookDetails bookDetails1 = new BookDetails("author", new Date());
@@ -77,7 +77,7 @@ public class LoginControllerTest {
         IController controller = new LoginController(consoleDisplay, new Login(), data);
         controller.executeAction();
 
-        verify(consoleDisplay, times(2)).getString();
+        verify(consoleDisplay, times(1)).getString();
     }
 
     @Test
@@ -88,7 +88,8 @@ public class LoginControllerTest {
         bookList.put(bookName1, bookDetails1);
         Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         ConsoleDisplay consoleDisplay = mock(ConsoleDisplay.class);
-        when(consoleDisplay.getString()).thenReturn("011-1111").thenReturn("1");
+        when(consoleDisplay.getLibraryNumber()).thenReturn("011-1111");
+        when(consoleDisplay.getString()).thenReturn("1").thenReturn("1\n");
         BibilioticaData data = new BibilioticaData(catalog, null, new GuestUser().authenticate());
         Login login = mock(Login.class);
         when(login.authenticate(anyString(), anyString())).thenReturn(new GuestUser().authenticate());
@@ -101,7 +102,7 @@ public class LoginControllerTest {
     @Test
     public void shouldPrintUnSuccessfulMessageForGuest() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        String input = "011-1111\n3\n";
+        String input = "011-1111\n\n3\n";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         HashMap<String, EntityDetails> bookList = new HashMap<String, EntityDetails>();
         BookDetails bookDetails1 = new BookDetails("author", new Date());

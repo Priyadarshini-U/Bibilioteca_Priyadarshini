@@ -14,7 +14,7 @@ public class LoginController implements IController {
     @Override
     public IController executeAction() {
         display.putOutput("Enter library Number");
-        String libraryNumber = display.getString();
+        String libraryNumber = display.getLibraryNumber();
         display.putOutput("Enter Password");
         String password = display.getString();
         String sessionToken = current.authenticate(libraryNumber, password);
