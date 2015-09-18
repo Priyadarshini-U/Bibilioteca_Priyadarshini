@@ -180,8 +180,8 @@ public class EntityViewTest {
         Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         EntityView entityView = new EntityView(catalog);
         String outputString = entityView.toString();
-        outputString = outputString.substring(0, outputString.length() -1);
-        String lastLine = outputString.substring(outputString.lastIndexOf("\n")+1);
+        outputString = outputString.substring(0, outputString.length() - 1);
+        String lastLine = outputString.substring(outputString.lastIndexOf("\n") + 1);
 
 
         assertEquals(lastLine.length(), catalog.fields().size() * 20);
@@ -198,9 +198,9 @@ public class EntityViewTest {
         Catalog catalog = new Catalog(bookList, new HashMap<String, EntityDetails>());
         EntityView entityView = new EntityView(catalog);
         String outputString = entityView.toString();
-        outputString = outputString.substring(0, outputString.length() -1);
-        String lastLine = outputString.substring(outputString.lastIndexOf("\n")+1);
-        lastLine = lastLine.replace("-","");
+        outputString = outputString.substring(0, outputString.length() - 1);
+        String lastLine = outputString.substring(outputString.lastIndexOf("\n") + 1);
+        lastLine = lastLine.replace("-", "");
 
         assertEquals(lastLine.length(), 0);
     }
@@ -219,7 +219,7 @@ public class EntityViewTest {
         Scanner scanner = new Scanner(outputString);
         scanner.nextLine();
         String secondLine = scanner.nextLine();
-        secondLine = secondLine.replace("-","");
+        secondLine = secondLine.replace("-", "");
 
         assertEquals(secondLine.length(), 0);
     }

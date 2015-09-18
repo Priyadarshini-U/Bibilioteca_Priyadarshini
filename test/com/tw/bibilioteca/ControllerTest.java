@@ -25,7 +25,7 @@ public class ControllerTest {
 
         verify(consoleDisplay).putOutput(welcomeScreen);
     }
-    
+
     @Test
     public void shouldReturnNewControllerWithMenu() {
         WelcomeMessage welcomeScreen = new WelcomeMessage();
@@ -34,7 +34,7 @@ public class ControllerTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(inContent, new PrintStream(outContent));
-        IController controller = new Controller(consoleDisplay, welcomeScreen,  new BibilioticaData(null, null, new GuestUser().authenticate()));
+        IController controller = new Controller(consoleDisplay, welcomeScreen, new BibilioticaData(null, null, new GuestUser().authenticate()));
 
         assertEquals(controller.executeAction().getClass(), MenuController.class);
     }
@@ -52,7 +52,7 @@ public class ControllerTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(inContent, new PrintStream(outContent));
-        Controller controller = new Controller(consoleDisplay, welcomeScreen,  new BibilioticaData(catalog, null, "34404444"));
+        Controller controller = new Controller(consoleDisplay, welcomeScreen, new BibilioticaData(catalog, null, "34404444"));
         IController result = controller.executeAction();
         result.executeAction();
 
@@ -72,7 +72,7 @@ public class ControllerTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(inContent, new PrintStream(outContent));
-        Controller controller = new Controller(consoleDisplay, welcomeScreen,  new BibilioticaData(catalog, null, "35505555"));
+        Controller controller = new Controller(consoleDisplay, welcomeScreen, new BibilioticaData(catalog, null, "35505555"));
         IController result = controller.executeAction();
         result.executeAction();
 
@@ -92,7 +92,7 @@ public class ControllerTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(inContent, new PrintStream(outContent));
-        Controller controller = new Controller(consoleDisplay, welcomeScreen,  new BibilioticaData(catalog, null, new GuestUser().authenticate()));
+        Controller controller = new Controller(consoleDisplay, welcomeScreen, new BibilioticaData(catalog, null, new GuestUser().authenticate()));
         IController result = controller.executeAction();
         result.executeAction();
 

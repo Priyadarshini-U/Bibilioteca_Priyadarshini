@@ -20,6 +20,7 @@ public class UsersTest {
     public void shouldReturnUserInformationForValidGuestToken() {
         assertTrue(new Users().getUserInformationFromToken(new GuestUser().authenticate()) != null);
     }
+
     @Test
     public void shouldReturnAdminRoleInformationForValidAdminUserToken() {
         assertEquals(new Users().getUserRole("34404444").getClass(), Admin.class);

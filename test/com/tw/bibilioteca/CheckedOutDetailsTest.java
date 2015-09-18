@@ -19,7 +19,7 @@ public class CheckedOutDetailsTest {
     public void shouldContainBookDetailsAndUserInfoAsConcatenatedString() {
         String author = "def";
         Date yearPublished = new Date();
-        assertTrue(new CheckedOutDetails(new BookDetails(author, yearPublished), "011-1111").toString().contains(new BookDetails(author, yearPublished).toString()+" 011-1111"));
+        assertTrue(new CheckedOutDetails(new BookDetails(author, yearPublished), "011-1111").toString().contains(new BookDetails(author, yearPublished).toString() + " 011-1111"));
     }
 
     @Test

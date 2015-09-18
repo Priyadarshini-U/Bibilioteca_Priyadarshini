@@ -1,7 +1,6 @@
 package com.tw.bibilioteca;
 
 import org.junit.Test;
-import org.mockito.InOrder;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -34,7 +33,7 @@ public class MenuControllerTest {
     }};
 
     @Test
-    public void shouldPrintMenu(){
+    public void shouldPrintMenu() {
         BibilioticaData catalog = mock(BibilioticaData.class);
         when(catalog.getSessionToken()).thenReturn("34404444");
         ConsoleDisplay display = mock(ConsoleDisplay.class);
@@ -47,7 +46,7 @@ public class MenuControllerTest {
     }
 
     @Test
-    public void shouldGetInput(){
+    public void shouldGetInput() {
         BibilioticaData catalog = mock(BibilioticaData.class);
         when(catalog.getSessionToken()).thenReturn("34404444");
         ConsoleDisplay display = mock(ConsoleDisplay.class);
@@ -205,7 +204,7 @@ public class MenuControllerTest {
         moviesList.put(name1, details);
         Catalog catalog = new Catalog(moviesList, new HashMap<String, EntityDetails>());
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        String input ="8\n2\n";
+        String input = "8\n2\n";
         ByteArrayInputStream inputStream = new ByteArrayInputStream(input.getBytes());
         ConsoleDisplay consoleDisplay = new ConsoleDisplay(inputStream, outputStream);
 

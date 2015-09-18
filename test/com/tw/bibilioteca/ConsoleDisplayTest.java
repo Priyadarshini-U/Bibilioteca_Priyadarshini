@@ -18,7 +18,7 @@ public class ConsoleDisplayTest {
         Object object = new Object();
         display.putOutput(object);
 
-        assertEquals(object.toString()+"\n", outContent.toString());
+        assertEquals(object.toString() + "\n", outContent.toString());
     }
 
     @Test

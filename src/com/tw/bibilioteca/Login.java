@@ -25,10 +25,9 @@ public class Login {
 
     private String encrypt(String libraryNumber) {
         String result = "";
-        for(int i = 0; i < libraryNumber.length(); i++)
-        {
+        for (int i = 0; i < libraryNumber.length(); i++) {
             int ascii = (int) libraryNumber.charAt(i);
-            ascii += (3 % 26 );
+            ascii += (3 % 26);
             result += (char) ascii;
         }
         return result;
