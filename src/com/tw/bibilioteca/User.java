@@ -1,6 +1,8 @@
 package com.tw.bibilioteca;
 
-public class User {
+import java.util.List;
+
+public class User implements EntityDetails{
     private String libraryNumber;
     private String contact;
     private String phone;
@@ -24,5 +26,10 @@ public class User {
 
     public String getLibraryNumber() {
         return libraryNumber;
+    }
+
+    @Override
+    public List<String> fields() {
+        return null;
     }
 }
