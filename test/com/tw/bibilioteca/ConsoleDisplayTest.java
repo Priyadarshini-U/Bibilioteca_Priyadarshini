@@ -53,4 +53,16 @@ public class ConsoleDisplayTest {
 
         assertEquals(inputString, 1);
     }
+
+    @Test
+    public void shouldPrintMessageIfInputIsNotAValidNumber() {
+        String input = "anna\n1\n";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+
+        ConsoleDisplay display = new ConsoleDisplay(inContent, outputStream);
+        display.getInteger();
+
+        assertTrue(outputStream.toString().contains("Enter Valid Number"));
+    }
 }

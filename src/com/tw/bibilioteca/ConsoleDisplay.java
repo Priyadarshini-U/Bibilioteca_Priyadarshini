@@ -28,6 +28,8 @@ public class ConsoleDisplay {
             return input;
         }catch(Exception exception){
             scanner.nextLine();
+            PrintStream printStream = new PrintStream(outputStream);
+            printStream.println("Enter Valid Number");
             return  getInteger();
         }
     }
