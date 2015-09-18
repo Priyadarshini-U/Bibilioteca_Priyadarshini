@@ -45,6 +45,8 @@ public class ConsoleDisplay {
             return  scanner.nextLine();
         else {
             scanner.nextLine();
+            PrintStream printStream = new PrintStream(outputStream);
+            printStream.println("Enter Valid Library Number");
             return getLibraryNumber();
         }
     }

@@ -76,4 +76,16 @@ public class ConsoleDisplayTest {
 
         assertEquals(inputString, "011-1111");
     }
+
+    @Test
+    public void shouldPrintMessageIfInputIsNotAValidLibraryNumber() {
+        String input = "anna\n011-1111\n";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+
+        ConsoleDisplay display = new ConsoleDisplay(inContent, outputStream);
+        display.getLibraryNumber();
+
+        assertTrue(outputStream.toString().contains("Enter Valid Library Number"));
+    }
 }
