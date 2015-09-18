@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="INPriya.local" name="com.tw.bibilioteca.NonAdminUserTest" skipped="0" tests="2" time="0.173" timestamp="2015-09-18T09:58:18">
+  <properties>
+    <property name="java.vendor" value="Oracle Corporation" />
+    <property name="coverage.summaryxml.dir" value="reports/cobertura-summary-xml" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="os.name" value="Mac OS X" />
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/classes" />
+    <property name="reports.html.dir" value="reports/junit-html" />
+    <property name="user.country.format" value="IN" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="ant.home" value="/usr/local/Cellar/ant/1.9.6/libexec" />
+    <property name="java.runtime.version" value="1.8.0_45-b14" />
+    <property name="cobertura.dir" value="." />
+    <property name="user.name" value="admin" />
+    <property name="user.language" value="en" />
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib" />
+    <property name="reports.dir" value="reports" />
+    <property name="ant.project.default-target" value="coverage" />
+    <property name="java.version" value="1.8.0_45" />
+    <property name="coverage.html.dir" value="reports/cobertura-html" />
+    <property name="user.timezone" value="Asia/Kolkata" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/endorsed" />
+    <property name="sun.cpu.isalist" value="" />
+    <property name="sun.jnu.encoding" value="UTF-8" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="file.separator" value="/" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="classes.dir" value="out" />
+    <property name="java.class.version" value="52.0" />
+    <property name="user.country" value="US" />
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="ant.file" value="/Users/admin/check2/Bibilioteca_Priyadarshini/build.xml" />
+    <property name="os.version" value="10.9.5" />
+    <property name="path.separator" value=":" />
+    <property name="java.vm.version" value="25.45-b02" />
+    <property name="ant.library.dir" value="/usr/local/Cellar/ant/1.9.6/libexec/lib" />
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob" />
+    <property name="sun.io.unicode.encoding" value="UnicodeBig" />
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="reports.xml.dir" value="reports/junit-xml" />
+    <property name="user.home" value="/Users/admin" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="coverage.xml.dir" value="reports/cobertura-xml" />
+    <property name="test.dir" value="test" />
+    <property name="java.library.path" value="/Users/admin/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:." />
+    <property name="java.vendor.url" value="http://java.oracle.com/" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="gopherProxySet" value="false" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.tw.bibilioteca.NonAdminUserTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/admin/check2/Bibilioteca_Priyadarshini/reports/junit-xml/TEST-com.tw.bibilioteca.NonAdminUserTest.xml crashfile=/Users/admin/check2/Bibilioteca_Priyadarshini/junitvmwatcher3652453730041333849.properties propsfile=/Users/admin/check2/Bibilioteca_Priyadarshini/junit1220664566815578791.properties" />
+    <property name="java.class.path" value="/Users/admin/check2/Bibilioteca_Priyadarshini/instrumented:/Users/admin/check2/Bibilioteca_Priyadarshini/out:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/asm-5.0.1.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/asm-analysis-5.0.1.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/asm-commons-5.0.1.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/asm-tree-5.0.1.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/asm-util-5.0.1.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/cobertura-2.1.1-javadoc.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/cobertura-2.1.1-sources.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/cobertura-2.1.1.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/commons-lang3-3.3.2.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/hamcrest-core-1.3.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/jaxen-1.1.4.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/jetty-6.1.14.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/jetty-util-6.1.14.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/junit-4.11.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/logback-classic-1.0.13.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/logback-core-1.0.13.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/mockito-all-1.9.5.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/oro-2.0.8.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/servlet-api-2.5-6.1.14.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/slf4j-api-1.7.5.jar:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/system-rules-1.2.0.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.9.6 compiled on June 29 2015" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="ant.file.type" value="file" />
+    <property name="java.vm.specification.version" value="1.8" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sun.os.patch.level" value="unknown" />
+    <property name="java.io.tmpdir" value="/var/folders/dw/k7v0k03j77z6q8kxvm_nyw840000gn/T/" />
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+    <property name="os.arch" value="x86_64" />
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment" />
+    <property name="instrumented.dir" value="instrumented" />
+    <property name="java.ext.dirs" value="/Users/admin/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java" />
+    <property name="user.dir" value="/Users/admin/check2/Bibilioteca_Priyadarshini" />
+    <property name="line.separator" value="&#xa;" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="basedir" value="/Users/admin/check2/Bibilioteca_Priyadarshini" />
+    <property name="ant.java.version" value="1.8" />
+    <property name="ant.core.lib" value="/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar" />
+    <property name="file.encoding" value="UTF-8" />
+    <property name="java.specification.version" value="1.8" />
+    <property name="src.dir" value="src" />
+    <property name="ant.project.invoked-targets" value="coverage" />
+  </properties>
+  <testcase classname="com.tw.bibilioteca.NonAdminUserTest" name="shouldHaveRespectiveDisplayOperationsIsSameAsPermissibleOPerationsForUser" time="0.136" />
+  <testcase classname="com.tw.bibilioteca.NonAdminUserTest" name="shouldHaveRespectiveOperationsForUser" time="0.0" />
+  <system-out><![CDATA[15:28:18,736 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+15:28:18,736 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+15:28:18,736 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+15:28:18,737 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
+15:28:18,737 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/cobertura-2.1.1-sources.jar!/logback.xml]
+15:28:18,737 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/cobertura-2.1.1.jar!/logback.xml]
+15:28:18,753 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@402f32ff - URL [jar:file:/Users/admin/check2/Bibilioteca_Priyadarshini/lib/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
+15:28:18,783 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+15:28:18,784 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+15:28:18,789 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+15:28:18,804 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+15:28:18,828 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
+15:28:18,828 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
+15:28:18,828 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+15:28:18,829 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+15:28:18,829 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@573f2bb1 - Registering current configuration as safe fallback point
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
