@@ -23,6 +23,10 @@ public class Menu {
     }
 
     public String choose(int option) {
-        return listOptions.get(option-1);
+        try {
+            return listOptions.get(option - 1);
+        }catch(Exception exception){
+            return new Integer(option).toString();
+        }
     }
 }

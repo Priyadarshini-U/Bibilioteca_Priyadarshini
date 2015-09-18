@@ -116,4 +116,17 @@ public class MenuTest {
 
         assertEquals(menu.choose(4), "CheckOut Movies");
     }
+
+    @Test
+    public void shouldReturnOptionWhenInvalid() {
+        List<String> listOptions = new ArrayList<String>() {{
+            add("List Books");
+            add("quit");
+            add("CheckOut Book");
+            add("CheckOut Movies");
+        }};
+        Menu menu = new Menu(listOptions);
+
+        assertEquals(menu.choose(5), "5");
+    }
 }
